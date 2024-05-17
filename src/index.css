@@ -1,13 +1,21 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+    font-family: humane-black;
+    src: url(../public/Humane-Black-BF657fc365849db.otf);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: sansation;
+    src: url(../public/Sansation_Regular.ttf);
 }
+@font-face {
+    font-family: sansation-light;
+    src: url(../public/Sansation_Light.ttf);
+}
+/* .header{
+    font-family: humane;
+} */
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

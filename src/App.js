@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import AboutMe from './components/about-me/AboutMe';
+import BoringIsBad from './components/BoringIsBad';
+import Service from './components/Service';
+import Landing from './components/landing/Landing';
+import Certificates from './components/Certificates';
+import Works from './components/Works';
+import Contact from './components/Contact';
+import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App bg-black-bg">
+      <Landing/>
+      <AboutMe/>
+      <BoringIsBad/>
+      <Service/>
+      <Certificates/>
+      <Works/>
+      <Contact/>
     </div>
   );
 }

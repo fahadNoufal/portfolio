@@ -1,38 +1,223 @@
-.App {
-  text-align: center;
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+    width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.am-here{
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: black;
+}
+
+.bento-box{
+    border-radius: 1.5rem;
+    display: flex;
+    padding: 1.75rem;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+    mix-blend-mode:lighten;
+}
+
+.bento-box-border{
+    border: 2px solid #c7c7c7;   
+
+}
+.bento-tag{
+    border-radius: 1.5rem;
+    border: 1px solid #d1fd0a;
+    font-size: 1.4rem;
+    color:#d1fd0a;
+    font-family: 'sansation-light';
+    padding: 0.5rem 1.5rem;
+
+}
+
+.bento-1{
+    background-image: url("./resources/service/service-solution.png");
+}
+.bento-2{
+    background-image: url("./resources/service/service-creative.png");
+}
+.bento-3{
+    background-image: url("./resources/service/service-development.png");
+}
+.bento-4{
+    background-size: contain;
+    background-image: url("./resources/service/service-animation.png");
+}
+
+.work-heading{
+    background-image: linear-gradient( "to bottom", #fff , #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.proj-name{
+    color: wheat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.p1-h1{
+    background-image: linear-gradient(to bottom, #fff, #555555);
+}
+
+.p1{
+    color: #c7c7c7;
+
+}
+
+.p2-h1{
+    background-image: linear-gradient(to bottom, #FDC28D, #503216);
+}
+.p2{
+    color: #FDC28D;
+}
+
+.p3-h1{
+    background-image: linear-gradient(to bottom, #98affe, #5b6998);
+}
+.p3{
+    color:#98AFFE;
+}
+.p3 img{
+    scale: 1.25;
+    margin-top: 7rem;
+}
+
+
+.line-txt {
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+.line-txt{
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 200vh; */
   }
-  to {
-    transform: rotate(360deg);
+  
+.line-txt .text {
+    letter-spacing: -.06em;
+    line-height: 160%;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    
+    /* width: 100%; */
+    color: #b6b6b633;
+    background: linear-gradient(to right, #b6b6b6, #b6b6b6) no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 0%;
+    transition: background-size cubic-bezier(.1,.5,.5,1) 0.5s;
+    
+  
+    border-bottom: 1px solid #2F2B28;
+    
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    /* justify-content: center; */
+    position: relative;
   }
+  
+.line-txt span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #d1fd0a;
+    color: #0D0D0D;
+    text-align: center;
+
+    
+
+
+    clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    transform-origin: center;
+
+    transition: all cubic-bezier(.1,.5,.5,1) 0.4s;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+.line-txt .text:hover > span {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  
+.line-txt a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+
+
+.proj-info h1{
+    -webkit-text-stroke-width: 3.3px;
+    -webkit-text-stroke-color: black;
 }
+.proj-info img{
+    object-fit: cover;
+}
+
+.contact-form input{
+    margin-top: 0.8rem;
+    background: transparent;
+    outline: none;
+    border-bottom: 2px solid #ffffff70;
+}
+
+
+
+.tech-stack div{
+    height: 100px;
+    aspect-ratio: 1;
+}
+
+.bento-tag{
+    border-radius: 1.5rem;
+    border: 1px solid #d1fd0a;
+    font-size: 1.4rem;
+    color:#d1fd0a;
+    font-family: 'sansation-light';
+    padding: 0.5rem 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .bento-tag{
+        border-radius: 1.5rem;
+        border: 1px solid #d1fd0a;
+        font-size: .8rem;
+        color:#d1fd0a;
+        font-family: 'sansation-light';
+        padding: 0.3rem 1rem;
+    }
+    .bento-box{
+        padding: 0.8rem;
+    }
+    .bento-1{
+        padding: 1.8rem 1rem 1rem ;
+        gap: 1rem;
+    }
+    .tech-stack div{
+        height: 70px;
+    }
+  }
+  .am-here span{
+    font-size:3rem ;
+  }
+

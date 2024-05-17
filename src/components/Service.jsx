@@ -1,0 +1,241 @@
+import React from 'react'
+import js from '../resources/tech-stack/javascriot.png'
+import material from '../resources/tech-stack/material-ui.png'
+import tailwind from '../resources/tech-stack/tailwind.png'
+import redux from '../resources/tech-stack/redux.png'
+import python from '../resources/tech-stack/python.png'
+import django from '../resources/tech-stack/django.png'
+import rRouter from '../resources/tech-stack/react-router.png'
+import gsap from '../resources/tech-stack/gsap.png'
+import pyAnywhere from '../resources/tech-stack/python-anywhere.png'
+import react from '../resources/tech-stack/react.png'
+
+
+
+const HowCanIHelp = () => {
+
+
+
+    // gsap.registerPlugin(ScrollTrigger);
+
+    // const textElements = gsap.utils.toArray('.text');
+
+    // textElements.forEach(text => {
+    // gsap.to(text, {
+    //     backgroundSize: '100%',
+    //     ease: 'none',
+    //     scrollTrigger: {
+    //     trigger: text,
+    //     start: 'center 80%',
+    //     end: 'center 20%',
+    //     scrub: true,
+    //     },
+    // });
+    // });
+
+
+
+
+    const ArrowMark=()=>{
+        return(
+            <svg className='aspect-square h-[6rem] md:h-[10rem] lg:h-[15rem] xl:h-[20rem] -rotate-45 ' viewBox="0 0 127 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* <rect x="63.3564" y="3.39411" width="84.8" height="84.8" rx="42.4" transform="rotate(45 63.3564 3.39411)" stroke="#D1FD0A" stroke-width="4.8"/> */}
+                <path d="M37.1086 66.5246L37.1086 60.189H80.5533L61.0937 40.7294L65.6192 36.2039L92.7721 63.3568L65.6192 90.5097L61.0937 85.9842L80.5533 66.5246L37.1086 66.5246Z" fill="#b6b6b633"/>
+            </svg>
+        )
+    }
+
+  return (
+    <div className='text-center py-[11rem]  items-center w-full '>
+        <h1 className=" relative z-10 text-white font-humane-black 
+                         text-[3.2rem] sm:text-[5rem] md:text-[6rem] lg:text-[8rem]">
+            <span className=' absolute z-[-1] border-y opacity-20 border-white  w-full left-0 
+                             bottom-0 sm:bottom-6 h-[50%] sm:h-[60%]'>
+            </span>
+            <span className=' bg-[#070707] tracking-wide pt-3 px-6'>
+                HOW CAN I HELP YOU <span className=' text-yellow-bg'>?</span>
+
+            </span>
+        </h1>
+
+        <div className="bento-container overflow-hidden mt-[5rem] md:mt-[10rem] lg:mt-[16rem] lg:h-[100svh] gap-4 flex lg:flex-row flex-col rounded-[1.5rem]
+                         p-[1.2rem] sm:p-[2.5rem] lg:p-[1.5rem] sm:tag-lg">
+            <div className="bc-1 flex-[3] gap-4 flex flex-col">
+                <div className=" bento-1 h-[55%] w-full flex flex-col justify-between bento-box 
+                                gap-[2rem] lg:gap-0 ">
+                    <div className="flex items-start justify-between font-humane-black">
+                        <div className=" items-start tracking-wider text-yellow-bg flex flex-col">
+                            <span className=' mt-[-2rem] lg:mt-0 xl:mt-[-3rem]
+                                            text-[3.5rem] sm:text-[7rem] md:text-[8rem] xl:text-[10rem] 2xl:text-[12rem] mb-[-1.6rem] md:mb-[-5.5rem] lg:mb-[-4rem] xl:mb-[-5.4rem] 2xl:mb-[-7rem]'>
+                                FINDING
+                            </span>
+                            <span className=' text-[2.2rem] sm:text-[4rem] md:text-[6rem] lg:text-[4rem] xl:text-[6rem] 2xl:text-[8rem]'>
+                                CREATIVE SOLUTIONS
+                            </span>
+                        </div>
+                        <div className="b-dot h-10 md:h-14 aspect-square  border-8 md:mt-[3rem] scale-75 sm:scale-100 rounded-full bg-yellow-bg border-[#969696]">
+                            
+                        </div>
+
+                    </div>
+                    <div className="flex justify-between text-left text-white -mt-4 items-end font-sansation-light
+                                    leading-[120%] sm:text-[1.2rem] md:text-[1.7rem] lg:text-[1.5rem] 2xl:text-[2rem]">
+                        <div className='w-[70%] lg:leading-[110%]  xl:leading-normal '>
+                            Unique designs are always better for conveying messages to large
+                        </div>
+                        <div className="bento-tag">
+                            UNIQUE
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div className="flex flex-1 gap-4 ">
+                    <div className=" bento-2 bento-box h-[150px] sm:h-[30svh] lg:h-auto bento-box-border flex-[2]">
+
+                    </div>
+                    <div className=" bento-3 bento-box flex-[3]">
+                        <div className="flex h-full w-full justify-end items-end">
+                            <div className="bento-tag bg-black bg-opacity-50 sm:mr-8">
+                                DEVELOPMENT
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div className="bc-2 lg:flex-[2] gap-4  sm:flex flex-col ">
+                <div className=" bento-4 justify-between items-end bento-box bento-box-border flex-[4]
+                                h-[400px] mb-4 sm:mb-0 sm:h-auto ">
+                    <svg className='aspect-square  
+                                     h-[7rem] sm:h-[10rem] lg:h-[6rem] xl:h-[10rem] 
+                                     sm:mt-[40svh] lg:mt-0' 
+                        viewBox="0 0 127 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="63.3564" y="3.39411" width="84.8" height="84.8" rx="42.4" transform="rotate(45 63.3564 3.39411)" stroke="#D1FD0A" stroke-width="4.8"/>
+                        <path d="M37.1086 66.5246L37.1086 60.189H80.5533L61.0937 40.7294L65.6192 36.2039L92.7721 63.3568L65.6192 90.5097L61.0937 85.9842L80.5533 66.5246L37.1086 66.5246Z" fill="#D1FD0A"/>
+                    </svg>
+                    <div className="bento-tag  scale-125 mr-6 mb-4">
+                        ANIMATION
+                    </div>
+                </div>
+                <div className=" bento-5 flex text-black font-humane-black bg-yellow-bg bento-box flex-[1]">
+                    <div className="flex flex-1 flex-col justify-center items-start
+                                    pl-4 sm:pl-0">
+                        <span className='  mt-[-1rem] mb-[-2.5rem] sm:my-[-2.5rem] 
+                                          text-[4rem] sm:text-[6rem] xl:text-[8rem] 2xl:tracking-wide'>
+                            UX DESIGN
+                        </span>
+                        <span className=' font-sansation-light 
+                                          text-[1.2rem] mt-4 xl:mt-0 xl:text-[1.5rem]'>
+                            focuses on user experience
+                        </span>
+                    </div>
+                    <div className="flex flex-col justify-between pr-4 sm:pr-0">
+                        <span className=' font-humane-black text-[2rem] sm:text-[4rem] mt-[-.5rem]'>
+                            UI
+                        </span>
+                        <div className=" aspect-square sm:w-12 w-7 rounded-full bg-black">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div className="tech-stack lg:tech-stack-bg  w-full overflow-hidden border-y-2 border-white border-opacity-20 
+                          mt-[3.5rem] sm:mt-[8rem] lg:mt-[10rem]  py-12 sm:py-[3.5rem] lg:py-[4.5rem]">
+            <span className="  ml-[-140px] flex flex-col lg:flex-row gap-[2.4rem] sm:gap-[3rem] lg:gap-[5rem] ">
+                <section className='flex gap-[2.4rem] sm:gap-[3rem] lg:gap-[5rem]'>
+                    <div id='js'>
+                        <img src="" alt="" />
+                    </div>
+                    <div id='js'>
+                        <img src={js} alt="" />
+                    </div>
+                    <div id='material'>
+                        <img src={material} alt="" />
+                    </div>
+                    <div id='react'>
+                        <img src={react} alt="" />
+                    </div>
+                    <div id='redux'>
+                        <img src={redux} alt="" />
+                    </div>
+                    <div className=' lg:hidden' id='python'>
+                        <img src={python} alt="" />
+                    </div>
+                </section>
+                <section className='flex gap-[2.4rem] sm:gap-[3rem] lg:gap-[5rem]'>
+                    <div id='python'>
+                        <img src={python} alt="" />
+                    </div>
+                    <div id='django'>
+                        <img src={django} alt="" />
+                    </div>
+                    <div id='rRouter'>
+                        <img src={rRouter} alt="" />
+                    </div>
+                    <div id='gsap'>
+                        <img src={gsap} alt="" />
+                    </div>
+                    <div id='tailwind'>
+                        <img src={tailwind} alt="" />
+                    </div>
+                    <div id='pyAnywhere'>
+                        <img src={pyAnywhere} alt="" />
+                    </div>
+                </section>
+            </span>
+                
+        </div>
+
+        <div className="line w-full h-[2px] mt-4 sm:mt-10 bg-white opacity-20">
+        </div>
+
+        
+        {/* <div className="container overflow-hidden line-txt leading-[100%] mx-12 md:mx-auto mt-[10rem] uppercase 
+                        text-[4rem] lg:text-[6rem] xl:text-[8rem] 2xl:text-[10rem] ">
+            <div className="text">
+                story telling
+                <span>
+                    <a href=" " >visuals</a>
+                </span>
+            </div>
+            
+            <div className="text"> 
+                <div  className=' flex gap-12  items-center'>
+                    <h2>
+                        HOOK
+                    </h2>
+                    <ArrowMark/>
+                </div>
+                <span>Retention</span>
+            </div>
+            <div className="text">
+                <div className=' flex gap-12  items-center'>
+                    <h2>
+                        Stands out
+                    </h2>
+                    <ArrowMark/>
+                </div>
+                <span>WOAH!! </span>
+            </div>
+            <div className="text">
+                <div className=' flex gap-12  items-center'>
+                    <h2>
+                        SEO
+                    </h2>
+                    <ArrowMark/>
+                </div>
+                <span>
+                    <a href=" " >Seamless</a>
+                </span>
+            </div>
+            <div className="text">animations<span>Interactive!!</span></div>
+        </div> */}
+    </div>
+  )
+}
+
+export default HowCanIHelp
