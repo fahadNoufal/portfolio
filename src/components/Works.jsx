@@ -4,9 +4,32 @@ import p1 from '../resources/works/work-chat-circle.png'
 import p2 from '../resources/works/work-fashion-site.png'
 import p3 from '../resources/works/work-task-flow.png'
 import ProjectDetails from './ProjectDetails'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 
 
 const Works = () => {
+
+    useGSAP(()=>{
+        gsap.to('.work-letters',{
+            y:0,
+            stagger:0.2,
+            ease:'power4.out',
+            duration:1.5,
+            opacity:1,
+            scrollTrigger:{
+                trigger:'.work-txt-container',
+                start:'top 45%',
+                end:'50% top',
+                onLeave:()=>{
+                    // gsap.to()
+                },
+                toggleActions:'restart play play reverse'
+            }
+            
+        })
+    })
+
 
     const allProjDetails={
         p1:{
@@ -28,16 +51,33 @@ const Works = () => {
 
         }
     }
+
+    let workText ='WORKS'.split('').map((char, index) => (
+            <div className=' work-letters leading-[90%] opacity-0 translate-y-[100%] bg-gradient-to-t from-[#333] to-white bg-clip-text text-transparent' key={index} >
+                <div className='inline-block  translate-y- '>{char}</div>
+            </div>
+            // <div className='workText work-heading inline-block ' key={index}>{char}</div>
+        ))
+
   return (
     <div className=' works overflow-hidden'>
 
 
 
-        <h1 className=' work-heading font-humane-black bg-gradient-to-b from-white to-[#555] text-center
+        {/* {workText} */}
+        {/* <span className='workText'> S </span> */}
+        <h1 className=' work-txt-container h-[100svh] flex justify-center items-center font-humane-black 
                           text-[12.5rem] sm:text-[15rem] md:text-[20rem] lg:text-[30rem] xl:text-[40rem] '>
-            WORKS
+            {/* 
+            <div className=' border leading-[90%] bg-gradient-to-t from-[#333] to-white bg-clip-text text-transparent'>
+                <div className='inline-block  translate-y- '>S</div>
+            </div>
+            */}
+            <span className='flex overflow-hidden pt-8'>
+                {workText}
+            </span>
         </h1>
-        <Project 
+        <Project    
             title={"Chat circle"} 
             sub1={"chat based"} 
             sub2={"social media application"} 
@@ -51,7 +91,7 @@ const Works = () => {
 
 
 
-        {/* <Project 
+        <Project 
             title={"fashion site"} 
             sub1={"online"} 
             sub2={"Ecommerse website"} 
@@ -67,7 +107,7 @@ const Works = () => {
             thumb={"Get your things done"} 
             no={"03"}
             img={p3}
-        /> */}
+        />
 
         <div className="flex justify-center mt-[8rem] mb-[20rem] border-y-[2px] border-[#ffffff40] text-[#ffffff90] font-sansation-light items-center
                         xl:text-[5rem] sm:text-[3.5rem] text-[2rem]">

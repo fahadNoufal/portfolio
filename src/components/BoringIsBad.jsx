@@ -1,39 +1,57 @@
 import React from 'react'
-import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
-import { scrollTrigger } from 'gsap/ScrollTrigger'
 import smiley from '../resources/smiley.png'
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 
 const BoringIsBad = () => {
-
+    gsap.registerPlugin(ScrollTrigger)
     useGSAP(()=>{
-        gsap.to('.am-here-texts span',{ x:'100%',repeat:1,scrollTrigger:{
-            trigger:'.am-here',
+        gsap.to('.boring',{yPercent:-130,scrollTrigger:{
+            trigger:'.boring-is-bad',
             start:'top bottom',
-            end:'bottom top',
-            toggleActions:'restart pause play pause'
+            end:'85% top',
+            scrub:1,
+            // markers:true,
+
+        }})
+        gsap.to(['.for-business','.smiley'],{yPercent:-65,scrollTrigger:{
+            trigger:'.boring-is-bad',
+            start:'top bottom',
+            end:'85% top',
+            scrub:1,
+            // markers:true,
+
+        }})
+        gsap.to('.smiley',{yPercent:-32,scale:1.25,scrollTrigger:{
+            trigger:'.boring-is-bad',
+            start:'top bottom',
+            end:'85% top',
+            scrub:1,
+            // markers:true,
+
         }})
     })
 
+
   return (
-    <div className=' flex flex-col sm:gap-24 pb-20 relative z-10'>
+    <div className=' boring-is-bad flex flex-col sm:gap-24 pb-20 relative z-10'>
         <div className=' h-[100svh]  flex text-white flex-col justify-center uppercase items-center font-humane-black 
                          text-[7rem] sm:text-[10rem] lg:text-[14rem]'>
         
-            <h1 className="">boring</h1>
+            <h1 className="boring translate-y-[100%] ">boring</h1>
 
             <div className=" text-[3.5rem] sm:text-[6.5rem] ml-[40px] gap-4 sm:gap-6 items-end flex mt-[-40px] mb-[-30px]  sm:my-[-50px] lg:mt-[-70px] lg:mb-[-50px] ">
                 <h2>
                     is
                 </h2>
-                <img src={smiley} className=' w-[160px] sm:w-auto' alt="" srcset="" />
+                <img src={smiley} className=' smiley scale-75 translate-y-[25%] relative z-10 w-[160px] sm:w-auto' alt="" srcset="" />
                 <h2>
                     bad
                 </h2>
             </div>
-            <h1> for business</h1>
+            <h1 className='for-business relative z-20 translate-y-[50%]'> for business</h1>
         </div>
 
 

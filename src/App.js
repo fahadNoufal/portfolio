@@ -9,6 +9,9 @@ import Contact from './components/Contact';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
 function App() {
+  // let enoughOfDialogs ='HELLOWORLD'.split('').map((char, index) => (
+  //   <span className=' inline-block charr translate-x-[20rem]' key={index}>{char}</span>
+  // ))
   return (
     <div className="App bg-black-bg">
       <Landing/>
@@ -18,6 +21,13 @@ function App() {
       <Certificates/>
       <Works/>
       <Contact/>
+
+      {/* <div className=" h-[100svh] flex justify-center items-center">
+        <div className=" text-white font-humane-black text-[20rem] ">
+          {enoughOfDialogs}
+        </div>
+      </div>
+       */}
     </div>
   );
 }

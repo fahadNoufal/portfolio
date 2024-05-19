@@ -145,11 +145,11 @@ const HowCanIHelp = () => {
 
         <div className="tech-stack lg:tech-stack-bg  w-full overflow-hidden border-y-2 border-white border-opacity-20 
                           mt-[3.5rem] sm:mt-[8rem] lg:mt-[10rem]  py-12 sm:py-[3.5rem] lg:py-[4.5rem]">
-            <span className="  ml-[-140px] flex flex-col lg:flex-row gap-[2.4rem] sm:gap-[3rem] lg:gap-[5rem] ">
+            <span className="  ml-[80px] flex flex-col lg:flex-row gap-[2.4rem] sm:gap-[3rem] lg:gap-[5rem] ">
                 <section className='flex gap-[2.4rem] sm:gap-[3rem] lg:gap-[5rem]'>
-                    <div id='js'>
+                    {/* <div id='js'>
                         <img src="" alt="" />
-                    </div>
+                    </div> */}
                     <div id='js'>
                         <img src={js} alt="" />
                     </div>

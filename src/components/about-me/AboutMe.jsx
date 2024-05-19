@@ -3,7 +3,7 @@ import fahad from '../../resources/fahad-img.png'
 
 const AboutMe = () => {
   return (
-    <div className=' about-me w-full py-[3rem] sm:h-[100svh] bg-[#fffaef] rounded-[3rem] flex flex-col
+    <div className=' about-me relative z-10 w-full py-[3rem] sm:h-[100svh] bg-[#fffaef] rounded-[3rem] flex flex-col
                      px-4 sm:px-[1.8rem] md:px-[3rem] lg:px-[5rem]'>
         <h1 className="who-am-i text-center border-y border-opacity-20 border-black font-bruno-ace text-[#585858]
                          text-[2.75rem] sm:text-[5rem] xl:text-[6rem] 2xl:text-[7.5rem] px-4 sm:px-0">

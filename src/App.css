@@ -221,3 +221,16 @@ body{
     font-size:3rem ;
   }
 
+  
+.thumb-cover{
+    background-color: #070707;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    height: 100%;
+    
+    
+
+}
