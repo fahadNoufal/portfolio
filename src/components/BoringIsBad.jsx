@@ -24,7 +24,7 @@ const BoringIsBad = () => {
             // markers:true,
 
         }})
-        gsap.to('.smiley',{yPercent:-32,scale:1.25,scrollTrigger:{
+        gsap.to('.smiley',{yPercent:-32,scale:1.5,scrollTrigger:{
             trigger:'.boring-is-bad',
             start:'top bottom',
             end:'85% top',
@@ -46,7 +46,7 @@ const BoringIsBad = () => {
                 <h2>
                     is
                 </h2>
-                <img src={smiley} className=' smiley scale-75 translate-y-[25%] relative z-10 w-[160px] sm:w-auto' alt="" srcset="" />
+                <img src={smiley} className=' smiley scale-50 translate-y-[25%] relative z-10 w-[160px] sm:w-auto' alt="" srcset="" />
                 <h2>
                     bad
                 </h2>

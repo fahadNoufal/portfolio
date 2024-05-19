@@ -18,9 +18,9 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
         ScrollTrigger.create({
             animation:tl,
             trigger:`.p${projNo}`,
-            start:'top bottom',
+            start:'-30% bottom',
             toggleActions:'restart play play reverse',
-            markers:true
+            // markers:true
         })
 
         gsap.to(`.p${projNo}`,{
@@ -29,13 +29,27 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
             scrollTrigger:{
                 trigger:`.p${projNo}`,
                 markers:true,
-                start:'top bottom',
+                start:'-30% bottom',
                 end:'bottom top',
                 // scrub:1,
                 toggleActions:'restart play play reverse',
             }
             
         })
+
+        let sections=gsap.utils.toArray(".proj-item")
+        ScrollTrigger.create({
+            trigger: '.projs-container',
+            // pin: true,
+            scrub: 1,
+            // snap: {
+            snap: 1/(sections.length+1) ,
+            // duration: 0.1,
+            // delay: 0.1,
+            ease: "power1.inOut"
+            },
+        )
+        
         
     })
 
@@ -57,7 +71,7 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
     ))
 
   return (
-    <div className={`overflow-hidden p${projNo} bg-black-bg translate-y-[100svh] h-[100svh] sm:py-8  pt-[4rem]`}
+    <div className={`overflow-hidden proj-item p${projNo} bg-black-bg translate-y-[100svh] h-[100svh] sm:py-8  pt-[4rem] relative`}
         ref={container}>
         {/* proj-name p${projNo}-h1 */}
         <h1 className={` overflow-hidden  uppercase tracking-widest border-y-2 border-yellow-bg border-opacity-20 font-days-one leading-[100%] md:leading-normal md:py-0
@@ -102,11 +116,14 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
                 </div>
             </div>
             <div className=" mx-[4.2rem] mt-[15rem]  sm:mr-12 md:mr-[6rem] lg:mr-[10rem] 2xl:mr-[15rem] lg:mb-[4rem] sm:ml-[4rem] lg:ml-[8rem] xl:ml-0 sm:mt-[8rem] lg:mt-0 scale-125  2xl:mt-[-4rem] 2xl:items-start flex items-center
-                            absolute sm:relative">
+                            absolute z-[20] sm:relative">
                 <img src={img} alt="" className=' proj-img object-cover xl:w-full 2xl:h-full ' />
             </div>
 
         </div>
+
+        {/* <div className="proj-details-container absolute bg-white-bg w-full h-full z-[10] left-0 top-[00%]">
+        </div> */}
         
     </div>
   )

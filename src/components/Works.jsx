@@ -59,6 +59,9 @@ const Works = () => {
             // <div className='workText work-heading inline-block ' key={index}>{char}</div>
         ))
 
+
+
+
   return (
     <div className=' works overflow-hidden'>
 
@@ -77,37 +80,38 @@ const Works = () => {
                 {workText}
             </span>
         </h1>
-        <Project    
-            title={"Chat circle"} 
-            sub1={"chat based"} 
-            sub2={"social media application"} 
-            thumb={"Find your circle"} 
-            no={"01"}
-            img={p1}
-        />
-        {/* <ProjectDetails 
-            {...allProjDetails.p1}
-        /> */}
+        <div className="projs-container -mt-[0svh]">
+            <Project    
+                title={"Chat circle"} 
+                sub1={"chat based"} 
+                sub2={"social media application"} 
+                thumb={"Find your circle"} 
+                no={"01"}
+                img={p1}
+            />
+            
+            {/* <ProjectDetails 
+                {...allProjDetails.p1}
+            /> */}
 
+            <Project 
+                title={"fashion site"} 
+                sub1={"online"} 
+                sub2={"Ecommerse website"} 
+                thumb={"Get your best outfit"} 
+                no={"02"}
+                img={p2}
+            />
 
-
-        <Project 
-            title={"fashion site"} 
-            sub1={"online"} 
-            sub2={"Ecommerse website"} 
-            thumb={"Get your best outfit"} 
-            no={"02"}
-            img={p2}
-        />
-
-        <Project 
-            title={"Task flow"} 
-            sub1={"Modern todo app"} 
-            sub2={"with stunning animation"} 
-            thumb={"Get your things done"} 
-            no={"03"}
-            img={p3}
-        />
+            <Project 
+                title={"Task flow"} 
+                sub1={"Modern todo app"} 
+                sub2={"with stunning animation"} 
+                thumb={"Get your things done"} 
+                no={"03"}
+                img={p3}
+            />
+        </div>
 
         <div className="flex justify-center mt-[8rem] mb-[20rem] border-y-[2px] border-[#ffffff40] text-[#ffffff90] font-sansation-light items-center
                         xl:text-[5rem] sm:text-[3.5rem] text-[2rem]">
