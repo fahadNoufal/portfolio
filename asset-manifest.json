@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.fcf92622.css",
+    "main.js": "/portfolio/static/js/main.ccdcf665.js",
+    "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
+    "static/media/Creative.svg": "/portfolio/static/media/Creative.bcd77bc38dee559be6194f1c935d7924.svg",
+    "static/media/certificats.png": "/portfolio/static/media/certificats.064c71a450116b02903d.png",
+    "static/media/work-task-flow.png": "/portfolio/static/media/work-task-flow.985fbc65159097f3f2b6.png",
+    "static/media/work-fashion-site.png": "/portfolio/static/media/work-fashion-site.020ddb95f11e7ca53982.png",
+    "static/media/work-chat-circle.png": "/portfolio/static/media/work-chat-circle.4d77b005dc03c6f262f0.png",
+    "static/media/fahad-img.png": "/portfolio/static/media/fahad-img.d627d94f7ecbe7d3c7ae.png",
+    "static/media/service-development.png": "/portfolio/static/media/service-development.730de5562e1c068b29fc.png",
+    "static/media/service-animation.png": "/portfolio/static/media/service-animation.e8c980579d84cfa7b18f.png",
+    "static/media/flower.png": "/portfolio/static/media/flower.dde2061d89b6ab2100df.png",
+    "static/media/Sansation_Light.ttf": "/portfolio/static/media/Sansation_Light.4b0e0e7199c58c7cc1d3.ttf",
+    "static/media/Sansation_Regular.ttf": "/portfolio/static/media/Sansation_Regular.9be04a011dc2beea9985.ttf",
+    "static/media/smiley.png": "/portfolio/static/media/smiley.3128e4beadc56349f1c2.png",
+    "static/media/service-solution.png": "/portfolio/static/media/service-solution.bbb0e1d6c4690c067672.png",
+    "static/media/Humane-Black-BF657fc365849db.otf": "/portfolio/static/media/Humane-Black-BF657fc365849db.73f32b61d8ce1b061a9f.otf",
+    "static/media/service-creative.png": "/portfolio/static/media/service-creative.afc63815364775313b5e.png",
+    "static/media/gsap.png": "/portfolio/static/media/gsap.a685ca97764e18e0beb3.png",
+    "static/media/react.png": "/portfolio/static/media/react.3b64ead6c74988a31907.png",
+    "static/media/javascriot.png": "/portfolio/static/media/javascriot.d2b09230ef424da03d47.png",
+    "static/media/Frame 2762.svg": "/portfolio/static/media/Frame 2762.8daad722d93528cfeb8c3f37ff0e2413.svg",
+    "index.html": "/portfolio/index.html",
+    "main.fcf92622.css.map": "/portfolio/static/css/main.fcf92622.css.map",
+    "main.ccdcf665.js.map": "/portfolio/static/js/main.ccdcf665.js.map",
+    "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fcf92622.css",
+    "static/js/main.ccdcf665.js"
+  ]
+}
