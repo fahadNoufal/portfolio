@@ -6,54 +6,113 @@ import redux from '../resources/tech-stack/redux.png'
 import python from '../resources/tech-stack/python.png'
 import django from '../resources/tech-stack/django.png'
 import rRouter from '../resources/tech-stack/react-router.png'
-import gsap from '../resources/tech-stack/gsap.png'
+import gsapLogo from '../resources/tech-stack/gsap.png'
 import pyAnywhere from '../resources/tech-stack/python-anywhere.png'
 import react from '../resources/tech-stack/react.png'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 
 
 
 const HowCanIHelp = () => {
 
+    gsap.registerPlugin(ScrollTrigger)
+
+    useGSAP(()=>{
+        gsap.from('.bento-box-t',{yPercent:50,opacity:0,stagger:0.3,duration:1.8,ease:'power3.out',
+            scrollTrigger:{
+                trigger:'.bento-container',
+                start:'30% bottom',
+                end:'top top',
+                scrubber:2,
+                toggleActions:'play play play reverse',
+                scroller:'#app'
+
+            }
+        })
+
+        gsap.from('.bento-box-b',{yPercent:50,opacity:0,stagger:0.3,duration:1.8,ease:'power3.out',
+            scrollTrigger:{
+                trigger:'.bento-container',
+                start:'80% bottom',
+                end:'top top',
+                scrub:3,
+                toggleActions:'play play play reverse',
+                scroller:'#app'
+
+            }
+        })
+
+        gsap.from('.how-help',{
+            yPercent:120,
+            duration:2,
+            opacity:0,
+            ease:'power3.out',
+            scrollTrigger:{
+                trigger:'.how-help',
+                start:'10% bottom',
+                end:'bottom top',
+                toggleActions:'play play play reverse',
+                scroller:'#app'
+
+            }
+        })
+        gsap.from('.tech-stack section div' ,{
+            scale:0.2,
+            // x:-200,
+            stagger:0.05,
+            opacity:0,
+            scrollTrigger:{
+                trigger:'.tech-stack',
+                // markers:true,
+                start:'bottom bottom',
+                end:'bottom top',
+                toggleActions:'play play play reverse',
+                scroller:'#app'
+
+            }
+        })
+    })
 
 
-    // gsap.registerPlugin(ScrollTrigger);
 
-    // const textElements = gsap.utils.toArray('.text');
 
-    // textElements.forEach(text => {
-    // gsap.to(text, {
-    //     backgroundSize: '100%',
-    //     ease: 'none',
-    //     scrollTrigger: {
-    //     trigger: text,
-    //     start: 'center 80%',
-    //     end: 'center 20%',
-    //     scrub: true,
-    //     },
-    // });
-    // });
+    // let serviceHeading='HOW  CAN  I  HELP  YOU'.split('').map((char, index) => (
+    //     <span className='   ' key={index} >
+    //         <span className=' '>{char}</span>
+    //     </span>
+    //     // <div className='workText work-heading inline-block ' key={index}>{char}</div>
+    // ))
 
 
 
 
-    const ArrowMark=()=>{
-        return(
-            <svg className='aspect-square h-[6rem] md:h-[10rem] lg:h-[15rem] xl:h-[20rem] -rotate-45 ' viewBox="0 0 127 127" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* <rect x="63.3564" y="3.39411" width="84.8" height="84.8" rx="42.4" transform="rotate(45 63.3564 3.39411)" stroke="#D1FD0A" stroke-width="4.8"/> */}
-                <path d="M37.1086 66.5246L37.1086 60.189H80.5533L61.0937 40.7294L65.6192 36.2039L92.7721 63.3568L65.6192 90.5097L61.0937 85.9842L80.5533 66.5246L37.1086 66.5246Z" fill="#b6b6b633"/>
-            </svg>
-        )
-    }
+    // const ArrowMark=()=>{
+    //     return(
+    //         <svg className='aspect-square h-[6rem] md:h-[10rem] lg:h-[15rem] xl:h-[20rem] -rotate-45 ' viewBox="0 0 127 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+    //             {/* <rect x="63.3564" y="3.39411" width="84.8" height="84.8" rx="42.4" transform="rotate(45 63.3564 3.39411)" stroke="#D1FD0A" stroke-width="4.8"/> */}
+    //             <path d="M37.1086 66.5246L37.1086 60.189H80.5533L61.0937 40.7294L65.6192 36.2039L92.7721 63.3568L65.6192 90.5097L61.0937 85.9842L80.5533 66.5246L37.1086 66.5246Z" fill="#b6b6b633"/>
+    //         </svg>
+    //     )
+    // }
 
   return (
-    <div className='text-center py-[11rem]  items-center w-full '>
+    <div data-scroll-section className='text-center py-[11rem] items-center w-full '>
         <h1 className=" relative z-10 text-white font-humane-black 
                          text-[3.2rem] sm:text-[5rem] md:text-[6rem] lg:text-[8rem]">
             <span className=' absolute z-[-1] border-y opacity-20 border-white  w-full left-0 
                              bottom-0 sm:bottom-6 h-[50%] sm:h-[60%]'>
             </span>
-            <span className=' bg-[#070707] tracking-wide pt-3 px-6'>
-                HOW CAN I HELP YOU <span className=' text-yellow-bg'>?</span>
+            <span className=' overflow-hidden inline-block bg-[#070707] tracking-wide pt-3 px-6'>
+                {/* HOW CAN I HELP YOU  */}
+                <div className='how-help'>
+                    HOW CAN I HELP YOU
+                    {' '}
+                    <span className=' text-yellow-bg'>?</span>
+                </div>
+                
+                
 
             </span>
         </h1>
@@ -61,7 +120,7 @@ const HowCanIHelp = () => {
         <div className="bento-container overflow-hidden mt-[5rem] md:mt-[10rem] lg:mt-[16rem] lg:h-[100svh] gap-4 flex lg:flex-row flex-col rounded-[1.5rem]
                          p-[1.2rem] sm:p-[2.5rem] lg:p-[1.5rem] sm:tag-lg">
             <div className="bc-1 flex-[3] gap-4 flex flex-col">
-                <div className=" bento-1 h-[55%] w-full flex flex-col justify-between bento-box 
+                <div className=" bento-box-t bento-1 h-[55%] w-full flex flex-col justify-between bento-box 
                                 gap-[2rem] lg:gap-0 ">
                     <div className="flex items-start justify-between font-humane-black">
                         <div className=" items-start tracking-wider text-yellow-bg flex flex-col">
@@ -92,10 +151,10 @@ const HowCanIHelp = () => {
                 </div>
 
                 <div className="flex flex-1 gap-4 ">
-                    <div className=" bento-2 bento-box h-[150px] sm:h-[30svh] lg:h-auto bento-box-border flex-[2]">
+                    <div className=" bento-box-b bento-2 bento-box h-[150px] sm:h-[30svh] lg:h-auto bento-box-border flex-[2]">
 
                     </div>
-                    <div className=" bento-3 bento-box flex-[3]">
+                    <div className=" bento-box-b bento-3 bento-box flex-[3]">
                         <div className="flex h-full w-full justify-end items-end">
                             <div className="bento-tag bg-black bg-opacity-50 sm:mr-8">
                                 DEVELOPMENT
@@ -107,20 +166,20 @@ const HowCanIHelp = () => {
             </div>
 
             <div className="bc-2 lg:flex-[2] gap-4  sm:flex flex-col ">
-                <div className=" bento-4 justify-between items-end bento-box bento-box-border flex-[4]
+                <div className=" bento-box-t bento-4 justify-between items-end bento-box bento-box-border flex-[4]
                                 h-[400px] mb-4 sm:mb-0 sm:h-auto ">
                     <svg className='aspect-square  
                                      h-[7rem] sm:h-[10rem] lg:h-[6rem] xl:h-[10rem] 
                                      sm:mt-[40svh] lg:mt-0' 
                         viewBox="0 0 127 127" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="63.3564" y="3.39411" width="84.8" height="84.8" rx="42.4" transform="rotate(45 63.3564 3.39411)" stroke="#D1FD0A" stroke-width="4.8"/>
+                        <rect x="63.3564" y="3.39411" width="84.8" height="84.8" rx="42.4" transform="rotate(45 63.3564 3.39411)" stroke="#D1FD0A" strokeWidth="4.8"/>
                         <path d="M37.1086 66.5246L37.1086 60.189H80.5533L61.0937 40.7294L65.6192 36.2039L92.7721 63.3568L65.6192 90.5097L61.0937 85.9842L80.5533 66.5246L37.1086 66.5246Z" fill="#D1FD0A"/>
                     </svg>
                     <div className="bento-tag  scale-125 mr-6 mb-4">
                         ANIMATION
                     </div>
                 </div>
-                <div className=" bento-5 flex text-black font-humane-black bg-yellow-bg bento-box flex-[1]">
+                <div className=" bento-box-b bento-5 flex text-black font-humane-black bg-yellow-bg bento-box flex-[1]">
                     <div className="flex flex-1 flex-col justify-center items-start
                                     pl-4 sm:pl-0">
                         <span className='  mt-[-1rem] mb-[-2.5rem] sm:my-[-2.5rem] 
@@ -176,8 +235,8 @@ const HowCanIHelp = () => {
                     <div id='rRouter'>
                         <img src={rRouter} alt="" />
                     </div>
-                    <div id='gsap'>
-                        <img src={gsap} alt="" />
+                    <div id='gsapLogo'>
+                        <img src={gsapLogo} alt="" />
                     </div>
                     <div id='tailwind'>
                         <img src={tailwind} alt="" />

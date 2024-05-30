@@ -1,13 +1,67 @@
 import React from 'react'
 import fahad from '../../resources/fahad-img.png'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const AboutMe = () => {
+
+    useGSAP(()=>{
+        const tl =gsap.timeline()
+
+        tl.from('.who-i-txt',{
+            yPercent:200,
+            duration:1.8,
+            opacity:0,
+            ease:'elastic.out(1,1)',
+        })
+        tl.from('.name-img img',{
+            scale:0.5,
+            yPercent:100,
+            opacity:0,
+            duration:1.2,
+            ease:'power3.out',
+        },"<")
+        tl.from('.name-img h2',{
+            yPercent:200,
+            opacity:0,
+            duration:1.5,
+            ease:'power3.out'
+
+        },"<")
+        tl.from('.subme-txt',{
+            yPercent:150,
+            opacity:0,
+            stagger:0.2,
+            duration:1,
+        },"<")
+        tl.from('.about-me-para p',{
+            yPercent:150,
+            opacity:0,
+            stagger:0.2,
+            duration:1,
+            ease:'power3.out'
+        },"-=2.8")
+
+
+        ScrollTrigger.create({
+            trigger:'.about-me',
+            start:'25% bottom',
+            animation:tl,
+            toggleActions:'play play play reverse',
+            scroller:'#app'
+        })
+    })
+
   return (
-    <div className=' about-me relative z-10 w-full py-[3rem] sm:h-[100svh] bg-[#fffaef] rounded-[3rem] flex flex-col
-                     px-4 sm:px-[1.8rem] md:px-[3rem] lg:px-[5rem]'>
-        <h1 className="who-am-i text-center border-y border-opacity-20 border-black font-bruno-ace text-[#585858]
+    <div data-scroll-section className=' about-me overflow-hidden relative z-10 w-full py-[3rem] sm:h-[100svh] bg-[#fffaef bg-white-bg rounded-[3rem] flex flex-col
+                    px-4 sm:px-[1.8rem] md:px-[3rem] lg:px-[5rem]'>
+        <h1 className="who-am-i text-center overflow-hidden border-y border-opacity-20 border-black font-bruno-ace text-[#585858]
                          text-[2.75rem] sm:text-[5rem] xl:text-[6rem] 2xl:text-[7.5rem] px-4 sm:px-0">
-            Who am i ?
+            <div className='who-i-txt'>
+                Who am i ?
+            </div>
+            
         </h1>
         <div className="sub-me font-days-one flex justify-center sm:justify-between text-[#858585] 
                          text-[0.75rem] sm:text-[1rem] lg:text-[1.25rem]">
@@ -27,32 +81,32 @@ const AboutMe = () => {
 
             <div className="about-me-txt font-sansation tracking-wide lg:tracking-widest  flex items-center  flex-[3]  text-[#585858]
                             mt-[-1.5rem] sm:mt-0 2xl:text-[1.5rem] xl:text-[1.38rem] md:text-[1.25rem] text-[1.1rem] ">
-                <div className='flex flex-col justify-center h-[80%] border-y py-8 border-black border-opacity-20
+                <div className=' about-me-para flex flex-col justify-center h-[80%] border-y py-8 border-black border-opacity-20
                                 text-center sm:text-start px-8 sm:px-0 xl:px-[3rem] 2xl:px-[4rem] gap-4 2xl:gap-8'>
                     <p>
                         Am a creative forntend developer based on Kerala, persuing 
                             {/* <span className=' bg-black text-white opacity-40 px-2 mx-2'>
                                 Barchelor in Data Science
                             </span> */}
-                            <span className=' border-b-2 border-black-bg border-opacity-50 bg-yellow-bg bg-opacity-60  px-2 mx-2'>
+                            {/* <span className=' border-b-2 border-black-bg border-opacity-50 bg-yellow-bg bg-opacity-60  px-2 mx-2'> */}
                                 Barchelor in Data Science
-                            </span>
+                            {/* </span> */}
                          and which opens whole new opertunities for me! I
                     </p>
                     <p>
                         I have been developing 
-                        <span className=' border-b-2 border-black-bg border-opacity-50 bg-yellow-bg bg-opacity-60  px-2 mx-2'>
+                        {/* <span className=' border-b-2 border-black-bg border-opacity-50 bg-yellow-bg bg-opacity-60  px-2 mx-2'> */}
                             {/* Barchelor in Data Science */}
                             clean and modern websites with stunning animations 
-                        </span>
+                        {/* </span> */}
                         for the past 3 years!.
                     </p>
                     <p>
                         As Creative frontend Developer / Designer, i have 
-                        <span className=' border-b-2 border-black-bg border-opacity-50 bg-yellow-bg bg-opacity-60  px-2 mx-2'>
+                        {/* <span className=' border-b-2 border-black-bg border-opacity-50 bg-yellow-bg bg-opacity-60  px-2 mx-2'> */}
                             {/* Barchelor in Data Science */}
                             knowledge and experience in both Development and designing .
-                        </span>
+                        {/* </span> */}
                     </p>
                 </div>
             </div>

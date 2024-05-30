@@ -24,7 +24,8 @@ const Works = () => {
                 onLeave:()=>{
                     // gsap.to()
                 },
-                toggleActions:'restart play play reverse'
+                toggleActions:'play play play reverse',
+                scroller:'#app'
             }
             
         })
@@ -63,7 +64,7 @@ const Works = () => {
 
 
   return (
-    <div className=' works overflow-hidden'>
+    <div data-scroll-section className=' works overflow-hidden'>
 
 
 
@@ -81,7 +82,7 @@ const Works = () => {
             </span>
         </h1>
         <div className="projs-container -mt-[0svh]">
-            <Project    
+            <Project
                 title={"Chat circle"} 
                 sub1={"chat based"} 
                 sub2={"social media application"} 
@@ -89,10 +90,6 @@ const Works = () => {
                 no={"01"}
                 img={p1}
             />
-            
-            {/* <ProjectDetails 
-                {...allProjDetails.p1}
-            /> */}
 
             <Project 
                 title={"fashion site"} 

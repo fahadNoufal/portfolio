@@ -20,6 +20,8 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
             trigger:`.p${projNo}`,
             start:'-30% bottom',
             toggleActions:'restart play play reverse',
+            scroller:'#app'
+
             // markers:true
         })
 
@@ -33,22 +35,25 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
                 end:'bottom top',
                 // scrub:1,
                 toggleActions:'restart play play reverse',
+                scroller:'#app'
+
             }
-            
         })
 
         let sections=gsap.utils.toArray(".proj-item")
         ScrollTrigger.create({
             trigger: '.projs-container',
-            // pin: true,
             scrub: 1,
-            // snap: {
+            scroller:'#app',
             snap: 1/(sections.length+1) ,
             // duration: 0.1,
             // delay: 0.1,
             ease: "power1.inOut"
-            },
+        },
+            
         )
+
+        // gsap.to(".proj-img-container img",{ width:'100%', height:'100%',x:'-100%'})
         
         
     })
@@ -115,15 +120,15 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
                     {no}
                 </div>
             </div>
-            <div className=" mx-[4.2rem] mt-[15rem]  sm:mr-12 md:mr-[6rem] lg:mr-[10rem] 2xl:mr-[15rem] lg:mb-[4rem] sm:ml-[4rem] lg:ml-[8rem] xl:ml-0 sm:mt-[8rem] lg:mt-0 scale-125  2xl:mt-[-4rem] 2xl:items-start flex items-center
+            <div className=" proj-img-container mx-[4.2rem] mt-[15rem]  sm:mr-12 md:mr-[6rem] lg:mr-[10rem] 2xl:mr-[15rem] lg:mb-[4rem] sm:ml-[4rem] lg:ml-[8rem] xl:ml-0 sm:mt-[8rem] lg:mt-0 scale-125  2xl:mt-[-4rem] 2xl:items-start flex items-center
                             absolute z-[20] sm:relative">
                 <img src={img} alt="" className=' proj-img object-cover xl:w-full 2xl:h-full ' />
             </div>
 
         </div>
 
-        {/* <div className="proj-details-container absolute bg-white-bg w-full h-full z-[10] left-0 top-[00%]">
-        </div> */}
+        <div className="proj-details-container absolute bg-white-bg w-full h-full z-[10] left-0 top-[100%]">
+        </div>
         
     </div>
   )

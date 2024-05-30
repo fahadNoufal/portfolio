@@ -16,6 +16,7 @@ const Certificates = () => {
         start:'80% bottom',
         end:'bottom 50%',
         scrub:2,
+        scroller:'#app'
         
       }
     })
@@ -25,6 +26,8 @@ const Certificates = () => {
         start:'top top',
         end:'bottom 60%',
         pin:true,
+        scroller:'#app'
+
         // markers:true,
       }
     })
@@ -36,7 +39,7 @@ const Certificates = () => {
 
 
   return (
-    <div className= ' enough-of-dialogues overflow-x-clip h-[100svh] flex relative justify-center overflow-x-hidde items-center  '>
+    <div data-scroll-section className= ' enough-of-dialogues overflow-x-clip h-[100svh] flex relative justify-center overflow-x-hidde items-center  '>
         <div className=" enough-text certif-heading font-humane-black leading-[80%] tracking-wide text-yellow-bg text-center
                          text-[6rem] sm:text-[10rem] md:text-[8rem] xl:text-[12rem] 2xl:text-[16rem]">
             <div className='  pt-8'>

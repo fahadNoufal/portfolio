@@ -16,6 +16,8 @@ const Landing = () => {
                 trigger:'.landing',
                 start:'bottom 110%',
                 end:'bottom 10%',
+                scroller:'#app'
+
              }
         })
         gsap.to('.landing-text',{scale:0.7, opacity:0.5, ease:'',
@@ -25,6 +27,8 @@ const Landing = () => {
                 toggleActions:'restart play play reverse',
                 end:'bottom 50%',
                 scrub:1,
+                scroller:'#app'
+
             }
         })
 
@@ -34,13 +38,14 @@ const Landing = () => {
                 start:'top bottom',
                 end:'top 20%',
                 scrub:1,
+                scroller:'#app'
             }
         })
     })
     
 
   return (
-    <div className='landing bg-black-bg h-[100svh] w-full overflow-hidden relative '>
+    <div data-scroll-section className='landing bg-black-bg h-[100svh] w-full overflow-hidden relative '>
         <div className="landing-text relative flex flex-col justify-center text-center items-center h-full z-[1] ">
             <h4 className=' font-sansation-light  text-white
                              sm:text-[1.25rem]'>
