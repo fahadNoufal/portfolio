@@ -13,7 +13,7 @@ const BoringIsBad = () => {
             start:'top bottom',
             end:'75% top',
             scrub:1,
-            scroller:'#app'
+            // scroller:'#app'
 
             // markers:true,
 
@@ -23,7 +23,7 @@ const BoringIsBad = () => {
             start:'top bottom',
             end:'75% top',
             scrub:1,
-            scroller:'#app'
+            // scroller:'#app'
 
             // markers:true,
 
@@ -33,7 +33,7 @@ const BoringIsBad = () => {
             start:'top bottom',
             end:'85% top',
             scrub:1,
-            scroller:'#app'
+            // scroller:'#app'
 
             // markers:true,
 
@@ -42,7 +42,7 @@ const BoringIsBad = () => {
 
 
   return (
-    <div data-scroll-section className=' boring-is-bad flex flex-col sm:gap-24 pb-20 relative z-10 pt-[40svh] sm:-mt-[20svh]'>
+    <div data-scroll-section className=' boring-is-bad flex flex-col sm:gap-24 pb-20 relative z-10 pt-[10svh] sm:-mt-[20svh]'>
         <div className=' h-[100svh]  flex text-white flex-col justify-center uppercase items-center font-humane-black 
                          text-[7rem] sm:text-[10rem] lg:text-[14rem]'>
         
@@ -61,8 +61,8 @@ const BoringIsBad = () => {
         </div>
 
 
-        <div className=" am-here w-[99svw] line-clamp-[20px] leading-[200%] sm:leading-[120%] overflow-hidden  my-[-10px] text-[#070707] font-allison justify-between  bg-yellow-bg
-                         text-[2rem] md:text-[3rem] lg:text-[6rem]">
+        {/* <div className=" am-here w-[99svw] line-clamp-[20px] leading-[200%] sm:leading-[120%] overflow-hidden  my-[-10px] font-allison tracking-wide justify-between text-yellow-bg
+                         text-[2rem] md:text-[6rem] lg:text-[20rem]">
             <div className=" am-here-texts flex xl:w-[160%]  w-[120%] text-nowrap  justify-around
                              gap-[8rem] lg:gap-[12rem]">
                 <span  className='hidden xl:block' >Thats why am here!</span>
@@ -74,7 +74,7 @@ const BoringIsBad = () => {
                 <span className=''>Thats why am here!</span>
             </div>
 
-        </div>
+        </div> */}
     </div>
   )
 }

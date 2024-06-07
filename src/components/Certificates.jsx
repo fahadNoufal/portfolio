@@ -16,17 +16,18 @@ const Certificates = () => {
         start:'80% bottom',
         end:'bottom 50%',
         scrub:2,
-        scroller:'#app'
+        // scroller:'#app'
         
       }
     })
     gsap.to('.enought-of-dialogues',{
       scrollTrigger:{
         trigger:'.enough-of-dialogues',
-        start:'top top',
-        end:'bottom 60%',
-        pin:true,
-        scroller:'#app'
+        start:'top 60%',
+        end:'bottom 80%',
+        // markers:true,
+        // pin:true,
+        // scroller:'#app'
 
         // markers:true,
       }

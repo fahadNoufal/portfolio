@@ -11,9 +11,9 @@ const AboutMe = () => {
 
         tl.from('.who-i-txt',{
             yPercent:200,
-            duration:1.8,
+            duration:1,
             opacity:0,
-            ease:'elastic.out(1,1)',
+            ease:'power3.out',
         })
         tl.from('.name-img img',{
             scale:0.5,
@@ -25,14 +25,14 @@ const AboutMe = () => {
         tl.from('.name-img h2',{
             yPercent:200,
             opacity:0,
-            duration:1.5,
+            duration:1,
             ease:'power3.out'
 
         },"<")
         tl.from('.subme-txt',{
             yPercent:150,
             opacity:0,
-            stagger:0.2,
+            stagger:0.1,
             duration:1,
         },"<")
         tl.from('.about-me-para p',{
@@ -41,7 +41,7 @@ const AboutMe = () => {
             stagger:0.2,
             duration:1,
             ease:'power3.out'
-        },"-=2.8")
+        },"-=1.5")
 
 
         ScrollTrigger.create({
@@ -49,7 +49,7 @@ const AboutMe = () => {
             start:'25% bottom',
             animation:tl,
             toggleActions:'play play play reverse',
-            scroller:'#app'
+            // scroller:'#app'
         })
     })
 

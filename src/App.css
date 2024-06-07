@@ -10,7 +10,7 @@ body{
 
 .am-here{
     -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: #D1FD0A;
 }
 
 .bento-box{
@@ -54,7 +54,7 @@ body{
 
 .work-heading{
     background-image: linear-gradient( "to bottom", #fff , #333);
-    -webkit-background-clip: text;
+    -webkit-background-clip: text;  
     -webkit-text-fill-color: transparent;
     color: transparent;
 }
@@ -96,16 +96,11 @@ body{
     margin-top: 7rem;
 }
 
-
-.line-txt {
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-
-  }
   
 .line-txt{
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
     display: flex;
-    
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -115,10 +110,9 @@ body{
 .line-txt .text {
     letter-spacing: -.06em;
     line-height: 160%;
-    margin: 0;
+    margin: 0 50%;
     width: 100%;
     text-align: left;
-    
     /* width: 100%; */
     color: #b6b6b633;
     background: linear-gradient(to right, #b6b6b6, #b6b6b6) no-repeat;
@@ -126,10 +120,7 @@ body{
     background-clip: text;
     background-size: 0%;
     transition: background-size cubic-bezier(.1,.5,.5,1) 0.5s;
-    
-  
     border-bottom: 1px solid #2F2B28;
-    
     display: flex;
     flex-direction: column;
     /* align-items: flex-start; */
@@ -218,6 +209,9 @@ body{
     }
     .tech-stack div{
         height: 70px;
+    }
+    .line-txt .text{
+        line-height: 360%;
     }
   }
   .am-here span{

@@ -25,7 +25,7 @@ const Works = () => {
                     // gsap.to()
                 },
                 toggleActions:'play play play reverse',
-                scroller:'#app'
+                // scroller:'#app'
             }
             
         })

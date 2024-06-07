@@ -10,9 +10,12 @@ import './base.css'
 import { useEffect } from 'react';
 import locomotiveScroll from 'locomotive-scroll';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from 'gsap';
 
 
 function App() {
+
+  gsap.registerPlugin(ScrollTrigger)
   
   
   const allProjDetails={
@@ -36,45 +39,45 @@ function App() {
     }
   }
 
-  useEffect(()=>{
-    const scrollEl=document.querySelector("#app")
-    const locoScroll=new locomotiveScroll({
-      el:scrollEl,
-      smooth:true,
-      // multiplier:1,
-      // class:'is-reveal'
-    })
-    locoScroll.on("scroll",ScrollTrigger.update)
+  // useEffect(()=>{
+  //   const scrollEl=document.querySelector("#app")
+  //   const locoScroll=new locomotiveScroll({
+  //     el:scrollEl,
+  //     smooth:true,
+  //     // multiplier:1,
+  //     // class:'is-reveal'
+  //   })
+  //   locoScroll.on("scroll",ScrollTrigger.update)
 
-    ScrollTrigger.scrollerProxy("#app", {
-      scrollTop(value) {
-        return arguments.length
-          ? locoScroll.scrollTo(value, 0, 0)
-          : locoScroll.scroll.instance.scroll.y;
-      },
-      getBoundingClientRect() {
-        return {
-          top: 0,
-          left: 0,
-          width: window.innerWidth,
-          height: window.innerHeight
-        };
-      },
-      // pinType: document.querySelector("#app").style.transform
-      //   ? "transform"
-      //   : "fixed" 
+  //   ScrollTrigger.scrollerProxy("#app", {
+  //     scrollTop(value) {
+  //       return arguments.length
+  //         ? locoScroll.scrollTo(value, 0, 0)
+  //         : locoScroll.scroll.instance.scroll.y;
+  //     },
+  //     getBoundingClientRect() {
+  //       return {
+  //         top: 0,
+  //         left: 0,
+  //         width: window.innerWidth,
+  //         height: window.innerHeight
+  //       };
+  //     },
+  //     // pinType: document.querySelector("#app").style.transform
+  //     //   ? "transform"
+  //     //   : "fixed" 
     
-    });
-    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+  //   });
+  //   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
-    ScrollTrigger.refresh();
-  },[])
+  //   ScrollTrigger.refresh();
+  // },[])
   
   return (
 
 
     <div className="App bg-black-bg">
-      <div data-scroll-container id='app'>
+      <div  id='app'>
         <Landing/>
         <AboutMe/>
         <BoringIsBad/>

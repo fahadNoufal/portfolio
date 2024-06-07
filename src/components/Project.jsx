@@ -20,8 +20,7 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
             trigger:`.p${projNo}`,
             start:'-30% bottom',
             toggleActions:'restart play play reverse',
-            scroller:'#app'
-
+            // scroller:'#app'
             // markers:true
         })
 
@@ -30,12 +29,12 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
             duration:1,
             scrollTrigger:{
                 trigger:`.p${projNo}`,
-                markers:true,
+                // markers:true,
                 start:'-30% bottom',
                 end:'bottom top',
                 // scrub:1,
                 toggleActions:'restart play play reverse',
-                scroller:'#app'
+                // scroller:'#app'
 
             }
         })
@@ -44,7 +43,7 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
         ScrollTrigger.create({
             trigger: '.projs-container',
             scrub: 1,
-            scroller:'#app',
+            // scroller:'#app',
             snap: 1/(sections.length+1) ,
             // duration: 0.1,
             // delay: 0.1,

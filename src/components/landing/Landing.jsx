@@ -16,7 +16,7 @@ const Landing = () => {
                 trigger:'.landing',
                 start:'bottom 110%',
                 end:'bottom 10%',
-                scroller:'#app'
+                // scroller:'#app'
 
              }
         })
@@ -27,7 +27,7 @@ const Landing = () => {
                 toggleActions:'restart play play reverse',
                 end:'bottom 50%',
                 scrub:1,
-                scroller:'#app'
+                // scroller:'#app'
 
             }
         })
@@ -38,7 +38,7 @@ const Landing = () => {
                 start:'top bottom',
                 end:'top 20%',
                 scrub:1,
-                scroller:'#app'
+                // scroller:'#app'
             }
         })
     })

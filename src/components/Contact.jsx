@@ -12,7 +12,7 @@ const Contact = () => {
             trigger:'.contact-bottom',
             start:'80% bottom',
             toggleActions:'play play play reverse',
-            scroller:'#app'
+            // scroller:'#app'
 
             // markers:true
         }
@@ -28,7 +28,7 @@ const Contact = () => {
                 start:'bottom bottom',
                 end:'bottom top',
                 toggleActions:'play play play reverse',
-                scroller:'#app'
+                // scroller:'#app'
             }
 
         })
@@ -41,7 +41,7 @@ const Contact = () => {
                 trigger:'.message-btn-txt',
                 start:'bottom bottom',
                 end:'bottom top',
-                scroller:'#app'
+                // scroller:'#app'
             }
         })
     })
