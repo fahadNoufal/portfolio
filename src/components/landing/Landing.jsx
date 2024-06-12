@@ -45,7 +45,7 @@ const Landing = () => {
     
 
   return (
-    <div data-scroll-section className='landing bg-black-bg h-[100svh] w-full overflow-hidden relative '>
+    <div data-scroll-section className='landing bg-black-bg h-[100svh] w-full overflow-hidden relative  ' >
         <div className="landing-text relative flex flex-col justify-center text-center items-center h-full z-[1] ">
             <h4 className=' font-sansation-light  text-white
                              sm:text-[1.25rem]'>

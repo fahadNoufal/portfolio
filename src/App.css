@@ -4,6 +4,29 @@ body{
     overflow-x: hidden;
 }
 
+/* width */
+.project-details-scrollbar::-webkit-scrollbar {
+width: 16px;
+background-color: transparent;
+}
+
+/* Track */
+.project-details-scrollbar::-webkit-scrollbar-track {
+background: #E8E8E8;
+}
+
+/* Handle */
+.project-details-scrollbar::-webkit-scrollbar-thumb {
+background: #070707;
+border-radius: 8px;
+max-height: 120px;
+}
+
+/* Handle on hover */
+.project-details-scrollbar::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+
 .App{
     width: 100%;
 }
@@ -17,16 +40,93 @@ body{
     border-radius: 1.5rem;
     display: flex;
     padding: 1.75rem;
-    background-repeat: no-repeat;
+    position: relative;
+    z-index: 20;
+    overflow: hidden;
+    transition: 0.6s border-color    ;
+    /* background-repeat: no-repeat;
     background-position:center;
-    background-size:cover;
-    mix-blend-mode:lighten;
+    background-size:cover; */
+}
+
+
+
+.bento-box img{
+    /* absolute rounded-[1.5rem] left-0 top-0 w-full h-full */
+    position: absolute;
+    border-radius: 1.5rem;
+    /* offset: 0; */
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* opacity: .5; */
+    transition: 1s scale;
+    background-color: #070707;
+}
+
+.bento-box:hover{
+    border-color: #d1fd0a;
+
+}
+
+.bento-2.bento-box img,.bento-4.bento-box img{
+    object-fit: contain;
+}
+.bento-3.bento-box{
+    /* scale: 0.95; */
 }
 
 .bento-box-border{
     border: 2px solid #c7c7c7;   
+}
+
+.bento-2:hover>img,.bento-4:hover > img{
+    /* animation: 1s pulseDown; */
+    scale: 0.85;
+}
+.bento-1:hover>img,.bento-3:hover > img{
+    /* animation: 1s pulseUp; */
+    scale: 1.1;
+}
+
+.bento-box:hover .bento-tag{
+    background-color: #d1fd0a;
+    color: #070707;
 
 }
+
+.certificate-container img{
+    height: 550px;
+    transform: translateX(200px);
+    /* width: max-content; */
+    /* object-fit: contain; */
+    /* background: f; */
+}
+
+@keyframes pulseDown{
+    from,
+    to{
+        scale: 1;
+    }
+
+    50%{
+        scale: 0.8;
+    }
+}
+@keyframes pulseUp{
+    from,
+    to{
+        scale: 1;
+    }
+
+    50%{
+        scale: 1.1;
+    }
+}
+
 .bento-tag{
     border-radius: 1.5rem;
     border: 1px solid #d1fd0a;
@@ -34,27 +134,13 @@ body{
     color:#d1fd0a;
     font-family: 'sansation-light';
     padding: 0.5rem 1.5rem;
+    transition: 0.4s background-color,0.4s color ;
 
-}
-
-.bento-1{
-    background-image: url("./resources/service/service-solution.png");
-}
-.bento-2{
-    background-image: url("./resources/service/service-creative.png");
-}
-.bento-3{
-    background-image: url("./resources/service/service-development.png");
-}
-.bento-4{
-    background-size: contain;
-    background-color: #000;
-    background-image: url("./resources/service/service-animation.png");
 }
 
 .work-heading{
     background-image: linear-gradient( "to bottom", #fff , #333);
-    -webkit-background-clip: text;  
+    -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent;
     color: transparent;
 }
@@ -191,6 +277,41 @@ body{
     padding: 0.5rem 1.5rem;
 }
 
+
+
+
+#custom-cursor{
+    /* height: 20px;
+    width: 20px; */
+    border-radius: 20px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 500ms ease;
+    /* mix-blend-mode: difference; */
+}
+
+.App:hover > #custom-cursor{
+    opacity: 1;
+}
+
+
+
+
+/* .bento-1:hover,.bento-2:hover,.bento-3:hover,.bento-4:hover{
+    scale: 1.1;
+} */
+
+
+.contact-container{
+    box-shadow: -5px -10px 100px #07070780;
+}
+
+
 @media (max-width: 600px) {
     .bento-tag{
         border-radius: 1.5rem;
@@ -212,6 +333,12 @@ body{
     }
     .line-txt .text{
         line-height: 360%;
+
+    }
+    .certificate-container img{
+        height: 350px;
+        width: auto;
+
     }
   }
   .am-here span{

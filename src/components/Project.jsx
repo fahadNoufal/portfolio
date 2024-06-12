@@ -1,6 +1,6 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 
@@ -57,15 +57,21 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
         
     })
 
+
+    let projDetails={}
+
+
     let projNo=1
     if (no==="01"){
         projNo=1
     }
     else if (no==="02"){
         projNo=2
+
     }
     else if (no==="03"){
         projNo=3
+
     }
 
     let titleTxt =title.split('').map((char, index) => (
@@ -104,7 +110,8 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
         <div className="proj-intro flex  ">
             <div className="flex  flex-col relative
                             items-center sm:items-start ml-[1.5rem] sm:ml-0 sm:text-left px-[1.25rem] sm:pl-[4rem] lg:pl-[6rem] xl:pl-[10rem]  2xl:pl-[15rem] xl:pr-[10rem] 2xl:pr-[15rem] 
-            ">
+                            interactable
+            " data-type='view-project-direction'>
                 <h2 className="proj-thumbnail relative text-nowrap opacity-50 mt-8 capitalize font-allison 
                                   text-[4rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.7rem] xl:text-[4.5rem] 2xl:text-[5.5rem]
                                   w-full sm:w-auto">
@@ -120,14 +127,21 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
                 </div>
             </div>
             <div className=" proj-img-container mx-[4.2rem] mt-[15rem]  sm:mr-12 md:mr-[6rem] lg:mr-[10rem] 2xl:mr-[15rem] lg:mb-[4rem] sm:ml-[4rem] lg:ml-[8rem] xl:ml-0 sm:mt-[8rem] lg:mt-0 scale-125  2xl:mt-[-4rem] 2xl:items-start flex items-center
-                            absolute z-[20] sm:relative">
-                <img src={img} alt="" className=' proj-img object-cover xl:w-full 2xl:h-full ' />
+                            absolute z-[20] sm:relative
+                            interactable scale-cursor
+                            " data-type='view-project-details'>
+
+                <div id="proj-imageContainer ">
+                    <img src={img} id='proj-img-id' alt="" className=' proj-img object-cover xl:w-full 2xl:h-full ' />
+                </div>
             </div>
 
         </div>
 
         <div className="proj-details-container absolute bg-white-bg w-full h-full z-[10] left-0 top-[100%]">
         </div>
+        
+        
         
     </div>
   )

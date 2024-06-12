@@ -15,44 +15,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 
 
-const ProjectDetails = ({technos,type,description,name,num,platform,platformSub,github='',visit=''}) => {
-
-    useGSAP(()=>{
-        const tl=gsap.timeline({paused:false});
-        tl.from(".proj-detail-img",{
-            width:"100%",
-            yPercent:100,
-            duration:2,
-            ease:'power3.out'
-        })
-        tl.from([".proj-subheads",".proj-num"],{
-            yPercent:-200,
-            opacity:0,
-            duration:2,
-            ease:'power3.out'
-        },"<")
-        tl.from('.tech-stack-item',{
-            yPercent:200,
-            opacity:0,
-            duration:1.5,
-            delay:0.6,
-            ease:'back.out'
-        },"<")
-        tl.to('.projd-name-cover',{
-            yPercent:100,
-            duration:2.5,
-            ease:'power3.out'
-        },"-=1")
-        tl.from('.proj-details-line',{
-            xPercent:100,
-            duration:2,
-            delay:0.3,
-            ease:'power3.out'
-        },"<")
-        
-        
-
-    })
+const ProjectDetails = ({technos,type,description,name,num,platform,platformSub,github='',visit='',handleBackClick}) => {
 
     const techStack={
         python:["Python" , py],
@@ -66,6 +29,48 @@ const ProjectDetails = ({technos,type,description,name,num,platform,platformSub,
         router:["router",routerlogo],
     }
 
+    const tl=gsap.timeline();
+
+    useGSAP(()=>{
+
+    tl.set('.proj-details-curtain',{y:0})
+    tl.to('.details-curtain',{y:0,duration:1,stagger:{each:0.05,from:'edges'}})
+
+    tl.set('.project-details-container',{
+        y:0,opacity:1,
+    })
+    tl.from(".proj-detail-img",{
+        width:"100%",
+        yPercent:100,
+        duration:2,
+        ease:'power3.out'
+    })
+    tl.from([".proj-subheads",".proj-num"],{
+        yPercent:-200,
+        opacity:0,
+        duration:2,
+        ease:'power3.out'
+    },"<")
+    tl.from('.tech-stack-item',{
+        yPercent:200,
+        opacity:0,
+        duration:1.5,
+        delay:0.6,
+        ease:'back.out'
+    },"<")
+    tl.to('.projd-name-cover',{
+        yPercent:100,
+        duration:2.5,
+        ease:'power3.out'
+    },"-=1")
+    tl.from('.proj-details-line',{
+        xPercent:100,
+        duration:2,
+        delay:0.3,
+        ease:'power3.out'
+    },"<")
+    })
+
 
     const Tech=({name,img})=>{
       return(
@@ -78,7 +83,6 @@ const ProjectDetails = ({technos,type,description,name,num,platform,platformSub,
     }
 
     const techs= technos.map((tech)=>{
-        console.log(techStack[tech]);
         return(
             <Tech name={techStack[tech][0]} img={techStack[tech][1]}/>
         )
@@ -90,6 +94,7 @@ const ProjectDetails = ({technos,type,description,name,num,platform,platformSub,
 
   return (
     <div className=" bg-black-bg overflow-x-hidden ">
+
         <div className=' rounded-b-[1.5rem] overflow-hidden sm:rounded-b-[3rem] bg-white-bg  pl-4 sm:pl-[2rem] pb-[3rem] sm:pb-[4.25rem] pt-[2.25rem] relative
                         pr-4 sm:pr-[3rem] xl:pr-[8.75rem]'>
             <div className=" proj-subheads flex capitalize font-sansation  w-[40%] pb-[6.5rem] justify-between items-start opacity-50
@@ -139,7 +144,9 @@ const ProjectDetails = ({technos,type,description,name,num,platform,platformSub,
 
             <div className="flex justify-between font-humane-black tracking-wide uppercase
                              -mx-4 sm:mx-0 text-[2.5rem] sm:text-[3.5rem] xl:text-[5rem]">
-                <div className="go-back  items-center flex sm:gap-3 opacity-60">
+                <div className="go-back  items-center flex sm:gap-3 opacity-60 
+                                interactable scale-cursor" data-type='details-back'
+                    onClick={handleBackClick}>
                     <img src={arrow} className=' scale-50 md:scale-[0.8] rotate-[-135deg] ' alt="" />
                     <span className=' leading-[100%]'>go back</span>
                 </div>

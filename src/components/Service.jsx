@@ -9,6 +9,12 @@ import rRouter from "../resources/tech-stack/react-router.png";
 import gsapLogo from "../resources/tech-stack/gsap.png";
 import pyAnywhere from "../resources/tech-stack/python-anywhere.png";
 import react from "../resources/tech-stack/react.png";
+
+import bento1 from "../resources/service/service-creative-sol.jpg"
+import bento2 from "../resources/service/service-creative.png"
+import bento3 from "../resources/service/service-development.jpg"
+import bento4 from "../resources/service/service-animation.png"
+
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -74,6 +80,7 @@ const HowCanIHelp = () => {
         toggleActions: "play play play reverse",
         // scroller:'#app'
       },
+
     });
 
     const textElements = gsap.utils.toArray('.line-txt .text');
@@ -90,6 +97,8 @@ const HowCanIHelp = () => {
         },
       });
     });
+
+    // gsa
 
   });
 
@@ -139,6 +148,7 @@ const HowCanIHelp = () => {
             className=" bento-box-t bento-1 h-[55%] w-full flex flex-col justify-between bento-box z-10
                                 gap-[2rem] lg:gap-0 "
           >
+            <img className=" opacity-70 " src={bento1} alt="" />
             <div className="flex items-start justify-between font-humane-black">
               <div className=" items-start tracking-wider text-yellow-bg flex flex-col">
                 <span
@@ -155,20 +165,24 @@ const HowCanIHelp = () => {
             </div>
             <div
               className="flex justify-between text-left text-white -mt-4 items-end font-sansation-light
-                                    leading-[120%] sm:text-[1.2rem] md:text-[1.7rem] lg:text-[1.5rem] 2xl:text-[2rem]"
+                                    leading-[120%] sm:text-[1.2rem] md:text-[1.7rem] lg:text-[1.5rem] 2xl:text-[1.8 rem]"
             >
               <div className="w-[70%] lg:leading-[110%]  xl:leading-normal ">
                 Unique designs are always better for conveying messages to large
               </div>
-              <div className="bento-tag">UNIQUE</div>
+              <div className="bento-tag interactable  cursor-button  ">UNIQUE</div>
             </div>
           </div>
 
           <div className="flex flex-1 gap-4 ">
-            <div className=" bento-box-b bento-2 bento-box h-[150px] sm:h-[30svh] lg:h-auto bento-box-border flex-[2]"></div>
-            <div className=" bento-box-b bento-3 bento-box flex-[3]">
+            <div className=" bento-box-b bento-2 relative bento-box h-[150px] sm:h-[30svh] lg:h-auto bento-box-border flex-[2] mix-blend-lighten">
+                <img src={bento2} alt="" className=" scale-90 mix-blend-lighten" />
+            </div>
+            
+            <div className=" bento-box-b bento-3 bg-black  bento-box flex-[3]">
+              <img src={bento3} alt="" />
               <div className="flex h-full w-full justify-end items-end">
-                <div className="bento-tag bg-black bg-opacity-50 sm:mr-8">
+                <div className="bento-tag interactable  cursor-button bg-black bg-opacity-50 sm:mr-8">
                   DEVELOPMENT
                 </div>
               </div>
@@ -178,9 +192,11 @@ const HowCanIHelp = () => {
 
         <div className="bc-2 lg:flex-[2] gap-4  sm:flex flex-col ">
           <div
-            className=" bento-box-t bento-4 justify-between items-end bento-box bento-box-border flex-[4] z-10
+            className=" bento-box-t bento-4 justify-between items-end bento-box bento-box-border flex-[4] z-10 mix-blend-lighten  
                                 h-[400px] mb-4 sm:mb-0 sm:h-auto "
           >
+            <img src={bento4} alt="" />
+            
             <svg
               className="aspect-square  
                                      h-[7rem] sm:h-[10rem] lg:h-[6rem] xl:h-[10rem] 
@@ -204,7 +220,7 @@ const HowCanIHelp = () => {
                 fill="#D1FD0A"
               />
             </svg>
-            <div className="bento-tag  scale-125 mr-6 mb-4">ANIMATION</div>
+            <div className="bento-tag interactable  cursor-button  scale-125 mr-6 mb-4">ANIMATION</div>
           </div>
           <div className=" bento-box-b bento-5 flex text-black font-humane-black bg-yellow-bg bento-box flex-[1]">
             <div
@@ -238,8 +254,8 @@ const HowCanIHelp = () => {
         className="tech-stack lg:tech-stack-bg  w-full overflow-hidden border-y-2 border-white border-opacity-20 
                           mt-[3.5rem] sm:mt-[8rem] lg:mt-[10rem]  py-12 sm:py-[3.5rem] lg:py-[4.5rem]"
       >
-        <span className="  ml-[80px] flex flex-col lg:flex-row gap-[2.4rem] sm:gap-[3rem] lg:gap-[5rem] ">
-          <section className="flex gap-[2.4rem] sm:gap-[3rem] lg:gap-[5rem]">
+        <span className="  md:ml-[80px] flex flex-col lg:flex-row gap-[2rem] sm:gap-[3rem] lg:gap-[5rem] ">
+          <section className="flex justify-around  sm:gap-[3rem] lg:gap-[5rem]">
             {/* <div id='js'>
                         <img src="" alt="" />
                     </div> */}
@@ -255,14 +271,12 @@ const HowCanIHelp = () => {
             <div id="redux">
               <img src={redux} alt="" />
             </div>
-            <div className=" lg:hidden" id="python">
-              <img src={python} alt="" />
-            </div>
-          </section>
-          <section className="flex gap-[2.4rem] sm:gap-[3rem] lg:gap-[5rem]">
             <div id="python">
               <img src={python} alt="" />
             </div>
+          </section>
+          <section className="flex justify-around sm:gap-[3rem] lg:gap-[5rem]">
+            
             <div id="django">
               <img src={django} alt="" />
             </div>
@@ -285,15 +299,16 @@ const HowCanIHelp = () => {
       <div className="line w-full h-[2px] mt-4 sm:mt-10 bg-white opacity-20"></div>
 
       <div className="overflow-hidden line-txt leading-[100%] mx-8 md:mx-[8%] mt-[10rem] uppercase 
-                        text-[2.5rem] sm:text-[4rem] lg:text-[6rem] xl:text-[8rem] 2xl:text-[10rem] ">
-            <div className="text ">
+                        text-[2.5rem] sm:text-[4rem] lg:text-[6rem] xl:text-[8rem] 2xl:text-[10rem] 
+                        ">
+            <div className="text interactable  cursor-button " data-type="story">
                 story telling
                 <span>
                     <a href=" " >visuals</a>
                 </span>
             </div>
             
-            <div className="text"> 
+            <div className="text interactable " data-type="hook"> 
                 <div  className=' flex sm:gap-12  items-center'>
                     <h2>
                         HOOK
@@ -302,7 +317,7 @@ const HowCanIHelp = () => {
                 </div>
                 <span>Retention</span>
             </div>
-            <div className="text">
+            <div className="text interactable " data-type="stands-out">
                 <div className=' flex sm:gap-12  items-center'>
                     <h2>
                         Stands out
@@ -311,7 +326,7 @@ const HowCanIHelp = () => {
                 </div>
                 <span>WOAH!! </span>
             </div>
-            <div className="text">
+            <div className="text interactable " data-type="seo">
                 <div className=' flex sm:gap-12  items-center'>
                     <h2>
                         SEO
@@ -322,7 +337,7 @@ const HowCanIHelp = () => {
                     <a href=" " >Seamless</a>
                 </span>
             </div>
-            <div className="text">animations<span>Interactive!!</span></div>
+            <div className="text interactable" data-type="animation">animations<span>Interactive!!</span></div>
         </div>
     </div>
   );

@@ -7,37 +7,14 @@ import Certificates from './components/Certificates';
 import Works from './components/Works';
 import Contact from './components/Contact';
 import './base.css'
-import { useEffect } from 'react';
-import locomotiveScroll from 'locomotive-scroll';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
+import Cursor from './components/Cursor';
 
 
 function App() {
 
   gsap.registerPlugin(ScrollTrigger)
-  
-  
-  const allProjDetails={
-    p1:{
-        name:"Chat Circle", //capatilize here
-        num:'01',
-        type:'landing website',
-        platform:'social media',
-        platformSub:'application',
-        description:"Online text based social media application in which the users create rooms in and people can join and share their thoughts.",
-        technos:["python","mui","react","redux","router","gsap","tailwind"],
-        github:'',
-        visit:'',
-        
-    },
-    p2:{
-
-    },
-    p3:{
-
-    }
-  }
 
   // useEffect(()=>{
   //   const scrollEl=document.querySelector("#app")
@@ -72,31 +49,22 @@ function App() {
 
   //   ScrollTrigger.refresh();
   // },[])
+
   
   return (
 
 
     <div className="App bg-black-bg">
+      <Cursor/>
       <div  id='app'>
         <Landing/>
         <AboutMe/>
         <BoringIsBad/>
         <Service/>
         <Certificates/>
-        <Works/>
+        <Works />
         <Contact/>
-                                                  {/* <div data-scroll-section>
-                                                        <h1 data-scroll>Hey</h1>
-                                                        <p data-scroll>👋</p>
-                                                    </div>
-                                                    <div data-scroll-section>
-                                                        <h2 data-scroll data-scroll-speed="1">What's up?</h2>
-                                                        <p data-scroll data-scroll-speed="2">😬</p>
-                                                  </div> */}
       </div>
-      {/* <ProjectDetails 
-          {...allProjDetails.p1}
-      /> */}
 
     </div>
   );
