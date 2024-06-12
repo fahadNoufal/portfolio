@@ -267,7 +267,7 @@ const Contact = () => {
 
         </div>
         
-        {notification&&<div className="notification-container w-full translate-y-40 opacity-0 fixed bottom-20 left-0 flex justify-center">
+        {notification&&<div className="notification-container scale-75 sm:scale-100 w-full translate-y-40 opacity-0 fixed bottom-20 left-0 flex justify-center">
             <div className="notification bg-green-300 py-2 text-[1.2rem]  px-6 rounded-lg bg-opacity-65">
                 {notification}
             </div>

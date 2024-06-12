@@ -62,21 +62,6 @@ const Cursor = () => {
             )
         }
 
-
-        const SendSvg=()=>{
-            return(
-                <svg   className='absolute top-0 left-0 w-full h-full' fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g mask="url(#mask0_365_7)">
-                        <path d="M14.7148 96.8303V20.0303L105.915 58.4303L14.7148 96.8303ZM24.3148 82.4303L81.1948 58.4303L24.3148 34.4303V51.2303L53.1148 58.4303L24.3148 65.6303V82.4303Z" fill="#070707"/>
-                    </g>
-                </svg>
-            )
-        }
-
-
-
-
-
         let displayingComponent=''
 
          
