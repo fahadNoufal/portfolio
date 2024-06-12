@@ -1,5 +1,4 @@
 import React from 'react'
-import certificates from '../resources/certificats.png'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 
@@ -12,7 +11,6 @@ import c6 from '../resources/certificates/QlikSenseDataArchitectQualification.jp
 import c7 from '../resources/certificates/fahad noufal.jpg'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-// import { SplitText } from 'gsap/dist/SplitText'
 
 const Certificates = () => {
 
@@ -38,10 +36,7 @@ const Certificates = () => {
 
     tl2.to('.certificate-set-2 img',{
       x:-100,
-      // delay:1,
-      // duration:5,
       rotate:'+=4',
-
       stagger:0.1,
     },"<")
 
@@ -59,7 +54,6 @@ const Certificates = () => {
       start:'65% bottom',
       end:'bottom 0%',
       scrub:3,
-      // markers:true,
       animation:tl2,
     })
     
@@ -71,11 +65,6 @@ const Certificates = () => {
         trigger:'.enough-of-dialogues',
         start:'top 60%',
         end:'bottom 80%',
-        // markers:true,
-        // pin:true,
-        // scroller:'#app'
-
-        // markers:true,
       }
     })
   })
@@ -93,15 +82,10 @@ const Certificates = () => {
               {enoughOfDialogs}
             </div>
         </div>
-        {/* <img src={certificates} className='z-[-10]' alt="" /> */}
-        {/* <img 
-          src={certificates} 
-          className=' certificates-img absolute scale-[3] sm:scale-125 right-[-100%] sm:right-[-100%] xl:bottom-[-100%] bottom-[10%] sm:bottom-[-25%]
-                     interactable scale-cursor img-cursor' data-type="certificates" 
-          alt="" /> */}
 
-        <div className="certificate-container absolute left-0 flex-col flex gap-10 md:rotate-[25deg] translate-x-[100%] 
-                        top-[230%] scale-[0.6] translate-y-[-150%] rotate-[35deg] md:top-0 md:scale-[0.78] lg:scale-90 xl:scale-100 md:translate-y-[100%] ">
+        <div className="
+                        certificate-container absolute left-0 flex-col flex gap-10 md:rotate-[25deg] translate-x-[100%] 
+                        top-[230%] scale-[0.6] translate-y-[-100%] rotate-[35deg] md:top-0 md:scale-[0.78] lg:scale-90 xl:scale-100 md:translate-y-[100%] ">
           <div className="flex gap-10 w-full certificate-set-1">
             <img src={c1} alt=""/>
             <img src={c2} alt="" />

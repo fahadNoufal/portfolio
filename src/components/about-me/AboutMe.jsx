@@ -49,7 +49,6 @@ const AboutMe = () => {
             start:'25% bottom',
             animation:tl,
             toggleActions:'play play play reverse',
-            // scroller:'#app'
         })
     })
 
@@ -85,28 +84,17 @@ const AboutMe = () => {
                                 text-center sm:text-start px-8 sm:px-0 xl:px-[3rem] 2xl:px-[4rem] gap-4 2xl:gap-8'>
                     <p>
                         Am a creative forntend developer based on Kerala, persuing 
-                            {/* <span className=' bg-black text-white opacity-40 px-2 mx-2'>
                                 Barchelor in Data Science
-                            </span> */}
-                            {/* <span className=' border-b-2 border-black-bg border-opacity-50 bg-yellow-bg bg-opacity-60  px-2 mx-2'> */}
-                                Barchelor in Data Science
-                            {/* </span> */}
                          and which opens whole new opertunities for me! I
                     </p>
                     <p>
                         I have been developing 
-                        {/* <span className=' border-b-2 border-black-bg border-opacity-50 bg-yellow-bg bg-opacity-60  px-2 mx-2'> */}
-                            {/* Barchelor in Data Science */}
                             clean and modern websites with stunning animations 
-                        {/* </span> */}
                         for the past 3 years!.
                     </p>
                     <p>
                         As Creative frontend Developer / Designer, i have 
-                        {/* <span className=' border-b-2 border-black-bg border-opacity-50 bg-yellow-bg bg-opacity-60  px-2 mx-2'> */}
-                            {/* Barchelor in Data Science */}
                             knowledge and experience in both Development and designing .
-                        {/* </span> */}
                     </p>
                 </div>
             </div>

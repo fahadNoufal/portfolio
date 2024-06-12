@@ -46,20 +46,13 @@ const Works = () => {
                 trigger:'.work-txt-container',
                 start:'top 45%',
                 end:'50% top',
-                onLeave:()=>{
-                    // gsap.to()
-                },
                 toggleActions:'play play play reverse',
-                // scroller:'#app'
             }
         })        
     })
 
 
     
-    // Project- details page animation
-    
-
     const handleBackClick = () =>{
         const backTl=gsap.timeline()
         backTl.to('.project-details-container',{opacity:0, y:-100,duration:0.5,ease: 'power3.in'})
@@ -67,7 +60,6 @@ const Works = () => {
         backTl.to('.proj-details-curtain',{yPercent:-150,
             onComplete:() =>{setShowProjDetails(false)}
         })
-        // setShowProjDetails(false)
     }
 
 
@@ -77,7 +69,6 @@ const Works = () => {
             <div className=' work-letters leading-[90%] opacity-0 translate-y-[100%] bg-gradient-to-t from-[#333] to-white bg-clip-text text-transparent' key={index} >
                 <div className='inline-block  translate-y- '>{char}</div>
             </div>
-            // <div className='workText work-heading inline-block ' key={index}>{char}</div>
         ))
 
 
@@ -86,15 +77,8 @@ const Works = () => {
 
 
 
-        {/* {workText} */}
-        {/* <span className='workText'> S </span> */}
-        <h1 className=' work-txt-container h-[100svh] flex justify-center items-center font-humane-black -mt-[20svh] md:mt-0
+        <h1 className=' work-txt-container h-[100svh] flex justify-center items-center font-humane-black -mt-[0svh] md:mt-0
                           text-[12.5rem] sm:text-[15rem] md:text-[20rem] lg:text-[30rem] xl:text-[40rem] '>
-            {/* 
-            <div className=' border leading-[90%] bg-gradient-to-t from-[#333] to-white bg-clip-text text-transparent'>
-                <div className='inline-block  translate-y- '>S</div>
-            </div>
-            */}
             <span className='flex overflow-hidden pt-8'>
                 {workText}
             </span>
@@ -143,7 +127,6 @@ const Works = () => {
                     More Works
                 </span>
                 <svg className='aspect-square sm:ml-[-1.5rem] xl:ml-0 h-[5rem] sm:h-[8rem] xl:h-[12rem] -rotate-45  text-yellow-bg' viewBox="0 0 127 127" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    {/* <rect x="63.3564" y="3.39411" width="84.8" height="84.8" rx="42.4" transform="rotate(45 63.3564 3.39411)" stroke="#D1FD0A" stroke-width="4.8"/> */}
                     <path d="M37.1086 66.5246L37.1086 60.189H80.5533L61.0937 40.7294L65.6192 36.2039L92.7721 63.3568L65.6192 90.5097L61.0937 85.9842L80.5533 66.5246L37.1086 66.5246Z" fill='#D1FD0A'/>
                 </svg>
             </div>

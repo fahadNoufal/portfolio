@@ -1,6 +1,6 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 
@@ -20,8 +20,6 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
             trigger:`.p${projNo}`,
             start:'-30% bottom',
             toggleActions:'restart play play reverse',
-            // scroller:'#app'
-            // markers:true
         })
 
         gsap.to(`.p${projNo}`,{
@@ -29,13 +27,9 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
             duration:1,
             scrollTrigger:{
                 trigger:`.p${projNo}`,
-                // markers:true,
                 start:'-30% bottom',
                 end:'bottom top',
-                // scrub:1,
                 toggleActions:'restart play play reverse',
-                // scroller:'#app'
-
             }
         })
 
@@ -43,23 +37,13 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
         ScrollTrigger.create({
             trigger: '.projs-container',
             scrub: 1,
-            // scroller:'#app',
             snap: 1/(sections.length+1) ,
-            // duration: 0.1,
-            // delay: 0.1,
             ease: "power1.inOut"
         },
             
         )
 
-        // gsap.to(".proj-img-container img",{ width:'100%', height:'100%',x:'-100%'})
-        
-        
     })
-
-
-    let projDetails={}
-
 
     let projNo=1
     if (no==="01"){
@@ -83,15 +67,11 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
   return (
     <div className={`overflow-hidden proj-item p${projNo} bg-black-bg translate-y-[100svh] h-[100svh] sm:py-8  pt-[4rem] relative`}
         ref={container}>
-        {/* proj-name p${projNo}-h1 */}
         <h1 className={` overflow-hidden  uppercase tracking-widest border-y-2 border-yellow-bg border-opacity-20 font-days-one leading-[100%] md:leading-normal md:py-0
                            text-center sm:text-left px-2 sm:pl-[4rem] lg:pl-[6rem] xl:pl-[10rem] 2xl:pl-[14rem] sm:pr-[10rem] text-[10svw] sm:text-[4.5rem]  md:text-[3.5rem] lg:text-[5rem] xl:text-[6rem] 2xl:text-[8rem]
                             py-2 sm:py-5`}>
             <div className="flex pl-4">
                 {titleTxt}
-                {/* <div className={`  bg-clip-text text-transparent `}  >
-                    <div className='inline-block  '>AB</div>
-                </div> */}
             </div>
         </h1>
         <div className=" uppercase border-b-2 border-opacity-20  border-yellow-bg font-sansation-light 
@@ -99,12 +79,10 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
                           pl-[1.25rem] sm:pl-[4rem] lg:px-[6rem] xl:px-[10rem] 2xl:px-[15rem] xl:text-[1.25rem] sm:text-[1.1rem] text-[.8rem]">
             <p>
                 {sub1}
-               {/* chat based */}
             </p>
             
             <p>
                 {sub2}
-               {/* social media application */}
             </p>
         </div>
         <div className="proj-intro flex  ">
@@ -115,14 +93,12 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
                 <h2 className="proj-thumbnail relative text-nowrap opacity-50 mt-8 capitalize font-allison 
                                   text-[4rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.7rem] xl:text-[4.5rem] 2xl:text-[5.5rem]
                                   w-full sm:w-auto">
-                    {/* find your circle */}
                     <div className="thumb-cover"></div>
                     {thumb}
                 </h2>
                 <div className="proj-no opacity-10 top-[8rem] sm:top-[10rem] absolute  tracking-wider mt-[-12rem] font-humane-black
                                 text-[38rem] sm:text-[35rem] lg:text-[42rem] xl:text-[45rem]
                                 ml-[3.5rem] xl:ml-0">
-                    {/* 01 */}
                     {no}
                 </div>
             </div>

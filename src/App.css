@@ -44,25 +44,19 @@ background: #555;
     z-index: 20;
     overflow: hidden;
     transition: 0.6s border-color    ;
-    /* background-repeat: no-repeat;
-    background-position:center;
-    background-size:cover; */
 }
 
 
 
 .bento-box img{
-    /* absolute rounded-[1.5rem] left-0 top-0 w-full h-full */
     position: absolute;
     border-radius: 1.5rem;
-    /* offset: 0; */
     left: 0;
     top: 0;
     z-index: -1;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* opacity: .5; */
     transition: 1s scale;
     background-color: #070707;
 }
@@ -75,20 +69,16 @@ background: #555;
 .bento-2.bento-box img,.bento-4.bento-box img{
     object-fit: contain;
 }
-.bento-3.bento-box{
-    /* scale: 0.95; */
-}
+
 
 .bento-box-border{
     border: 2px solid #c7c7c7;   
 }
 
 .bento-2:hover>img,.bento-4:hover > img{
-    /* animation: 1s pulseDown; */
     scale: 0.85;
 }
 .bento-1:hover>img,.bento-3:hover > img{
-    /* animation: 1s pulseUp; */
     scale: 1.1;
 }
 
@@ -101,9 +91,6 @@ background: #555;
 .certificate-container img{
     height: 550px;
     transform: translateX(200px);
-    /* width: max-content; */
-    /* object-fit: contain; */
-    /* background: f; */
 }
 
 @keyframes pulseDown{
@@ -190,7 +177,6 @@ background: #555;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* height: 200vh; */
   }
   
 .line-txt .text {
@@ -199,7 +185,6 @@ background: #555;
     margin: 0 50%;
     width: 100%;
     text-align: left;
-    /* width: 100%; */
     color: #b6b6b633;
     background: linear-gradient(to right, #b6b6b6, #b6b6b6) no-repeat;
     -webkit-background-clip: text;
@@ -209,8 +194,6 @@ background: #555;
     border-bottom: 1px solid #2F2B28;
     display: flex;
     flex-direction: column;
-    /* align-items: flex-start; */
-    /* justify-content: center; */
     position: relative;
   }
   
@@ -258,7 +241,6 @@ background: #555;
     margin-top: 0.8rem;
     background: transparent;
     outline: none;
-    /* border-bottom: 2px solid #ffffff70; */
 }
 
 
@@ -281,8 +263,6 @@ background: #555;
 
 
 #custom-cursor{
-    /* height: 20px;
-    width: 20px; */
     border-radius: 20px;
     background-color: white;
     position: fixed;
@@ -292,20 +272,11 @@ background: #555;
     pointer-events: none;
     opacity: 0;
     transition: opacity 500ms ease;
-    /* mix-blend-mode: difference; */
 }
 
 .App:hover > #custom-cursor{
     opacity: 1;
 }
-
-
-
-
-/* .bento-1:hover,.bento-2:hover,.bento-3:hover,.bento-4:hover{
-    scale: 1.1;
-} */
-
 
 .contact-container{
     box-shadow: -5px -10px 100px #07070780;
@@ -357,4 +328,14 @@ background: #555;
     
     
 
+}
+
+.input-field-container input{
+    font-family: 'sansation';
+    font-size: 1.2rem;
+    
+}
+input:-webkit-autofill{
+    -webkit-text-fill-color: yellow #fff;
+    background-color: #070707;
 }

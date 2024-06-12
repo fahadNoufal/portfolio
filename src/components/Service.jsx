@@ -34,7 +34,6 @@ const HowCanIHelp = () => {
         end: "top top",
         scrubber: 3,
         toggleActions: "play play play reverse",
-        // how can:'#app'
       },
     });
 
@@ -50,7 +49,6 @@ const HowCanIHelp = () => {
         end: "top top",
         scrub: 3,
         toggleActions: "play play play reverse",
-        // how can:'#app'
       },
     });
 
@@ -64,21 +62,17 @@ const HowCanIHelp = () => {
         start: "10% bottom",
         end: "bottom top",
         toggleActions: "play play play reverse",
-        // scroller:'#app'
       },
     });
     gsap.from(".tech-stack section div", {
       scale: 0.2,
-      // x:-200,
       stagger: 0.05,
       opacity: 0,
       scrollTrigger: {
         trigger: ".tech-stack",
-        // markers:true,
         start: "bottom bottom",
         end: "bottom top",
         toggleActions: "play play play reverse",
-        // scroller:'#app'
       },
 
     });
@@ -98,21 +92,11 @@ const HowCanIHelp = () => {
       });
     });
 
-    // gsa
-
   });
-
-  // let serviceHeading='HOW  CAN  I  HELP  YOU'.split('').map((char, index) => (
-  //     <span className='   ' key={index} >
-  //         <span className=' '>{char}</span>
-  //     </span>
-  //     // <div className='workText work-heading inline-block ' key={index}>{char}</div>
-  // ))
 
   const ArrowMark=()=>{
       return(
           <svg className='aspect-square h-[6rem] md:h-[10rem] lg:h-[15rem] xl:h-[20rem] -rotate-45 ' viewBox="0 0 127 127" fill="none" xmlns="http://www.w3.org/2000/svg">
-              {/* <rect x="63.3564" y="3.39411" width="84.8" height="84.8" rx="42.4" transform="rotate(45 63.3564 3.39411)" stroke="#D1FD0A" stroke-width="4.8"/> */}
               <path d="M37.1086 66.5246L37.1086 60.189H80.5533L61.0937 40.7294L65.6192 36.2039L92.7721 63.3568L65.6192 90.5097L61.0937 85.9842L80.5533 66.5246L37.1086 66.5246Z" fill="#b6b6b633"/>
           </svg>
       )
@@ -132,7 +116,6 @@ const HowCanIHelp = () => {
                              bottom-0 sm:bottom-6 h-[50%] sm:h-[60%]"
         ></span>
         <span className=" overflow-hidden inline-block bg-[#070707] tracking-wide pt-3 px-6">
-          {/* HOW CAN I HELP YOU  */}
           <div className="how-help">
             HOW CAN I HELP YOU <span className=" text-yellow-bg">?</span>
           </div>
@@ -256,9 +239,6 @@ const HowCanIHelp = () => {
       >
         <span className="  md:ml-[80px] flex flex-col lg:flex-row gap-[2rem] sm:gap-[3rem] lg:gap-[5rem] ">
           <section className="flex justify-around  sm:gap-[3rem] lg:gap-[5rem]">
-            {/* <div id='js'>
-                        <img src="" alt="" />
-                    </div> */}
             <div id="js">
               <img src={js} alt="" />
             </div>

@@ -16,8 +16,6 @@ const Landing = () => {
                 trigger:'.landing',
                 start:'bottom 110%',
                 end:'bottom 10%',
-                // scroller:'#app'
-
              }
         })
         gsap.to('.landing-text',{scale:0.7, opacity:0.5, ease:'',
@@ -35,17 +33,16 @@ const Landing = () => {
         gsap.to('.about-me',{yPercent:-50,ease:'power3.out',
             scrollTrigger:{
                 trigger:'.about-me',
-                start:'top bottom',
+                start:'top 90%',
                 end:'top 20%',
                 scrub:1,
-                // scroller:'#app'
             }
         })
     })
     
 
   return (
-    <div data-scroll-section className='landing bg-black-bg h-[100svh] w-full overflow-hidden relative  ' >
+    <div className='landing bg-black-bg h-[100svh] w-full overflow-hidden relative ' >
         <div className="landing-text relative flex flex-col justify-center text-center items-center h-full z-[1] ">
             <h4 className=' font-sansation-light  text-white
                              sm:text-[1.25rem]'>
@@ -68,7 +65,7 @@ const Landing = () => {
         </div>
         
         
-        <svg className=' loading-wave absolute left-0 right-0 bottom-[-110%] ' viewBox="0 0 1280 851" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className=' loading-wave absolute left-0 right-0 bottom-[-110%] ' viewBox="0 0 1280 851" fill="none" >
             <g clipPath="url(#clip0_323_298)">
                 <g filter="url(#filter0_f_323_298)">
                     <path d="M640 1357.5C843.567 1357.5 1029.07 1296.64 1164.4 1196.75C1299.72 1096.86 1386.5 956.405 1386.5 798.5C1386.5 640.595 1299.72 500.14 1164.4 400.255C1029.07 300.363 843.567 239.5 640 239.5C436.433 239.5 250.93 300.363 115.599 400.255C-19.7232 500.14 -106.5 640.595 -106.5 798.5C-106.5 956.405 -19.7232 1096.86 115.599 1196.75C250.93 1296.64 436.433 1357.5 640 1357.5Z" 
