@@ -36,7 +36,7 @@ const Certificates = () => {
         trigger:'.enough-of-dialogues',
         start:'65% bottom',
         end:'bottom 0%',
-        markers:true,
+        // markers:true,
         scrub:3,
       }
     })

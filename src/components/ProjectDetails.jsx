@@ -1,7 +1,7 @@
 import React from 'react'
 import cc from "../resources/works/work-chat-circle.png"
 import djangologo from "../resources/bw-logo/django-logo.png"
-import gsaplogo from "../resources/bw-logo/django-logo.png"
+import gsaplogo from "../resources/bw-logo/gsap-logo.png"
 import js from "../resources/bw-logo/js-logo.png"
 import mui from "../resources/bw-logo/mui-logo.png"
 import py from "../resources/bw-logo/py-logo.png"
@@ -152,11 +152,11 @@ const ProjectDetails = ({technos,type,description,name,num,platform,platformSub,
                 </div>
                 <div className=" flex gap- md:gap-[5rem]">
                     <div className="go-back  items-center flex md:gap-3">
-                        <a href={visit} className=' leading-[100%]'>visit</a>
+                        <a target='_blank' rel='noreferrer' href={visit} className=' leading-[100%]'>visit</a>
                         <img src={arrow} className=' -ml-3 sm:ml-0 scale-50 md:scale-[0.95] ' alt="" />
                     </div>
                     <div className="go-back  items-center flex md:gap-3">
-                        <a href={github} className=' leading-[100%]'>github</a>
+                        <a target='_blank' rel='noreferrer' href={github} className=' leading-[100%]'>github</a>
                         <img src={arrow} className=' -ml-3 sm:ml-0 scale-50 md:scale-[0.95] ' alt="" />
                     </div>
                 </div>

@@ -83,18 +83,18 @@ const AboutMe = () => {
                 <div className=' about-me-para flex flex-col justify-center h-[80%] border-y py-8 border-black border-opacity-20
                                 text-center sm:text-start px-8 sm:px-0 xl:px-[3rem] 2xl:px-[4rem] gap-8 2xl:gap-8'>
                     <p>
-                        Am a creative forntend developer based on Kerala, persuing 
-                                Barchelor in Data Science
-                         and which opens whole new opertunities for me! I
+                        Am a creative developer based on Kerala, India; having Bachelor’s in Data Science.
+                        With a keen eye for design and a relentless drive to innovate.
                     </p>
                     <p>
-                        I have been developing 
-                            clean and modern websites with stunning animations 
-                        for the past 3 years!.
+
+                        {/* with the experience in from designing to developing helps me make best of all worlds . integrating greate ui with smooth animations and integrating functionalities to make exceptional user experience  */}
+                        My experience in both design and development allows me to seamlessly integrate stunning UI with smooth animations, creating exceptional user experiences.
+                        I build everything from frontend to backend.
+
                     </p>
                     <p>
-                        As Creative frontend Developer / Designer, i have 
-                            knowledge and experience in both Development and designing .
+                        I thrive on tackling new challenges and crafting solutions; I like learn and solve problems that comes on my way.
                     </p>
                 </div>
             </div>
