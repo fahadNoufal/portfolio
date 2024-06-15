@@ -57,6 +57,10 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
         projNo=3
 
     }
+    else if (no==="04"){
+        projNo=4
+
+    }
 
     let titleTxt =title.split('').map((char, index) => (
         <div className={`p${projNo}-h1 bg-clip-text text-transparent`} key={index} >
@@ -91,7 +95,7 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
                             interactable
             " data-type='view-project-direction'>
                 <h2 className="proj-thumbnail relative text-nowrap opacity-50 mt-8 capitalize font-allison 
-                                  text-[4rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.7rem] xl:text-[4.5rem] 2xl:text-[5.5rem]
+                                  text-[3.5rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.7rem] xl:text-[4.5rem] 2xl:text-[5.5rem]
                                   w-full sm:w-auto">
                     <div className="thumb-cover"></div>
                     {thumb}

@@ -20,7 +20,7 @@ const ProjectDetails = ({technos,type,description,name,num,platform,platformSub,
     const techStack={
         python:["Python" , py],
         django:["django",djangologo],
-        js:["javascript",js],
+        javascript:["javascript",js],
         mui:["material UI",mui],
         gsap:["gsap",gsaplogo],
         react:["react",reactlogo],
@@ -84,7 +84,7 @@ const ProjectDetails = ({technos,type,description,name,num,platform,platformSub,
 
     const techs= technos.map((tech)=>{
         return(
-            <Tech name={techStack[tech][0]} img={techStack[tech][1]}/>
+            <Tech key={techStack[tech][0]} name={techStack[tech][0]}  img={techStack[tech][1]}/>
         )
     }
     )
@@ -106,7 +106,7 @@ const ProjectDetails = ({technos,type,description,name,num,platform,platformSub,
                     <h4>
                         {platform}
                     </h4>
-                    <h4 className=' ml-8 -mt-2'> 
+                    <h4 className=' sm:ml-8 -mt-1 sm:-mt-2'> 
                         {platformSub}
                     </h4>
                 </div>
@@ -117,7 +117,7 @@ const ProjectDetails = ({technos,type,description,name,num,platform,platformSub,
                 {num}
             </div>
 
-            <div className=" pt-[9rem] sm:pt-[12rem] w-full flex justify-between items-start
+            <div className=" pt-[6rem] sm:pt-[12rem] w-full flex justify-between items-start
                             flex-col sm:flex-row pb-[4rem] xl:pb-[8rem]">
                 <div className="proj-info w-full gap-[4rem] flex flex-col items-start">
                     <h1 className='font-sansation overflow-hidden relative text-[4rem] md:text-[5.5rem] xl:text-[7.5rem] capitalize'>
@@ -137,7 +137,7 @@ const ProjectDetails = ({technos,type,description,name,num,platform,platformSub,
                     </p>
                 </div>
                 <div className="tech-stack flex mt-6 sm:mt-10 sm:flex-col 
-                                sm:gap-6 md:gap-12 xl:gap-16 -mx-4">
+                                sm:gap-6 md:gap-12 xl:gap-16 -mx-4 ">
                     {techs}
                 </div>
             </div>
@@ -147,17 +147,17 @@ const ProjectDetails = ({technos,type,description,name,num,platform,platformSub,
                 <div className="go-back  items-center flex sm:gap-3 opacity-60 
                                 interactable scale-cursor" data-type='details-back'
                     onClick={handleBackClick}>
-                    <img src={arrow} className=' scale-50 md:scale-[0.8] rotate-[-135deg] ' alt="" />
-                    <span className=' leading-[100%]'>go back</span>
+                    <img src={arrow} className=' scale-[0.4] sm:scale-50 md:scale-[0.8] rotate-[-135deg] ' alt="" />
+                    <span className=' -ml-2 sm:-ml-0 leading-[100%]'>go back</span>
                 </div>
-                <div className=" flex gap-4 md:gap-[5rem]">
+                <div className=" flex gap- md:gap-[5rem]">
                     <div className="go-back  items-center flex md:gap-3">
                         <a href={visit} className=' leading-[100%]'>visit</a>
-                        <img src={arrow} className=' scale-50 md:scale-[0.95] ' alt="" />
+                        <img src={arrow} className=' -ml-3 sm:ml-0 scale-50 md:scale-[0.95] ' alt="" />
                     </div>
                     <div className="go-back  items-center flex md:gap-3">
                         <a href={github} className=' leading-[100%]'>github</a>
-                        <img src={arrow} className=' scale-50 md:scale-[0.95] ' alt="" />
+                        <img src={arrow} className=' -ml-3 sm:ml-0 scale-50 md:scale-[0.95] ' alt="" />
                     </div>
                 </div>
             </div>
@@ -167,8 +167,8 @@ const ProjectDetails = ({technos,type,description,name,num,platform,platformSub,
 
         </div>
         <div className=" w-full ">
-            <div className=' py-5 text-2xl text-[#e8e8e8] mt-2 tracking-wide  opacity-80 font-sansation flex justify-between gap-4 sm:gap-10 w-[40%] 
-                             text-[1.2rem] pl-6 sm:pl-[4rem] xl:pl-[6rem]'>
+            <div className=' py-5 text-2xl text-[#e8e8e8] mt-2 tracking-wide  opacity-80 font-sansation justify-around flex sm:justify-between gap-4 sm:gap-10 sm:w-[40%] 
+                             text-[1rem]  sm:text-[1.2rem] sm:pl-[4rem] xl:pl-[6rem]'>
                 <a href=" ">About</a>
                 <a href=" ">Service</a>
                 <a href=" ">Contact</a>

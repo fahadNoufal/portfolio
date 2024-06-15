@@ -11,10 +11,12 @@ const Landing = () => {
     gsap.registerPlugin(ScrollTrigger)
     useGSAP(()=>{
         gsap.to('.loading-wave',{
-             yPercent:-190,duration:3, opacity:0,ease: 'power3.in', repeat:-1 ,
+             yPercent:-190,duration:2.8, opacity:0,ease: 'power3.in', repeat:-1 ,
              scrollTrigger:{
                 trigger:'.landing',
+                // start:'bottom 110%',
                 start:'bottom 110%',
+
                 end:'bottom 10%',
              }
         })

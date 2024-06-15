@@ -15,12 +15,30 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 const Certificates = () => {
 
   useGSAP(()=>{
+
+    let mobile=true
+
+    if (window.matchMedia("(min-width: 650px)").matches) {
+      mobile=false
+    }
+
+    gsap.set('.certificate-container', {
+      xPercent: `${mobile?90:90}`,
+      yPercent: `${mobile?-200:100}`
+    });
     
     const tl=gsap.timeline();
     
     tl.to('.certificate-container',{
-      xPercent:-280,
-      yPercent:-250,
+      xPercent:`${mobile?-200:-120}`,
+      yPercent:`${mobile?-280:-100}`,
+      scrollTrigger:{
+        trigger:'.enough-of-dialogues',
+        start:'65% bottom',
+        end:'bottom 0%',
+        markers:true,
+        scrub:3,
+      }
     })
     
     
@@ -46,27 +64,9 @@ const Certificates = () => {
       start:'65% bottom',
       end:'bottom 0%',
       scrub:3,
-      animation:tl,
-    })
-
-    ScrollTrigger.create({
-      trigger:'.enough-of-dialogues',
-      start:'65% bottom',
-      end:'bottom 0%',
-      scrub:3,
       animation:tl2,
     })
     
-    
-    
-    
-    gsap.to('.enought-of-dialogues',{
-      scrollTrigger:{
-        trigger:'.enough-of-dialogues',
-        start:'top 60%',
-        end:'bottom 80%',
-      }
-    })
   })
 
   let enoughOfDialogs ='ENOUGH OF DIALOGUES'.split('').map((char, index) => (
@@ -83,9 +83,12 @@ const Certificates = () => {
             </div>
         </div>
 
+        {/* certificate-container absolute left-0 flex-col flex gap-10 md:rotate-[25deg] translate-x-[100%] 
+                        top-[230%] scale-[0.6] translate-y-[-100%] rotate-[35deg] md:top-0 md:scale-[0.78] lg:scale-90 xl:scale-100 md:translate-y-[100%]  */}
+
         <div className="
-                        certificate-container absolute left-0 flex-col flex gap-10 md:rotate-[25deg] translate-x-[100%] 
-                        top-[230%] scale-[0.6] translate-y-[-100%] rotate-[35deg] md:top-0 md:scale-[0.78] lg:scale-90 xl:scale-100 md:translate-y-[100%] ">
+                        certificate-container absolute left-0 flex-col flex gap-10 md:rotate-[25deg]
+                        top-[230%] scale-[0.6] rotate-[35deg] md:top-0 md:scale-[0.78] lg:scale-90 xl:scale-100">
           <div className="flex gap-10 w-full certificate-set-1">
             <img src={c1} alt=""/>
             <img src={c2} alt="" />

@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import Project from './Project'
 import p1 from '../resources/works/work-chat-circle.png'
-import p2 from '../resources/works/work-fashion-site.png'
-import p3 from '../resources/works/work-task-flow.png'
+import p2 from '../resources/works/work-cc-app.png'
+import p3 from '../resources/works/work-fashion-site.png'
+import p4 from '../resources/works/work-task-flow.png'
 import ProjectDetails from './ProjectDetails'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
@@ -10,9 +11,11 @@ import gsap from 'gsap'
 
 const Works = () => {
 
-    const [showProjDetails,setShowProjDetails]=useState(false)
+    const [selectedProjDetails,setSelectedProjDetails]=useState(null)
 
 
+
+    console.log(selectedProjDetails)
     const allProjDetails={
         p1:{
             name:"chat circle",
@@ -20,20 +23,46 @@ const Works = () => {
             type:'landing website',
             platform:'social media',
             platformSub:'application',
-            description:"Online text based social media application in which the users create rooms in and people can join and share their thoughts.",
-            technos:["python","mui","react","redux","router","gsap","tailwind"],
-            github:'',
-            visit:'',
+            description:"The official landing page for the Chat Circle App, this site is a showcase of modern web design with React,featuring stunning animations and a sleek user interface that enhances visitor engagement.",
+            technos:["javascript","python","mui","react","redux","router","gsap","tailwind"],
+            github:'https://github.com/fahadNoufal/chat-circle',
+            visit:'https://fahadnoufal.github.io/chat-circle/',
             
         },
         p2:{
-
+            name:"Chat.C-App",
+            num:'03',
+            type:'Functional Application',
+            platform:'A Social Media',
+            platformSub:'application',
+            description:"This social media application offers a platform for users to create chat rooms and engage in real-time discussions. The backend is developed with Django, providing a RESTful API for efficient user interactions, while the React frontend ensures a smooth user experience, all supported by SQLPlus for data management.",
+            technos:["python","django","javascript","react","redux","router","gsap","tailwind","router"],
+            github:'https://github.com/fahadNoufal/chat-circle',
+            visit:'https://fahadnoufal.github.io/chat-circle/',
         },
         p3:{
-
+            name:"Fashion Site",
+            num:'02',
+            type:'Website for shopping',
+            platform:'Ecommerce',
+            platformSub:'website',
+            description:"An e-commerce site for fashion, crafted with pure HTML, CSS, and JavaScript. It encapsulates all e-commerce essentials like a blog, cart, gallery, and trending sections, offering a complete shopping experience without external frameworks.",
+            technos:["javascript"],
+            github:'https://github.com/fahadNoufal/fashion-site',
+            visit:'https://fahadnoufal.github.io/fashion-site/',
+        },
+        p4:{
+            name:"Task flow",
+            num:'04',
+            type:'landing website',
+            platform:'social media',
+            platformSub:'application',
+            description:"A to-do application that stands out with its engaging animations, making task management visually appealing and user-friendly.",
+            technos:["javascript","mui","react","redux","gsap","tailwind"],
+            github:'https://github.com/fahadNoufal/TaskFlow',
+            visit:'https://fahadnoufal.github.io/TaskFlow/',
         }
     }
-
         
     useGSAP(()=>{
         gsap.to('.work-letters',{
@@ -58,7 +87,7 @@ const Works = () => {
         backTl.to('.project-details-container',{opacity:0, y:-100,duration:0.5,ease: 'power3.in'})
         backTl.to('.details-curtain',{yPercent:-100,duration:1,stagger:{each:0.05,from:'center'}})
         backTl.to('.proj-details-curtain',{yPercent:-150,
-            onComplete:() =>{setShowProjDetails(false)}
+            onComplete:() =>{setSelectedProjDetails(null)}
         })
     }
 
@@ -85,7 +114,7 @@ const Works = () => {
         </h1>
         <div className="projs-container -mt-[0svh]">
             <div className="p1-container"
-                onClick={()=>{setShowProjDetails(true)}}
+                onClick={()=>{setSelectedProjDetails(allProjDetails.p1)}}
             >
                 <Project
                     title={"Chat circle"} 
@@ -97,25 +126,43 @@ const Works = () => {
                 />
             </div>
 
-            <div className="p2-container">
+            
+
+            <div className="p4-container"
+                onClick={()=>{setSelectedProjDetails(allProjDetails.p2)}}
+            >
+                <Project 
+                    title={"Chat.C-App"} 
+                    sub1={"Immersive chating"} 
+                    sub2={"with people of your interest"} 
+                    thumb={"Strengthen your ideas!"} 
+                    img={p2}
+                    no={"02"}
+                />
+            </div>
+            <div className="p2-container"
+                onClick={()=>{setSelectedProjDetails(allProjDetails.p3)}}
+            >
                 <Project 
                     title={"fashion site"} 
                     sub1={"online"} 
                     sub2={"Ecommerse website"} 
                     thumb={"Get your best outfit"} 
-                    no={"02"}
-                    img={p2}
+                    no={"03"}
+                    img={p3}
                 />
             </div>
 
-            <div className="p3-container">
+            <div className="p3-container"
+                onClick={()=>{setSelectedProjDetails(allProjDetails.p4)}}
+            >
                 <Project 
                     title={"Task flow"} 
                     sub1={"Modern todo app"} 
                     sub2={"with stunning animation"} 
                     thumb={"Get your things done"} 
-                    no={"03"}
-                    img={p3}
+                    no={"04"}
+                    img={p4}
                 />
             </div>
         </div>
@@ -144,13 +191,14 @@ const Works = () => {
 
 
 
+
         {
-            showProjDetails&&
+            selectedProjDetails!==null&&
             <div className=" project-details-container fixed top-0 left-0 right-0 bottom-0 overflow-y-scroll  z-50
                              project-details-scrollbar translate-y-[120svh]">
                 <ProjectDetails
                     handleBackClick={handleBackClick}
-                    {...allProjDetails.p1}
+                    {...selectedProjDetails}
                 />
             </div>
         }

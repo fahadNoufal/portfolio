@@ -79,9 +79,9 @@ const AboutMe = () => {
             </div>
 
             <div className="about-me-txt font-sansation tracking-wide lg:tracking-widest  flex items-center  flex-[3]  text-[#585858]
-                            mt-[-1.5rem] sm:mt-0 2xl:text-[1.5rem] xl:text-[1.38rem] md:text-[1.25rem] text-[1.1rem] ">
+                            mt-[-1.5rem] sm:mt-0 2xl:text-[1.5rem] xl:text-[1.38rem] md:text-[1.25rem] text-[1.1rem]  ">
                 <div className=' about-me-para flex flex-col justify-center h-[80%] border-y py-8 border-black border-opacity-20
-                                text-center sm:text-start px-8 sm:px-0 xl:px-[3rem] 2xl:px-[4rem] gap-4 2xl:gap-8'>
+                                text-center sm:text-start px-8 sm:px-0 xl:px-[3rem] 2xl:px-[4rem] gap-8 2xl:gap-8'>
                     <p>
                         Am a creative forntend developer based on Kerala, persuing 
                                 Barchelor in Data Science
