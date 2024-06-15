@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.ab2fc9fc.css",
-    "main.js": "/portfolio/static/js/main.eb3f5de2.js",
+    "main.css": "/portfolio/static/css/main.a45550de.css",
+    "main.js": "/portfolio/static/js/main.8d4232d5.js",
     "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
+    "static/media/work-cc-app.png": "/portfolio/static/media/work-cc-app.34547116a42efc5a5f83.png",
     "static/media/22CDSA1.jpg": "/portfolio/static/media/22CDSA1.6bb4a3fc32a5a39e603d.jpg",
     "static/media/Creative.svg": "/portfolio/static/media/Creative.bcd77bc38dee559be6194f1c935d7924.svg",
     "static/media/BentlyInstitute(3D).jpg": "/portfolio/static/media/BentlyInstitute(3D).8b0328b41d1dcac46b02.jpg",
@@ -33,12 +34,12 @@
     "static/media/javascriot.png": "/portfolio/static/media/javascriot.d2b09230ef424da03d47.png",
     "static/media/Frame 2762.svg": "/portfolio/static/media/Frame 2762.8daad722d93528cfeb8c3f37ff0e2413.svg",
     "index.html": "/portfolio/index.html",
-    "main.ab2fc9fc.css.map": "/portfolio/static/css/main.ab2fc9fc.css.map",
-    "main.eb3f5de2.js.map": "/portfolio/static/js/main.eb3f5de2.js.map",
+    "main.a45550de.css.map": "/portfolio/static/css/main.a45550de.css.map",
+    "main.8d4232d5.js.map": "/portfolio/static/js/main.8d4232d5.js.map",
     "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ab2fc9fc.css",
-    "static/js/main.eb3f5de2.js"
+    "static/css/main.a45550de.css",
+    "static/js/main.8d4232d5.js"
   ]
 }
