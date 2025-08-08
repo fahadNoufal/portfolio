@@ -24,7 +24,7 @@ function App() {
       <div  id='app'>
         <Landing/>
         <AboutMe/>
-        <BoringIsBad/>
+        {/* <BoringIsBad/> */}
         <Service/>
         <Certificates/>
         <Works />
