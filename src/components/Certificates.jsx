@@ -75,7 +75,7 @@ const Certificates = () => {
 
 
   return (
-    <div data-scroll-section className= ' enough-of-dialogues overflow-x-clip h-[100svh] flex relative justify-center overflow-x-hidde items-center  '>
+    <div data-scroll-section className= ' enough-of-dialogues overflow-x-clip h-[100dvh] flex relative justify-center overflow-x-hidde items-center  '>
         <div className=" enough-text certif-heading font-humane-black leading-[80%] tracking-wide text-yellow-bg text-center
                          text-[6rem] sm:text-[10rem] md:text-[8rem] xl:text-[12rem] 2xl:text-[16rem]">
             <div className='  pt-8'>

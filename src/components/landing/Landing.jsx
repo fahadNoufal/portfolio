@@ -15,7 +15,7 @@ const Landing = () => {
              scrollTrigger:{
                 trigger:'.landing',
                 // start:'bottom 110%',
-                start:'bottom 110%',
+                start:'top 110%',
 
                 end:'bottom 10%',
              }
@@ -44,7 +44,7 @@ const Landing = () => {
     
 
   return (
-    <div className='landing bg-black-bg h-[100svh] w-full overflow-hidden relative ' >
+    <div className='landing bg-black-bg h-[100dvh] w-full overflow-hidden relative ' >
         <div className="landing-text relative flex flex-col justify-center text-center items-center h-full z-[1] ">
             <h4 className=' font-sansation-light  text-white
                              sm:text-[1.25rem]'>

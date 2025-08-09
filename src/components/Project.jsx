@@ -29,19 +29,19 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
                 trigger:`.p${projNo}`,
                 start:'-30% bottom',
                 end:'bottom top',
-                toggleActions:'restart play play reverse',
+                toggleActions:'play',
             }
         })
 
-        let sections=gsap.utils.toArray(".proj-item")
-        ScrollTrigger.create({
-            trigger: '.projs-container',
-            scrub: 1,
-            snap: 1/(sections.length+1) ,
-            ease: "power1.inOut"
-        },
+        // let sections=gsap.utils.toArray(".proj-item")
+        // ScrollTrigger.create({
+        //     trigger: '.projs-container',
+        //     scrub: 1,
+        //     snap: 1/(sections.length+1) ,
+        //     ease: "power1.inOut"
+        // },
             
-        )
+        // )
 
     })
 
