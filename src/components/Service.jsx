@@ -56,7 +56,7 @@ const HowCanIHelp = () => {
       ease: "power4.out",
       scrollTrigger: {
         trigger: ".bento-container",
-        start: "70% bottom",
+        start: "50% bottom",
         toggleActions: "play none none reverse",
       },
     });
@@ -150,7 +150,7 @@ const HowCanIHelp = () => {
   return (
     <div
       data-scroll-section
-      className="text-center py-[11rem] items-center w-full "
+      className="text-center sm:mt-20 py-[11rem] items-center w-full "
     >
       <h1
         className=" relative z-10 text-white font-humane-black 

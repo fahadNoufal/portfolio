@@ -1,6 +1,7 @@
 import React from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import photo from '../../resources/fahad_img.jpg'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -14,17 +15,7 @@ const AboutMe = () => {
       duration: 1.2,
       opacity: 0,
     })
-      .from(
-        ".profile-placeholder",
-        {
-          scale: 0.6,
-          yPercent: 100,
-          opacity: 0,
-          duration: 1.4,
-          ease: "elastic.out(1, 0.7)",
-        },
-        "<"
-      )
+      
       .from(
         ".name-title",
         {
@@ -66,7 +57,7 @@ const AboutMe = () => {
   return (
     <section
       data-scroll-section
-      className="about-section relative z-10 w-full bg-[#FDFCF9] rounded-3xl px-6 sm:px-10 lg:px-20 py-16 sm:h-[100svh] overflow-hidden"
+      className="about-section relative z-10 w-full bg-[#FDFCF9] rounded-3xl px-6 sm:px-10 lg:px-20 py-16  overflow-hidden"
     >
       <header className="text-center mb-10">
         <h1 className="who-i-heading text-[#444] text-[2.75rem] sm:text-[5rem] xl:text-[6rem] 2xl:text-[7.5rem] font-bruno-ace border-y border-black border-opacity-20 px-4 sm:px-0 inline-block">
@@ -79,9 +70,9 @@ const AboutMe = () => {
         </div>
       </header>
 
-      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-10 sm:gap-16">
-        <div className="profile-placeholder w-[250px] h-[250px] sm:w-[320px] sm:h-[320px] bg-white border border-dashed border-[#999] rounded-2xl shadow-md mx-auto sm:mx-0 flex items-center justify-center transition-transform duration-500 hover:scale-105">
-          <span className="text-[#bbb] text-sm text-center">Image Placeholder</span>
+      <div className="flex flex-col md:flex-row items-center sm:items-start gap-10 sm:gap-16">
+        <div className="profile-placeholder md:w-1/4   max-h-full  rounded-2xl shadow-md mx-auto sm:mx-0 flex items-center justify-center transition-transform duration-500 hover:scale-105 overflow-hidden">
+          <img src={photo} className="text-[#bbb] text-sm text-center w-full h-full rounded-lg object-cover "/>
         </div>
 
         <div className="flex flex-col items-center sm:items-start flex-1">
@@ -94,6 +85,9 @@ const AboutMe = () => {
               I'm a creative developer from Kerala, India, holding a Bachelor’s in Data Science. I combine technical skill with a strong design aesthetic to bring concepts to life.
             </p>
           </div>
+            <p className=" about-description py-8 px-6 sm:px-0 xl:px-12 text-[#585858] text-center sm:text-left space-y-6 text-[1.1rem] md:text-[1.25rem] xl:text-[1.38rem] 2xl:text-[1.5rem] font-sansation tracking-wide lg:tracking-wider hidden sm:block">
+              A curious mind with a passion for blending code and creativity, turning ideas into immersive digital experiences. Skilled in crafting visually striking and user-friendly interfaces, while bringing innovation to every project. Always exploring the sweet spot where design meets technology."
+            </p>
         </div>
       </div>
     </section>

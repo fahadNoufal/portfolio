@@ -88,7 +88,7 @@ const Certificates = () => {
 
         <div className="
                         certificate-container absolute left-0 flex-col flex gap-10 md:rotate-[25deg]
-                        top-[230%] scale-[0.6] rotate-[35deg] md:top-0 md:scale-[0.78] lg:scale-90 xl:scale-100">
+                        top-[200%] scale-[0.6] rotate-[35deg] md:top-0 md:scale-[0.78] lg:scale-90 xl:scale-100">
           <div className="flex gap-10 w-full certificate-set-1">
             <img src={c1} alt=""/>
             <img src={c2} alt="" />
