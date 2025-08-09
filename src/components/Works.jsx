@@ -92,7 +92,7 @@ const Works = () => {
   ))
 
   return (
-    <div data-scroll-section className='works overflow-hidden'>
+    <div data-scroll-section className='work overflow-hidden'>
       <h1 className='work-txt-container h-[100dvh] flex justify-center items-center font-humane-black text-[12.5rem] sm:text-[15rem] md:text-[20rem] lg:text-[30rem] xl:text-[40rem]'>
         <span className='flex overflow-hidden pt-8'>
           {workText}

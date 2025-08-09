@@ -106,6 +106,20 @@ const HowCanIHelp = () => {
         toggleActions: "play none none reverse",
       },
     });
+    const textElements = gsap.utils.toArray('.line-txt .text');
+
+    textElements.forEach(text => {
+      gsap.to(text, {
+        backgroundSize: '100%',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: text,
+          start: 'center 100%',
+          end: 'center 20%',
+          scrub: true,
+        },
+      });
+    });
 
     // Hover animations for bento tags
     gsap.utils.toArray(".bento-tag").forEach((tag) => {
@@ -331,42 +345,45 @@ const HowCanIHelp = () => {
       <div className="line w-full h-[2px] mt-4 sm:mt-10 bg-white opacity-20"></div>
 
       <div
-        className="overflow-hidden line-txt leading-[100%] mx-8 md:mx-[8%] mt-[10rem] uppercase 
-                        text-[2.5rem] sm:text-[4rem] lg:text-[6rem] xl:text-[8rem] 2xl:text-[10rem] 
+        className="overflow-hidden line-txt leading-[100%] mt-[10rem] uppercase 
+                        text-[2.2rem] sm:text-[4rem] lg:text-[6rem] xl:text-[8rem] 2xl:text-[10rem] 
                         "
       >
         <div className="text interactable  cursor-button " data-type="story">
-          story telling
-          <span>
-            <a href=" ">visuals</a>
-          </span>
+          <div className=" line-heading flex sm:gap-12  items-center">
+            <h2>story telling</h2>
+            <ArrowMark />
+          </div>
+          <span>visuals</span>
         </div>
 
         <div className="text interactable " data-type="hook">
-          <div className=" flex sm:gap-12  items-center">
+          <div className=" line-heading flex sm:gap-12  items-center">
             <h2>HOOK</h2>
             <ArrowMark />
           </div>
           <span>Retention</span>
         </div>
         <div className="text interactable " data-type="stands-out">
-          <div className=" flex sm:gap-12  items-center">
+          <div className=" line-heading flex sm:gap-12  items-center">
             <h2>Stands out</h2>
             <ArrowMark />
           </div>
           <span>WOAH!! </span>
         </div>
         <div className="text interactable " data-type="seo">
-          <div className=" flex sm:gap-12  items-center">
+          <div className=" line-heading flex sm:gap-12  items-center">
             <h2>SEO</h2>
             <ArrowMark />
           </div>
-          <span>
-            <a href=" ">Seamless</a>
-          </span>
+          <span >Seamless</span>
         </div>
         <div className="text interactable" data-type="animation">
-          animations<span>Interactive!!</span>
+          <div className=" line-heading flex sm:gap-12  items-center">
+            <h2>animations</h2>
+            <ArrowMark />
+          </div>
+          <span >Interactive!!</span>
         </div>
       </div>
     </div>

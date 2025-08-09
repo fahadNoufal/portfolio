@@ -69,7 +69,7 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
     ))
 
   return (
-    <div className={`overflow-hidden proj-item p${projNo} bg-black-bg translate-y-[100svh] h-[100svh] sm:py-8  pt-[4rem] relative`}
+    <div className={`overflow-hidden proj-item p${projNo} bg-black-bg translate-y-[100dvh] h-[100dvh] sm:py-8  pt-[4rem] relative`}
         ref={container}>
         <h1 className={` overflow-hidden  uppercase tracking-widest border-y-2 border-yellow-bg border-opacity-20 font-days-one leading-[100%] md:leading-normal md:py-0
                            text-center sm:text-left px-2 sm:pl-[4rem] lg:pl-[6rem] xl:pl-[10rem] 2xl:pl-[14rem] sm:pr-[10rem] text-[10svw] sm:text-[4.5rem]  md:text-[3.5rem] lg:text-[5rem] xl:text-[6rem] 2xl:text-[8rem]

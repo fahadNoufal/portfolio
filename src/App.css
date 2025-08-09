@@ -182,13 +182,16 @@ background: #555;
 
   
 .line-txt{
-    padding: 0;
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
+.line-txt .line-heading{
+    padding: 0 0;
+}
   
 .line-txt .text {
     letter-spacing: -.06em;
@@ -238,6 +241,9 @@ background: #555;
     color: inherit;
   }
 
+.line-txt .line-heading{
+    padding: 0 8%;
+}
 
 
 .proj-info h1{
@@ -274,8 +280,7 @@ background: #555;
     border-radius: 20px;    
     background-color: white;
     position: fixed;
-    top: 0;
-    left: -30;
+    top: -1px;
     z-index: 999;
     pointer-events: none;
     opacity: 0;
@@ -325,7 +330,10 @@ background: #555;
     .p2 img{
         margin-top: 0rem;
     }
-  }
+    .line-txt .line-heading{
+    padding: 0 2rem;
+    }
+}
   .am-here span{
     font-size:3rem ;
   }
