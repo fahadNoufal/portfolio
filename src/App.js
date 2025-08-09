@@ -19,7 +19,7 @@ function App() {
   return (
 
 
-    <div className="App bg-black-bg">
+    <div className="App bg-black-bg select-none">
       <Cursor/>
       <div  id='app'>
         <Landing/>

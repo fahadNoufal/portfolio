@@ -10,97 +10,142 @@ import gsapLogo from "../resources/tech-stack/gsap.png";
 import pyAnywhere from "../resources/tech-stack/python-anywhere.png";
 import react from "../resources/tech-stack/react.png";
 
-import bento1 from "../resources/service/service-creative-sol.jpg"
-import bento2 from "../resources/service/service-creative.png"
-import bento3 from "../resources/service/service-development.jpg"
-import bento4 from "../resources/service/service-animation.png"
+import bento1 from "../resources/service/service-creative-sol.jpg";
+import bento2 from "../resources/service/service-creative.png";
+import bento3 from "../resources/service/service-development.jpg";
+import bento4 from "../resources/service/service-animation.png";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.defaults({ ease: "power2.out", duration: 1 });
+
+
 const HowCanIHelp = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Top bento boxes entrance with smoother, natural spring feel
     gsap.from(".bento-box-t", {
-      yPercent: 80,
-      stagger: 0.2,
+      y: 70,
       opacity: 0,
-      ease: "power3.out",
+      rotateX: -6,
+      transformOrigin: "center bottom",
+      stagger: 0.2,
+      ease: "power4.out",
+      duration: 1.4,
       scrollTrigger: {
         trigger: ".bento-container",
         start: "30% bottom",
-        end: "top top",
-        scrubber: 3,
-        toggleActions: "play play play reverse",
+        toggleActions: "play none none reverse",
       },
     });
 
+    // Bottom bento boxes entrance with natural lift
     gsap.from(".bento-box-b", {
-      yPercent: 50,
+      y: 50,
       opacity: 0,
-      stagger: 0.3,
-      duration: 1.8,
-      ease: "power3.out",
+      rotateX: 4,
+      stagger: 0.25,
+      duration: 1.4,
+      ease: "power4.out",
       scrollTrigger: {
         trigger: ".bento-container",
-        start: "80% bottom",
-        end: "top top",
-        scrub: 3,
-        toggleActions: "play play play reverse",
+        start: "70% bottom",
+        toggleActions: "play none none reverse",
       },
     });
 
-    gsap.from(".how-help", {
-      yPercent: 120,
-      duration: 1,
-      opacity: 0,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".how-help",
-        start: "10% bottom",
-        end: "bottom top",
-        toggleActions: "play play play reverse",
-      },
-    });
-    gsap.from(".tech-stack section div", {
-      scale: 0.2,
-      stagger: 0.05,
-      opacity: 0,
-      scrollTrigger: {
-        trigger: ".tech-stack",
-        start: "bottom bottom",
-        end: "bottom top",
-        toggleActions: "play play play reverse",
-      },
-
-    });
-
-    const textElements = gsap.utils.toArray('.line-txt .text');
-
-    textElements.forEach(text => {
-      gsap.to(text, {
-        backgroundSize: '100%',
-        ease: 'none',
+    // Parallax effect for images (desktop only)
+    if (window.innerWidth > 768) {
+      gsap.to(".bento-box img", {
+        yPercent: 6,
+        ease: "none",
         scrollTrigger: {
-          trigger: text,
-          start: 'center 80%',
-          end: 'center 20%',
+          trigger: ".bento-container",
+          start: "top bottom",
+          end: "bottom top",
           scrub: true,
         },
       });
+    }
+
+    // Title reveal animation - more organic motion
+    gsap.from(".how-help", {
+      y: 30,
+      opacity: 0,
+      scale: 0.96,
+      ease: "power4.out",
+      duration: 1.2,
+      scrollTrigger: {
+        trigger: ".how-help",
+        start: "10% bottom",
+        toggleActions: "play none none reverse",
+      },
     });
 
+    // Tech stack container smooth stagger with natural bounce
+    
+
+    // Line text reveal with smooth slide
+    gsap.from(".line-txt .text", {
+      yPercent: 120,
+      opacity: 0,
+      clipPath: "inset(100% 0% 0% 0%)",
+      stagger: 0.12,
+      ease: "power3.out",
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".line-txt",
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    // Hover animations for bento tags
+    gsap.utils.toArray(".bento-tag").forEach((tag) => {
+      tag.addEventListener("mouseenter", () => {
+        gsap.to(tag, { scale: 1.05, duration: 0.3, ease: "power2.out" });
+      });
+      tag.addEventListener("mouseleave", () => {
+        gsap.to(tag, { scale: 1, duration: 0.3, ease: "power2.out" });
+      });
+    });
+
+    // Hover image zoom for bento boxes
+    gsap.utils.toArray(".bento-box").forEach((box) => {
+      const img = box.querySelector("img");
+      if (img) {
+        box.addEventListener("mouseenter", () => {
+          gsap.to(img, { scale: 1.04, duration: 0.4, ease: "power2.out" });
+        });
+        box.addEventListener("mouseleave", () => {
+          gsap.to(img, { scale: 1, duration: 0.4, ease: "power2.out" });
+        });
+      }
+    });
   });
 
-  const ArrowMark=()=>{
-      return(
-          <svg className='aspect-square h-[6rem] md:h-[10rem] lg:h-[15rem] xl:h-[20rem] -rotate-45 ' viewBox="0 0 127 127" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M37.1086 66.5246L37.1086 60.189H80.5533L61.0937 40.7294L65.6192 36.2039L92.7721 63.3568L65.6192 90.5097L61.0937 85.9842L80.5533 66.5246L37.1086 66.5246Z" fill="#b6b6b633"/>
-          </svg>
-      )
-  }
+  const ArrowMark = () => {
+    return (
+      <svg
+        className="aspect-square h-[6rem] md:h-[10rem] lg:h-[15rem] xl:h-[20rem] -rotate-45 "
+        viewBox="0 0 127 127"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M37.1086 66.5246L37.1086 60.189H80.5533L61.0937 40.7294L65.6192 36.2039L92.7721 63.3568L65.6192 90.5097L61.0937 85.9842L80.5533 66.5246L37.1086 66.5246Z"
+          fill="#b6b6b633"
+        />
+      </svg>
+    );
+  };
 
   return (
     <div
@@ -153,15 +198,21 @@ const HowCanIHelp = () => {
               <div className="w-[70%] lg:leading-[110%]  xl:leading-normal ">
                 Unique designs are always better for conveying messages to large
               </div>
-              <div className="bento-tag interactable  cursor-button  ">UNIQUE</div>
+              <div className="bento-tag interactable  cursor-button  ">
+                UNIQUE
+              </div>
             </div>
           </div>
 
           <div className="flex flex-1 gap-4 ">
             <div className=" bento-box-b bento-2 relative bento-box h-[150px] sm:h-[30svh] lg:h-auto bento-box-border flex-[2] mix-blend-lighten">
-                <img src={bento2} alt="" className=" scale-90 mix-blend-lighten" />
+              <img
+                src={bento2}
+                alt=""
+                className=" scale-90 mix-blend-lighten"
+              />
             </div>
-            
+
             <div className=" bento-box-b bento-3 bg-black  bento-box flex-[3]">
               <img src={bento3} alt="" />
               <div className="flex h-full w-full justify-end items-end">
@@ -179,7 +230,7 @@ const HowCanIHelp = () => {
                                 h-[400px] mb-4 sm:mb-0 sm:h-auto "
           >
             <img src={bento4} alt="" />
-            
+
             <svg
               className="aspect-square  
                                      h-[7rem] sm:h-[10rem] lg:h-[6rem] xl:h-[10rem] 
@@ -203,7 +254,9 @@ const HowCanIHelp = () => {
                 fill="#D1FD0A"
               />
             </svg>
-            <div className="bento-tag interactable  cursor-button  scale-125 mr-6 mb-4">ANIMATION</div>
+            <div className="bento-tag interactable  cursor-button  scale-125 mr-6 mb-4">
+              ANIMATION
+            </div>
           </div>
           <div className=" bento-box-b bento-5 flex text-black font-humane-black bg-yellow-bg bento-box flex-[1]">
             <div
@@ -256,7 +309,6 @@ const HowCanIHelp = () => {
             </div>
           </section>
           <section className="flex justify-around sm:gap-[3rem] lg:gap-[5rem]">
-            
             <div id="django">
               <img src={django} alt="" />
             </div>
@@ -278,47 +330,45 @@ const HowCanIHelp = () => {
 
       <div className="line w-full h-[2px] mt-4 sm:mt-10 bg-white opacity-20"></div>
 
-      <div className="overflow-hidden line-txt leading-[100%] mx-8 md:mx-[8%] mt-[10rem] uppercase 
+      <div
+        className="overflow-hidden line-txt leading-[100%] mx-8 md:mx-[8%] mt-[10rem] uppercase 
                         text-[2.5rem] sm:text-[4rem] lg:text-[6rem] xl:text-[8rem] 2xl:text-[10rem] 
-                        ">
-            <div className="text interactable  cursor-button " data-type="story">
-                story telling
-                <span>
-                    <a href=" " >visuals</a>
-                </span>
-            </div>
-            
-            <div className="text interactable " data-type="hook"> 
-                <div  className=' flex sm:gap-12  items-center'>
-                    <h2>
-                        HOOK
-                    </h2>
-                    <ArrowMark/>
-                </div>
-                <span>Retention</span>
-            </div>
-            <div className="text interactable " data-type="stands-out">
-                <div className=' flex sm:gap-12  items-center'>
-                    <h2>
-                        Stands out
-                    </h2>
-                    <ArrowMark/>
-                </div>
-                <span>WOAH!! </span>
-            </div>
-            <div className="text interactable " data-type="seo">
-                <div className=' flex sm:gap-12  items-center'>
-                    <h2>
-                        SEO
-                    </h2>
-                    <ArrowMark/>
-                </div>
-                <span>
-                    <a href=" " >Seamless</a>
-                </span>
-            </div>
-            <div className="text interactable" data-type="animation">animations<span>Interactive!!</span></div>
+                        "
+      >
+        <div className="text interactable  cursor-button " data-type="story">
+          story telling
+          <span>
+            <a href=" ">visuals</a>
+          </span>
         </div>
+
+        <div className="text interactable " data-type="hook">
+          <div className=" flex sm:gap-12  items-center">
+            <h2>HOOK</h2>
+            <ArrowMark />
+          </div>
+          <span>Retention</span>
+        </div>
+        <div className="text interactable " data-type="stands-out">
+          <div className=" flex sm:gap-12  items-center">
+            <h2>Stands out</h2>
+            <ArrowMark />
+          </div>
+          <span>WOAH!! </span>
+        </div>
+        <div className="text interactable " data-type="seo">
+          <div className=" flex sm:gap-12  items-center">
+            <h2>SEO</h2>
+            <ArrowMark />
+          </div>
+          <span>
+            <a href=" ">Seamless</a>
+          </span>
+        </div>
+        <div className="text interactable" data-type="animation">
+          animations<span>Interactive!!</span>
+        </div>
+      </div>
     </div>
   );
 };

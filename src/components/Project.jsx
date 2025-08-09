@@ -111,9 +111,9 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
                             interactable scale-cursor
                             " data-type='view-project-details'>
 
-                <div id="proj-imageContainer ">
+                <button id="proj-imageContainer ">
                     <img src={img} id='proj-img-id' alt="" className=' proj-img object-cover xl:w-full 2xl:h-full ' />
-                </div>
+                </button>
             </div>
 
         </div>
