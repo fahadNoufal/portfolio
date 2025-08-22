@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.78139cd9.css",
-    "main.js": "/portfolio/static/js/main.bdf79b6b.js",
+    "main.css": "/portfolio/static/css/main.20b1747f.css",
+    "main.js": "/portfolio/static/js/main.6351e682.js",
     "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
     "static/media/work-cc-app.png": "/portfolio/static/media/work-cc-app.34547116a42efc5a5f83.png",
+    "static/media/fashion-site-reference.png": "/portfolio/static/media/fashion-site-reference.5c4f3a73deb606fb32c3.png",
     "static/media/22CDSA1.jpg": "/portfolio/static/media/22CDSA1.6bb4a3fc32a5a39e603d.jpg",
     "static/media/Creative.svg": "/portfolio/static/media/Creative.bcd77bc38dee559be6194f1c935d7924.svg",
     "static/media/BentlyInstitute(3D).jpg": "/portfolio/static/media/BentlyInstitute(3D).8b0328b41d1dcac46b02.jpg",
     "static/media/hook.webm": "/portfolio/static/media/hook.c7671bb2ed93f6dcafdf.webm",
     "static/media/fahad noufal.jpg": "/portfolio/static/media/fahad noufal.504399e1bf7b3772fbc8.jpg",
+    "static/media/xactitude-details.png": "/portfolio/static/media/xactitude-details.b0046f34376da003a66e.png",
+    "static/media/chat-circle-detail.png": "/portfolio/static/media/chat-circle-detail.4d355ad92f4abff61412.png",
     "static/media/MachineLearningOnramp.jpg": "/portfolio/static/media/MachineLearningOnramp.5b6649091d29ae3e9b14.jpg",
-    "static/media/work-task-flow.png": "/portfolio/static/media/work-task-flow.985fbc65159097f3f2b6.png",
     "static/media/work-fashion-site.png": "/portfolio/static/media/work-fashion-site.020ddb95f11e7ca53982.png",
+    "static/media/x-actitude-mockup.png": "/portfolio/static/media/x-actitude-mockup.7de2bb1b11b18d2cbdba.png",
     "static/media/Process_Automation_Bootcamp.jpg": "/portfolio/static/media/Process_Automation_Bootcamp.4a80dc78876f05432a04.jpg",
     "static/media/work-chat-circle.png": "/portfolio/static/media/work-chat-circle.4d77b005dc03c6f262f0.png",
     "static/media/hackerrank-5-star.png": "/portfolio/static/media/hackerrank-5-star.b2042180bd52113c3044.png",
@@ -23,7 +26,6 @@
     "static/media/animation.webm": "/portfolio/static/media/animation.cb2142198eb9dcb44250.webm",
     "static/media/Sansation_Light.ttf": "/portfolio/static/media/Sansation_Light.4b0e0e7199c58c7cc1d3.ttf",
     "static/media/Sansation_Regular.ttf": "/portfolio/static/media/Sansation_Regular.9be04a011dc2beea9985.ttf",
-    "static/media/smiley.png": "/portfolio/static/media/smiley.3128e4beadc56349f1c2.png",
     "static/media/Humane-Black-BF657fc365849db.otf": "/portfolio/static/media/Humane-Black-BF657fc365849db.73f32b61d8ce1b061a9f.otf",
     "static/media/service-creative-sol.jpg": "/portfolio/static/media/service-creative-sol.fe698cc987598128a86b.jpg",
     "static/media/service-creative.png": "/portfolio/static/media/service-creative.afc63815364775313b5e.png",
@@ -34,12 +36,12 @@
     "static/media/javascriot.png": "/portfolio/static/media/javascriot.d2b09230ef424da03d47.png",
     "static/media/Frame 2762.svg": "/portfolio/static/media/Frame 2762.8daad722d93528cfeb8c3f37ff0e2413.svg",
     "index.html": "/portfolio/index.html",
-    "main.78139cd9.css.map": "/portfolio/static/css/main.78139cd9.css.map",
-    "main.bdf79b6b.js.map": "/portfolio/static/js/main.bdf79b6b.js.map",
+    "main.20b1747f.css.map": "/portfolio/static/css/main.20b1747f.css.map",
+    "main.6351e682.js.map": "/portfolio/static/js/main.6351e682.js.map",
     "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.78139cd9.css",
-    "static/js/main.bdf79b6b.js"
+    "static/css/main.20b1747f.css",
+    "static/js/main.6351e682.js"
   ]
 }
