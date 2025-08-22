@@ -1,5 +1,4 @@
 import React from 'react'
-import cc from "../resources/works/work-chat-circle.png"
 import djangologo from "../resources/bw-logo/django-logo.png"
 import gsaplogo from "../resources/bw-logo/gsap-logo.png"
 import js from "../resources/bw-logo/js-logo.png"
@@ -15,7 +14,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 
 
-const ProjectDetails = ({technos,type,description,name,num,platform,platformSub,github='',visit='',handleBackClick}) => {
+const ProjectDetails = ({technos=[],type,description,name,num,platform,platformSub,github='',visit='',referenceImg='',handleBackClick}) => {
 
     const techStack={
         python:["Python" , py],
@@ -83,7 +82,7 @@ const ProjectDetails = ({technos,type,description,name,num,platform,platformSub,
     }
 
     const techs= technos.map((tech)=>{
-        return(
+        return technos&&(
             <Tech key={techStack[tech][0]} name={techStack[tech][0]}  img={techStack[tech][1]}/>
         )
     }
@@ -127,8 +126,8 @@ const ProjectDetails = ({technos,type,description,name,num,platform,platformSub,
                         </div>
                     </h1>
                     <img 
-                        className=' proj-detail-img m-auto sm:mx-0 sm:mb-0 sm:w-[80%] h-[450px] sm:h-[650px] xl:h-[1000px] mt-[-3rem]' 
-                        src={cc} 
+                        className=' proj-detail-img m-auto sm:mx-0 sm:mb-0 sm:w-[80%] h-[450px] sm:h-[650px] xl:h-auto mt-[-3rem] object-contain' 
+                        src={referenceImg} 
                         alt="" 
                     />
                     <p className=' text-[1.25rem] sm:text-[1.5rem] font-sansation-light opacity-70  leading-6 sm:leading-7
@@ -151,11 +150,11 @@ const ProjectDetails = ({technos,type,description,name,num,platform,platformSub,
                     <span className=' -ml-2 sm:-ml-0 leading-[100%]'>go back</span>
                 </div>
                 <div className=" flex gap- md:gap-[5rem]">
-                    <div className="go-back  items-center flex md:gap-3">
+                    <div className="go-back  items-center flex md:gap-3 cursor-pointer interactable " data-type='visit'>
                         <a target='_blank' rel='noreferrer' href={visit} className=' leading-[100%]'>visit</a>
                         <img src={arrow} className=' -ml-3 sm:ml-0 scale-50 md:scale-[0.95] ' alt="" />
                     </div>
-                    <div className="go-back  items-center flex md:gap-3">
+                    <div className="go-back  items-center flex md:gap-3 cursor-pointer interactable"  data-type='visit'>
                         <a target='_blank' rel='noreferrer' href={github} className=' leading-[100%]'>github</a>
                         <img src={arrow} className=' -ml-3 sm:ml-0 scale-50 md:scale-[0.95] ' alt="" />
                     </div>

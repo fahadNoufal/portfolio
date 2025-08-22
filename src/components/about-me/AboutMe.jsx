@@ -72,7 +72,7 @@ const AboutMe = () => {
 
       <div className="flex flex-col md:flex-row items-center sm:items-start gap-10 sm:gap-16">
         <div className="profile-placeholder md:w-1/4   max-h-full  rounded-2xl shadow-md mx-auto sm:mx-0 flex items-center justify-center transition-transform duration-500 hover:scale-105 overflow-hidden">
-          <img src={photo} className="text-[#bbb] text-sm text-center w-full h-full rounded-lg object-cover "/>
+          <img alt="profile" src={photo} className="text-[#bbb] text-sm text-center w-full h-full rounded-lg object-cover "/>
         </div>
 
         <div className="flex flex-col items-center sm:items-start flex-1">

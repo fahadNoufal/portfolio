@@ -92,6 +92,13 @@ const Cursor = () => {
                                         </svg>
                                     </div>
                 break
+            case 'visit':
+                displayingComponent= <div className=' bg-yellow-bg rounded-full scale-[7]'>
+                                        <svg className='aspect-square  -rotate-45' viewBox="0 0 127 127" >
+                                            <path d="M37.1086 66.5246L37.1086 60.189H80.5533L61.0937 40.7294L65.6192 36.2039L92.7721 63.3568L65.6192 90.5097L61.0937 85.9842L80.5533 66.5246L37.1086 66.5246Z" fill="#000"/>
+                                        </svg>
+                                    </div>
+                break
             case 'view-project-direction':
                 displayingComponent= <div className='bg-white rounded-full flex scale-[2]'>
                                         <svg className='' viewBox="0 0 127 127" >

@@ -1,6 +1,5 @@
 import './App.css';
 import AboutMe from './components/about-me/AboutMe';
-import BoringIsBad from './components/BoringIsBad';
 import Service from './components/Service';
 import Landing from './components/landing/Landing';
 import Certificates from './components/Certificates';
@@ -24,7 +23,6 @@ function App() {
       <div  id='app'>
         <Landing/>
         <AboutMe/>
-        {/* <BoringIsBad/> */}
         <Service/>
         <Certificates/>
         <Works />
