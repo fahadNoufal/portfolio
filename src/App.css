@@ -6,7 +6,7 @@ body{
 
 /* width */
 .project-details-scrollbar::-webkit-scrollbar {
-width: 16px;
+width: 10px;
 background-color: transparent;
 }
 
@@ -132,7 +132,7 @@ background: #555;
     color: transparent;
 }
 .p4 .proj-img-container img{
-    max-height: 400px;
+    height: auto;
 }
 .proj-name{
     color: wheat;
@@ -331,8 +331,14 @@ background: #555;
         margin-top: 0rem;
     }
     .line-txt .line-heading{
-    padding: 0 2rem;
+        padding: 0 2rem;
     }
+    .project-details-scrollbar::-webkit-scrollbar {
+        width: 8px;
+        height: 20px;
+        background-color: transparent;
+    }
+
 }
   .am-here span{
     font-size:3rem ;

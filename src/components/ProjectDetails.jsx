@@ -73,9 +73,9 @@ const ProjectDetails = ({technos=[],type,description,name,num,platform,platformS
 
     const Tech=({name,img})=>{
       return(
-        <div className=" tech-stack-item w-full  capitalize flex flex-col gap-1 sm:gap-2 font-sansation text-[0.9rem] sm:text-[1rem] 
+        <div className=" tech-stack-item items-center w-full capitalize flex flex-col gap-1 sm:gap-2 font-sansation text-[0.9rem] sm:text-[1rem] 
                         scale-75 sm:scale-90 md:scale-100 xl:scale-125 text-center sm:text-left">
-            <img className=' w-[64px] h-[54px] object-cover' src={img} alt={name} />
+            <img className=' w-[64px] h-[54px] object-cover rounded-md shadow-lg' src={img} alt={name} />
             <span className=''>{name}</span>
         </div>
     )
@@ -147,7 +147,7 @@ const ProjectDetails = ({technos=[],type,description,name,num,platform,platformS
                                 interactable scale-cursor" data-type='details-back'
                     onClick={handleBackClick}>
                     <img src={arrow} className=' scale-[0.4] sm:scale-50 md:scale-[0.8] rotate-[-135deg] ' alt="" />
-                    <span className=' -ml-2 sm:-ml-0 leading-[100%]'>go back</span>
+                    <span className=' -ml-2 sm:-ml-0 leading-[100%]'>back</span>
                 </div>
                 <div className=" flex gap- md:gap-[5rem]">
                     <div className="go-back  items-center flex md:gap-3 cursor-pointer interactable " data-type='visit'>

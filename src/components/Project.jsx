@@ -112,7 +112,7 @@ const Project = ({title,sub1,sub2,thumb,no,img}) => {
                             " data-type='view-project-details'>
 
                 <button id="proj-imageContainer ">
-                    <img src={img} id='proj-img-id' alt="" className=' proj-img object-cover xl:w-full 2xl:h-full ' />
+                    <img src={img} id='proj-img-id' alt="" className=' proj-img object-cover w-full h-full xl:w-full 2xl:h-full ' />
                 </button>
             </div>
 
