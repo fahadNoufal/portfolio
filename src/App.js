@@ -4,6 +4,8 @@ import Service from './components/Service';
 import Landing from './components/landing/Landing';
 import Certificates from './components/Certificates';
 import Works from './components/Works';
+// import Gallary from './components/image-gallary/Gallery.tsx'
+import WebProjs from './components/web-projects/WebProjs.jsx';
 import Contact from './components/Contact';
 import './base.css'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -25,9 +27,11 @@ function App() {
         <AboutMe/>
         <Service/>
         <Certificates/>
+        <WebProjs/>
         <Works />
         <Contact/>
       </div>
+      {/* <Gallary/> */}
 
     </div>
   );

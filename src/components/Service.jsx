@@ -23,7 +23,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 gsap.defaults({ ease: "power2.out", duration: 1 });
 
-
 const HowCanIHelp = () => {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -32,7 +31,7 @@ const HowCanIHelp = () => {
 
     // Top bento boxes entrance with smoother, natural spring feel
     gsap.from(".bento-box-t", {
-      y: 70,
+      y: 500,
       opacity: 0,
       rotateX: -6,
       transformOrigin: "center bottom",
@@ -90,7 +89,6 @@ const HowCanIHelp = () => {
     });
 
     // Tech stack container smooth stagger with natural bounce
-    
 
     // Line text reveal with smooth slide
     gsap.from(".line-txt .text", {
@@ -106,16 +104,16 @@ const HowCanIHelp = () => {
         toggleActions: "play none none reverse",
       },
     });
-    const textElements = gsap.utils.toArray('.line-txt .text');
+    const textElements = gsap.utils.toArray(".line-txt .text");
 
-    textElements.forEach(text => {
+    textElements.forEach((text) => {
       gsap.to(text, {
-        backgroundSize: '100%',
-        ease: 'none',
+        backgroundSize: "100%",
+        ease: "none",
         scrollTrigger: {
           trigger: text,
-          start: 'center 100%',
-          end: 'center 20%',
+          start: "center 100%",
+          end: "center 20%",
           scrub: true,
         },
       });
@@ -161,28 +159,71 @@ const HowCanIHelp = () => {
     );
   };
 
+  const serviceText = "EXPERTISE".split("").map((char, index) => (
+    <div
+      className="service-letters leading-[90%] opacity-0 translate-y-[50%] bg-gradient-to-t from-[#333] to-white bg-clip-text text-transparent"
+      key={index}
+    >
+      <div className="inline-block">{char}</div>
+    </div>
+  ));
+  useGSAP(() => {
+    gsap.to(".service-letters", {
+      y: 0,
+      stagger: 0.05,
+      ease: "power4.out",
+      duration: 1,
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".service-txt-container",
+        start: "top 45%",
+        end: "50% top",
+        toggleActions: "play play play reverse",
+        onLeave: () => {
+          gsap.to(".service-desc-text", {
+            y: 0,
+            opacity: 0,
+            duration: 0.5,
+          });
+        },
+      },
+      onComplete: () => {
+        gsap.to(".service-desc-text", {
+          y: '-150%',
+          opacity: 0.4,
+          ease: "power4.out",
+          duration: 1,
+        });
+      },
+      
+      
+    });
+  });
+
   return (
     <div
       data-scroll-section
-      className="text-center sm:mt-20 py-[11rem] items-center w-full "
+      className="text-center sm:mt-20 xl:mt-40 py-[11rem] items-center w-full "
     >
       <h1
         className=" relative z-10 text-white font-humane-black 
                          text-[3.2rem] sm:text-[5rem] md:text-[6rem] lg:text-[8rem]"
       >
-        <span
-          className=" absolute z-[-1] border-y opacity-20 border-white  w-full left-0 
-                             bottom-0 sm:bottom-6 h-[50%] sm:h-[60%]"
-        ></span>
         <span className=" overflow-hidden inline-block bg-[#070707] tracking-wide pt-3 px-6">
-          <div className="how-help">
-            HOW CAN I HELP YOU <span className=" text-yellow-bg">?</span>
-          </div>
+          <h1 className="service-txt-container h-[100dvh] flex font-humane-black text-[12.5rem] sm:text-[15rem] md:text-[20rem] lg:text-[30rem] xl:text-[40rem]">
+            <span className="flex overflow-hidden pt-8 flex-col items-center md:items-start">
+              <div className="flex">{serviceText}</div>
+              <p className=" service-desc-text font-sansation self-start tracking-wide lg:tracking-wider text-3xl opacity-0 ">
+                From exploring data to developing predictive models, I
+                specialize in transforming .
+              </p>
+            </span>
+          </h1>
         </span>
       </h1>
 
       <div
-        className="bento-container relative overflow-hidden mt-[5rem] md:mt-[10rem] lg:mt-[16rem] lg:h-[100svh] gap-4 flex lg:flex-row flex-col rounded-[1.5rem]
+        className="bento-container relative overflow-hidden mt-[5rem]  lg:h-[100svh] gap-4 flex lg:flex-row flex-col rounded-[1.5rem]
                          p-[1.2rem] sm:p-[2.5rem] lg:p-[1.5rem] sm:tag-lg"
       >
         <div className="bc-1 flex-[3] gap-4 flex flex-col">
@@ -376,14 +417,14 @@ const HowCanIHelp = () => {
             <h2>SEO</h2>
             <ArrowMark />
           </div>
-          <span >Seamless</span>
+          <span>Seamless</span>
         </div>
         <div className="text interactable" data-type="animation">
           <div className=" line-heading flex sm:gap-12  items-center">
             <h2>animations</h2>
             <ArrowMark />
           </div>
-          <span >Interactive!!</span>
+          <span>Interactive!!</span>
         </div>
       </div>
     </div>

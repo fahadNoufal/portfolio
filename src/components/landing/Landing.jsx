@@ -45,6 +45,26 @@ const Landing = () => {
 
   return (
     <div className='landing bg-black-bg h-[100dvh] w-full overflow-hidden relative ' >
+        <nav className='flex flex-row justify-between text-[2rem] tracking-wider font-allison text-[#bfbfbf] font-light items-center absolute top-0 left-0 right-0 px-20 py-10 '>
+            <div className="logo text-white font z-10 relative">
+                Home
+            </div>
+            <div className="nav-links flex gap-20 text-white z-10 relative">
+                <a href="#about-me" className='hover:text-gray-400 transition-colors'>Intro</a>
+                <a href="#services" className='hover:text-gray-400 transition-colors'>Services</a>
+                {/* <a href="#web-projs" className='hover:text-gray-400 transition-colors'>Web Projects</a> */}
+                <a href="#works" className='hover:text-gray-400 transition-colors'>Works</a>
+                <a href="#contact" className='hover:text-gray-400 transition-colors'>Contact</a>
+            </div>
+
+        </nav>
+        <div className='flex absolute top-0 bottom-0 left-0 right-0'>
+            <div className="w-full border-white opacity-10 border-y-0 border h-full"></div>
+            <div className="w-full border-white opacity-10 border-y-0 border h-full"></div>
+            <div className="w-full border-white opacity-10 border-y-0 border h-full"></div>
+            <div className="w-full border-white opacity-10 border-y-0 border h-full"></div>
+            <div className="w-full border-white opacity-10 border-y-0 border h-full"></div>
+        </div>
         <div className="landing-text relative flex flex-col justify-center text-center items-center h-full z-[1] ">
             <h4 className=' font-sansation-light  text-white
                              sm:text-[1.25rem]'>
@@ -57,13 +77,13 @@ const Landing = () => {
             <img src={creative} alt="" className=' px-2 sm:w-[70%] lg:w-[50%]' />
             <h3 className=' font-days-one  text-[#bfbfbf]
                              mt-[1.5rem] sm:mt-[2rem] lg:mt-[3.5rem] sm:text-[1.2rem] lg:text-[1.8rem]' >
-                FRONTEND DEVELOPER
+                DATA SCIENTIST
             </h3>
             <div className="flower absolute z-[-1] ">
                 <img src={flower} alt=""  className=' mt-[16rem] sm:w-auto w-[60%] mx-auto mb-28 sm:mb-0 sm:h-[80svh]'/>
             </div>
-            <div className="land-circle absolute w-[150%] sm:w-[120%] xl:w-[90%] aspect-square outline outline-[#444444a6] rounded-full bottom-[50%] z-[-2]">
-            </div>
+            {/* <div className="land-circle absolute w-[150%] sm:w-[120%] xl:w-[90%] aspect-square outline outline-[#444444a6] rounded-full bottom-[50%] z-[-2]">
+            </div> */}
         </div>
         
         
