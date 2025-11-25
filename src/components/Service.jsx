@@ -213,7 +213,7 @@ const HowCanIHelp = () => {
           <h1 className="service-txt-container h-[100dvh] flex font-humane-black text-[12.5rem] sm:text-[15rem] md:text-[20rem] lg:text-[30rem] xl:text-[40rem]">
             <span className="flex overflow-hidden pt-8 flex-col items-center md:items-start">
               <div className="flex">{serviceText}</div>
-              <p className=" service-desc-text font-sansation self-start tracking-wide lg:tracking-wider text-3xl opacity-0 ">
+              <p className=" service-desc-text font-sansation-light self-start tracking-wide lg:tracking-wide text-3xl opacity-0 ">
                 From exploring data to developing predictive models, I
                 specialize in transforming .
               </p>

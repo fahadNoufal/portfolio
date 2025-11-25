@@ -11,6 +11,7 @@ import './base.css'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 import Cursor from './components/Cursor';
+import DataScienceProjects from './components/ds-projs/DataScienceProjects.jsx';
 
 
 function App() {
@@ -27,8 +28,9 @@ function App() {
         <AboutMe/>
         <Service/>
         <Certificates/>
+        <DataScienceProjects/>
         <WebProjs/>
-        <Works />
+        {/* <Works /> */}
         <Contact/>
       </div>
       {/* <Gallary/> */}

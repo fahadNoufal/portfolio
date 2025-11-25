@@ -148,11 +148,11 @@ const Contact = () => {
 
   return (
     <div className="contact-section relative font-days-one overflow-xhidden rounded-t-[2.5rem] sm:rounded-t-[5rem]">
-      <div className="translate-y-[-20dvh] connect-screen bg-white-bg h-[120dvh] absolute w-full top-0">
+      {/* <div className="translate-y-[-20dvh] connect-screen bg-white-bg h-[120dvh] absolute w-full top-0">
         <div className="font-humane-black opacity-[1] text-center text-[40svw]">
           CONNECT
         </div>
-      </div>
+      </div> */}
 
       <div className="contact-container mt-[20dvh] w-full overflow-hidden font-sansation-light rounded-t-[2.5rem] sm:rounded-t-[5rem] bg-black-bg text-white pt-[6rem] sm:pt-[8rem] pb-[6rem] xl:pb-[10rem] px-[2rem] sm:px-[4rem] md:px-[6rem] lg:px-[10rem] xl:px-[15rem] 2xl:px-[20rem]">
         <div className="text-start text-[2.1rem] sm:text-[2.8rem] md:text-[3.5rem] lg:text-[4.5rem] xl:text-[6rem] lg:pt-[3rem] xl:pt-[8rem]">
@@ -179,77 +179,76 @@ const Contact = () => {
             className="input-field-container text-left gap-20 font-sansation flex flex-col mt-[6rem] md:mt-[8rem] lg:mt-[10rem] xl:mt-[14rem]"
           >
             <div
-  className="relative p-6 sm:p-10 md:p-14 rounded-3xl bg-gradient-to-br from-[#040404] via-[#090909] to-[#000000] shadow-2xl border border-white/10 backdrop-blur-sm min-h-[650px] overflow-hidden 
+              className="relative p-6 sm:p-10 md:p-14 rounded-3xl bg-gradient-to-br from-[#040404] via-[#090909] to-[#000000] shadow-2xl border border-white/10 backdrop-blur-sm min-h-[650px] overflow-hidden 
   transition-all duration-500 hover:scale-[1.02] md:hover:scale-[1.05] hover:shadow-2xl"
->
-  {/* Decorative Gradient Blob */}
-  <div className="absolute -top-20 -right-20 w-48 sm:w-60 md:w-72 h-48 sm:h-60 md:h-72 bg-gradient-to-br from-yellow-400/20 via-orange-500/10 to-transparent rounded-full blur-3xl animate-pulse-slow pointer-events-none"></div>
+            >
+              {/* Decorative Gradient Blob */}
+              <div className="absolute -top-20 -right-20 w-48 sm:w-60 md:w-72 h-48 sm:h-60 md:h-72 bg-gradient-to-br from-yellow-400/20 via-orange-500/10 to-transparent rounded-full blur-3xl animate-pulse-slow pointer-events-none"></div>
 
-  {/* Name & Email */}
-  <div className="name-email-field flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-12 relative z-10">
-    <div className="name-field flex-1">
-      <label
-        htmlFor="name"
-        className="block mb-3 sm:mb-4 text-lg sm:text-xl md:text-2xl font-semibold tracking-wide text-gray-100"
-      >
-        Name
-      </label>
-      <input
-        type="text"
-        name="from_name"
-        id="name"
-        className="w-full interactable cursor-button capitalize px-4 sm:px-5 md:px-6 py-4 sm:py-5 text-base sm:text-lg md:text-xl rounded-xl bg-white/5 text-white placeholder-gray-400 outline-none 
+              {/* Name & Email */}
+              <div className="name-email-field flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-12 relative z-10">
+                <div className="name-field flex-1">
+                  <label
+                    htmlFor="name"
+                    className="block mb-3 sm:mb-4 text-lg sm:text-xl md:text-2xl font-semibold tracking-wide text-gray-100"
+                  >
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    name="from_name"
+                    id="name"
+                    className="w-full interactable cursor-button capitalize px-4 sm:px-5 md:px-6 py-4 sm:py-5 text-base sm:text-lg md:text-xl rounded-xl bg-white/5 text-white placeholder-gray-400 outline-none 
         focus:ring-2 focus:ring-yellow-400 focus:shadow-[0_0_25px_rgba(250,204,21,0.4)] focus:border-transparent transition-all"
-        data-type="input"
-        value={name}
-        onChange={handleNameChange}
-        placeholder="Enter your full name"
-      />
-    </div>
+                    data-type="input"
+                    value={name}
+                    onChange={handleNameChange}
+                    placeholder="Enter your full name"
+                  />
+                </div>
 
-    <div className="email-field flex-1">
-      <label
-        htmlFor="email"
-        className="block mb-3 sm:mb-4 text-lg sm:text-xl md:text-2xl font-semibold tracking-wide text-gray-100"
-      >
-        Email
-      </label>
-      <input
-        type="email"
-        name="email_id"
-        id="email"
-        className="w-full interactable cursor-button px-4 sm:px-5 md:px-6 py-4 sm:py-5 text-base sm:text-lg md:text-xl rounded-xl bg-white/5 text-white placeholder-gray-400 outline-none 
+                <div className="email-field flex-1">
+                  <label
+                    htmlFor="email"
+                    className="block mb-3 sm:mb-4 text-lg sm:text-xl md:text-2xl font-semibold tracking-wide text-gray-100"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    name="email_id"
+                    id="email"
+                    className="w-full interactable cursor-button px-4 sm:px-5 md:px-6 py-4 sm:py-5 text-base sm:text-lg md:text-xl rounded-xl bg-white/5 text-white placeholder-gray-400 outline-none 
         focus:ring-2 focus:ring-yellow-400 focus:shadow-[0_0_25px_rgba(250,204,21,0.4)] focus:border-transparent transition-all"
-        data-type="input"
-        value={email}
-        onChange={handleEmailChange}
-        placeholder="Enter your email address"
-      />
-    </div>
-  </div>
+                    data-type="input"
+                    value={email}
+                    onChange={handleEmailChange}
+                    placeholder="Enter your email address"
+                  />
+                </div>
+              </div>
 
-  {/* Message */}
-  <div className="message-field w-full mt-8 sm:mt-10 md:mt-12 relative z-10">
-    <label
-      htmlFor="message"
-      className="block mb-3 sm:mb-4 text-lg sm:text-xl md:text-2xl font-semibold tracking-wide text-gray-100"
-    >
-      Message
-    </label>
-    <textarea
-      name="message"
-      id="message"
-      rows="6"
-      className="w-full interactable cursor-button px-4 sm:px-5 md:px-6 py-4 sm:py-5 text-base sm:text-lg md:text-xl rounded-xl bg-white/5 text-white placeholder-gray-400 outline-none 
+              {/* Message */}
+              <div className="message-field w-full mt-8 sm:mt-10 md:mt-12 relative z-10">
+                <label
+                  htmlFor="message"
+                  className="block mb-3 sm:mb-4 text-lg sm:text-xl md:text-2xl font-semibold tracking-wide text-gray-100"
+                >
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="6"
+                  className="w-full interactable cursor-button px-4 sm:px-5 md:px-6 py-4 sm:py-5 text-base sm:text-lg md:text-xl rounded-xl bg-white/5 text-white placeholder-gray-400 outline-none 
       focus:ring-2 focus:ring-yellow-400 focus:shadow-[0_0_25px_rgba(250,204,21,0.4)] focus:border-transparent transition-all resize-none"
-      data-type="input"
-      value={message}
-      onChange={handleMessageChange}
-      placeholder="Type your message..."
-    />
-  </div>
-</div>
-
+                  data-type="input"
+                  value={message}
+                  onChange={handleMessageChange}
+                  placeholder="Type your message..."
+                />
+              </div>
+            </div>
 
             <button
               className="mt-[1rem] interactable self-start cursor-button overflow-hidden lg:mt-[3rem] xl:mt-[4rem] sm:text-[6rem] text-[4rem] font-humane-black tracking-wide cursor-pointer text-white border-b-4 leading-[100%] border-[#ffffff70]"
