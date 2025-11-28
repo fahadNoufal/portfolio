@@ -750,6 +750,7 @@ const DataScienceProjects = () => {
     container.addEventListener("touchstart", onTouchStart);
     window.addEventListener("touchmove", onTouchMove);
     window.addEventListener("touchend", onTouchEnd);
+    
     window.addEventListener("resize", onResize);
     window.addEventListener("keydown", onKeyDown);
     overlay.addEventListener("click", onOverlayClick);
@@ -791,6 +792,22 @@ const DataScienceProjects = () => {
     });
   });
 
+  useGSAP(() => {
+    gsap.from(".ds-proj-root", {
+      marginTop: 250,
+      ease: "power4.out",
+      duration: 1.6,
+      opacity: 0.5,
+      scrollTrigger: {
+        // trigger: ".work-txt-container",
+        trigger: ".ds-proj-root",
+        start: "top bottom",
+        end: "50% top",
+        toggleActions: "play pause pause reverse",
+      },
+    });
+  });
+
   const workText = 'WORKS'.split('').map((char, index) => (
     <div className='work-letters leading-[90%] opacity-0 translate-y-[100%] bg-gradient-to-t from-[#333] to-white bg-clip-text text-transparent' key={index}>
       <div className='inline-block'>{char}</div>
@@ -801,7 +818,7 @@ const DataScienceProjects = () => {
       <h1 className="work-txt-container h-[100dvh] flex justify-center items-center font-humane-black text-[12.5rem] sm:text-[15rem] md:text-[20rem] lg:text-[30rem] xl:text-[40rem]">
         <span className="flex overflow-hidden pt-8">{workText}</span>
       </h1>
-      <div className="h-[100svh]">
+      <div className="ds-proj-section mt-[300px] h-[100svh]">
         <div className="ds-proj-root">
           <div className="ds-proj">
             {/* --- Header Section --- */}

@@ -3,8 +3,7 @@ import AboutMe from './components/about-me/AboutMe';
 import Service from './components/Service';
 import Landing from './components/landing/Landing';
 import Certificates from './components/Certificates';
-import Works from './components/Works';
-// import Gallary from './components/image-gallary/Gallery.tsx'
+import SelectedWorks from './components/selected-works/SelectedWorks.jsx';
 import WebProjs from './components/web-projects/WebProjs.jsx';
 import Contact from './components/Contact';
 import './base.css'
@@ -26,11 +25,11 @@ function App() {
       <div  id='app'>
         <Landing/>
         <AboutMe/>
-        <Service/>
+        {/* <Service/> */}
         <Certificates/>
         <DataScienceProjects/>
+        <SelectedWorks/>
         <WebProjs/>
-        {/* <Works /> */}
         <Contact/>
       </div>
       {/* <Gallary/> */}

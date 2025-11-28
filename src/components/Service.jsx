@@ -181,15 +181,15 @@ const HowCanIHelp = () => {
         toggleActions: "play play play reverse",
         onLeave: () => {
           gsap.to(".service-desc-text", {
-            y: 0,
+            yPercent: 100,
             opacity: 0,
-            duration: 0.5,
+            duration: 1,
           });
         },
       },
       onComplete: () => {
         gsap.to(".service-desc-text", {
-          y: '-150%',
+          y: 0,
           opacity: 0.4,
           ease: "power4.out",
           duration: 1,
@@ -213,10 +213,12 @@ const HowCanIHelp = () => {
           <h1 className="service-txt-container h-[100dvh] flex font-humane-black text-[12.5rem] sm:text-[15rem] md:text-[20rem] lg:text-[30rem] xl:text-[40rem]">
             <span className="flex overflow-hidden pt-8 flex-col items-center md:items-start">
               <div className="flex">{serviceText}</div>
-              <p className=" service-desc-text font-sansation-light self-start tracking-wide lg:tracking-wide text-3xl opacity-0 ">
-                From exploring data to developing predictive models, I
-                specialize in transforming .
-              </p>
+              <div className=" font-sansation-light -mt-16 overflow-hidden h-10 self-start w-full relative tracking-wide lg:tracking-wide text-3xl ">
+                <span className="service-desc-text opacity-40 absolute top-0 left-0 right-0 text-start translate-y-[100%]">
+                  From exploring data to developing predictive models, I
+                  specialize in transforming .
+                </span>
+              </div>
             </span>
           </h1>
         </span>

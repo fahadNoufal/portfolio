@@ -52,7 +52,22 @@ const AboutMe = () => {
       animation: tl,
       toggleActions: "play play play reverse",
     });
+
+    gsap.from('.about-head-text', {
+      yPercent: 100,
+      ease: 'inOutCubic',
+      duration: 1.3,
+      opacity: 1,
+      scrollTrigger: {
+        trigger: '.about-section',
+        start: '25% bottom',
+        // end: '50% top',
+        toggleActions: 'play play play reverse',
+      }
+    })
   });
+
+  
 
   return (
     <section
@@ -60,8 +75,12 @@ const AboutMe = () => {
       className="about-section relative z-10 w-full bg-[#FDFCF9]  px-6 sm:px-10 lg:px-20 xl:px-40 py-16  overflow-hidden scale-95 pb-0"
     >
       <header className="text- m-10 mt-20">
-        <h1 className="uppercase font-humane-black tracking-wide work-letters w-full text-[#444] text-[2.75rem] sm:text-[5rem] xl:text-[6rem] 2xl:text-[7.5rem]  border-y border-black border-opacity-20 px-4 sm:px-0 inline-block">
-          A Little Bit About Me!
+        <h1 className="uppercase  font-humane-black py-8 tracking-wide work-letters w-full text-[#444] text-[2.75rem] sm:text-[5rem] xl:text-[6rem] 2xl:text-[7.5rem]  border-y border-black border-opacity-20 px-4 sm:px-0 inline-block">
+          <div className="  overflow-hidden w-full ">
+            <div className=" about-head-text leading-[6rem]  transform translate-y-[0]">
+              A Little Bit About Me!
+            </div>
+          </div>
         </h1>
         <div className="flex flex-wrap justify-center sm:justify-between mt-4 text-[#858585] text-sm sm:text-base lg:text-lg font-days-one gap-2">
           <span className="subtext-line">A creator at heart</span>

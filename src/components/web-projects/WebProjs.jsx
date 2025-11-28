@@ -259,7 +259,7 @@ export default function WebProjs() {
       opacity: 1,
       scrollTrigger: {
         trigger: '.web-work-txt-container',
-        start: 'top 35%',
+        start: 'top 50%',
         end: '50% top',
         toggleActions: 'play play play reverse',
       }
@@ -269,7 +269,7 @@ export default function WebProjs() {
     <div className="web-projs">
       <main className="portfolio-container">
         
-        <h1 className='web-work-txt-container h-[100dvh] flex justify-center items-center font-humane-black text-[12.5rem] sm:text-[15rem] md:text-[20rem] lg:text-[30rem] xl:text-[40rem]'>
+        <h1 className='web-work-txt-container h-[100dvh] flex justify-center items-center font-humane-black text-[32svw]'>
             <span className='flex overflow-hidden pt-8'>
             {webWorkText}
             </span>
