@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+
 import gsap from "gsap";
 import { useGSAP } from '@gsap/react'
 
@@ -170,25 +171,6 @@ const DataScienceProjects = () => {
       items.forEach((img) => {
         img.style.transition = "transform 0.3s ease";
       });
-    };
-
-    const updateSettings = () => {
-      itemSizes = [
-        { width: settings.baseWidth, height: settings.smallHeight },
-        { width: settings.baseWidth, height: settings.largeHeight },
-      ];
-      cellWidth = settings.baseWidth + settings.itemGap;
-      cellHeight =
-        Math.max(settings.smallHeight, settings.largeHeight) + settings.itemGap;
-
-      // Force redraw
-      state.visibleItems.forEach((itemId) => {
-        const item = document.getElementById(itemId);
-        if (item && item.parentNode === canvas) canvas.removeChild(item);
-      });
-      state.visibleItems.clear();
-      updateVisibleItems();
-      updateCSSVariables();
     };
 
     // --- Core Logic ---

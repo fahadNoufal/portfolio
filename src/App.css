@@ -296,6 +296,9 @@ background: #555;
     box-shadow: -5px -10px 100px #07070780;
 }
 
+.profile-placeholder{
+    height: -webkit-fill-available;
+}
 
 @media (max-width: 600px) {
     .bento-tag{
@@ -367,4 +370,9 @@ background: #555;
 input:-webkit-autofill{
     -webkit-text-fill-color: yellow #fff;
     background-color: #070707;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+  height: 100vh;
 }

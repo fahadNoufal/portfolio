@@ -109,6 +109,15 @@ export default function App() {
   const backgroundRef = useRef(null);
   const contentRef = useRef(null);
 
+  useEffect(() => {
+  if (activeImage) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [activeImage]);
+
+
   // Helper to accumulate refs
   const addToRefs = (el, index) => {
     if (el && !gridItemsRef.current.includes(el)) {
@@ -174,8 +183,10 @@ export default function App() {
         duration: 1 + Math.random() * 0.5,
         y: 0,
         ease: "power3.inOut",
+        onComplete:()=>{setActiveImage(false)},
       });
     });
+    
   };
 
 
@@ -218,6 +229,20 @@ export default function App() {
   })
 
   return (
+    <div className="selected-works-container">
+      {/* Full Screen Content */}
+      <div
+        className="content"
+        ref={contentRef}
+        style={{
+          backgroundImage: activeImage ? `url(${activeImage})` : "none",
+        }}
+      >
+        <a className="content__back" href="/" onClick={handleBackClick}>
+          Back
+        </a>
+      </div>
+      
     <div className="selected-works translate-y-[10%] pt-[40vh]  py-[20vh]">
       <div className="app-container bg-[#f4f4f4] pt-[40vh] relative overflow-hidden">
         <div className="selected-works-header absolute top-[27svh] left-1/2 transform -translate-x-1/2 w-full flex justify-center items-center ">
@@ -245,19 +270,9 @@ export default function App() {
           ))}
         </div>
 
-        {/* Full Screen Content */}
-        <div
-          className="content"
-          ref={contentRef}
-          style={{
-            backgroundImage: activeImage ? `url(${activeImage})` : "none",
-          }}
-        >
-          <a className="content__back" href="/" onClick={handleBackClick}>
-            Back
-          </a>
-        </div>
+        
       </div>
+    </div>
     </div>
   );
 }

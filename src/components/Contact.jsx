@@ -166,7 +166,7 @@ const Contact = () => {
         </div>
 
         <div className="contact-form mt-[5rem] md:mt-[6rem] mb-[12rem] lg:mt-[10rem] sm:text-[1.2rem] lg:text-[1.5rem] xl:text-[1.75rem]">
-          <div className="contact-head z-10 bg-black-bg font-days-one relative gap-2 flex items-center sm:text-[1.25rem] md:text-[1.5rem] lg:text-[2rem]">
+          <div className="contact-head z-10 bg-black-bg font-days- relative gap-2 flex items-center sm:text-[1.25rem] md:text-[1.5rem] lg:text-[2rem]">
             LET'S MAKE IT
             <span className="text-black-bg relative z- bg-yellow-bg px-2 rounded-sm">
               HAPPEN !
@@ -179,7 +179,7 @@ const Contact = () => {
             className="input-field-container text-left gap-20 font-sansation flex flex-col mt-[6rem] md:mt-[8rem] lg:mt-[10rem] xl:mt-[14rem]"
           >
             <div
-              className="relative p-6 sm:p-10 md:p-14 rounded-3xl bg-gradient-to-br from-[#040404] via-[#090909] to-[#000000] shadow-2xl border border-white/10 backdrop-blur-sm min-h-[650px] overflow-hidden 
+              className="relative p-6 sm:p-10 md:p-14 bg-gradient-to-br from-[#040404] via-[#090909] to-[#000000] shadow-2xl border border-white/10 backdrop-blur-sm min-h-[650px] overflow-hidden 
   transition-all duration-500 hover:scale-[1.02] md:hover:scale-[1.05] hover:shadow-2xl"
             >
               {/* Decorative Gradient Blob */}
@@ -240,7 +240,7 @@ const Contact = () => {
                   name="message"
                   id="message"
                   rows="6"
-                  className="w-full interactable cursor-button px-4 sm:px-5 md:px-6 py-4 sm:py-5 text-base sm:text-lg md:text-xl rounded-xl bg-white/5 text-white placeholder-gray-400 outline-none 
+                  className="w-full interactable cursor-button px-4 sm:px-5 md:px-6 py-4 sm:py-5 text-base sm:text-lg md:text-xl  bg-white/5 text-white placeholder-gray-400 outline-none 
       focus:ring-2 focus:ring-yellow-400 focus:shadow-[0_0_25px_rgba(250,204,21,0.4)] focus:border-transparent transition-all resize-none"
                   data-type="input"
                   value={message}
