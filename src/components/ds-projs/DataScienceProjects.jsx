@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import gsap from "gsap";
 import { useGSAP } from '@gsap/react'
@@ -73,19 +73,37 @@ const DataScienceProjects = () => {
   const overlayRef = useRef(null);
   const titleRef = useRef(null);
   const paneRef = useRef(null);
+  const [mobile,setMobile] = useState(window.innerWidth <= 768)
 
   // We use a ref to store all the "global" logic variables to keep them accessible
   // inside the effect without stale closures, and to clean them up on unmount.
+
+  
+  useEffect(() => {
+    const handleResize = () => {
+      // Note: Usually "mobile" is determined by width, 
+      // but I've kept it as 768 height to match your logic.
+      setMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    
+    // Clean up the listener when the component unmounts
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  console.log(mobile)
+
   const engineRef = useRef({
     settings: {
-      baseWidth: 400,
-      smallHeight: 330,
-      largeHeight: 500,
-      itemGap: 65,
+      baseWidth: mobile?200:400,
+      smallHeight: mobile?165:330,
+      largeHeight: mobile?250:500,
+      itemGap: mobile?32:65,
       hoverScale: 1.05,
       expandedScale: 0.4,
       dragEase: 0.075,
-      momentumFactor: 200,
+      momentumFactor: mobile?400:200,
       bufferZone: 3,
       borderRadius: 0,
       vignetteSize: 0,
@@ -921,7 +939,7 @@ const DataScienceProjects = () => {
 
             {/* --- Main Animation Container --- */}
             {/* We attach containerRef here for the drag events */}
-            <div className="container scale-50 md:scale-100" ref={containerRef}>
+            <div className="container scale-100" ref={containerRef}>
               {/* We attach canvasRef here for GSAP to move and append items */}
               <div className="canvas" id="canvas" ref={canvasRef}></div>
               {/* We attach overlayRef here for the fade-in background */}
