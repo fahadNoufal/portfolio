@@ -23,6 +23,29 @@ import movie_recomm from '../../resources/project-images/movie-recom.jpg'
 gsap.registerPlugin(CustomEase);
 CustomEase.create("hop", "0.9, 0, 0.1, 1");
 
+
+const desc = [
+  "A comprehensive predictive model utilizing Random Forest and Gradient Boosting regressors to estimate student grades. By analyzing demographic and behavioral patterns, this tool helps educators identify at-risk students for early intervention.",
+
+  "An unsupervised machine learning system that groups customers into distinct personas based on purchasing habits. Using K-Means clustering and PCA for dimensionality reduction, it enables highly targeted marketing campaigns and improved retention.",
+
+  "A Deep Q-Network (DQN) agent trained to autonomously pilot and land a lunar module within a physics-based simulation. This project demonstrates proficiency in reinforcement learning, reward shaping, and policy optimization for continuous control.",
+
+  "A hybrid recommendation engine combining collaborative filtering with content-based analysis to suggest personalized movie titles. The system effectively handles the cold-start problem and scales to process millions of user ratings with low latency.",
+
+  "A robust real-estate valuation tool built on XGBoost to predict housing prices with high accuracy. The model integrates complex feature engineering—including location geospatial data and market trends—to outperform standard linear benchmarks.",
+
+  "An unbeatable AI opponent for strategy games implemented using the Minimax algorithm with alpha-beta pruning. This project explores game theory and state-space search optimization to ensure optimal decision-making in zero-sum environments.",
+
+  "A bioinformatics classification pipeline designed to identify genetic markers associated with specific traits. Utilizing Support Vector Machines on high-dimensional gene expression data, this tool assists researchers in isolating key biological predictors.",
+
+  "A Natural Language Processing (NLP) framework that analyzes text and survey data to detect early signs of stress and burnout. By leveraging sentiment analysis and biometric correlations, it provides actionable insights for mental health support.",
+
+  "A generative AI application capable of constructing valid crossword grids and generating semantic clues. The system uses LSTM networks to understand word relationships, ensuring both structural integrity and challenging, context-aware puzzles.",
+
+  "A time-series forecasting model designed to predict market trends using Recurrent Neural Networks (RNNs). By analyzing historical price data and technical indicators, the system identifies potential future movements with minimized volatility error."
+];
+
 // --- Configuration Data ---
 const items = [
   "Chromatic Loopscape",
@@ -35,9 +58,9 @@ const items = [
   "Fractal Mirage",
   "Nova Pulse",
   "Sonic Horizon",
-  "Dream Circuit",
-  "Lunar Mesh",
-  "Radiant Dusk",
+  // "Dream Circuit",
+  // "Lunar Mesh",
+  // "Radiant Dusk",
   // "Pixel Drift",
   // "Vortex Bloom",
   // "Shadow Static",
@@ -72,6 +95,7 @@ const DataScienceProjects = () => {
   const canvasRef = useRef(null);
   const overlayRef = useRef(null);
   const titleRef = useRef(null);
+  const descRef = useRef(null);
   const paneRef = useRef(null);
   const [mobile,setMobile] = useState(window.innerWidth <= 768)
 
@@ -145,6 +169,7 @@ const DataScienceProjects = () => {
     const canvas = canvasRef.current;
     const overlay = overlayRef.current;
     const projectTitleElement = titleRef.current;
+    const projectDescElement = descRef.current
     const engine = engineRef.current;
     const { settings, state } = engine;
 
@@ -346,6 +371,12 @@ const DataScienceProjects = () => {
               types: "words",
             });
 
+            projectDescElement.textContent = ""
+
+            gsap.set('.ds-proj-desc',{
+              opacity:0,
+            }) 
+
             gsap.set([nameCloneSplit.words, numberCloneSplit.words], {
               y: "100%",
               opacity: 0,
@@ -371,6 +402,7 @@ const DataScienceProjects = () => {
                   document.body.removeChild(captionClone);
               },
             });
+            
           }
 
           if (state.expandedItem && state.expandedItem.parentNode) {
@@ -407,6 +439,7 @@ const DataScienceProjects = () => {
       const itemHeight = parseInt(item.dataset.height);
 
       setAndAnimateTitle(items[titleIndex]);
+      projectDescElement.textContent = desc[titleIndex]
 
       // Caption Logic
       const nameElement = item.querySelector(".item-name");
@@ -454,6 +487,9 @@ const DataScienceProjects = () => {
           if (captionClone.parentNode) document.body.removeChild(captionClone);
         },
       });
+      gsap.to('.ds-proj-desc',{
+        opacity:1,
+      })
 
       const rect = item.getBoundingClientRect();
       state.originalPosition = {
@@ -842,7 +878,7 @@ const DataScienceProjects = () => {
         <span className="flex overflow-hidden pt-8">{workText}</span>
       </h1>
       <div className="ds-proj-section mt-[300px] h-[110svh]">
-        <div className=" ds-proj-header text-lg pr-4 text-right opacity-50 mb-10"> Drag and click to explore projects</div>
+        <div className=" ds-proj-header text-sm md:text-lg pr-4 text-right opacity-50 mb-10"> Drag and click to explore projects</div>
         
         <div className="ds-proj-root">
 
@@ -944,14 +980,23 @@ const DataScienceProjects = () => {
               {/* We attach canvasRef here for GSAP to move and append items */}
               <div className="canvas" id="canvas" ref={canvasRef}></div>
               {/* We attach overlayRef here for the fade-in background */}
-              <div className="overlay" id="overlay" ref={overlayRef}></div>
+              <div className="overlay" id="overlay" ref={overlayRef}>
+                
+              </div>
             </div>
 
             {/* --- Project Title --- */}
             <div className="project-title">
               {/* We attach titleRef here for SplitType animation */}
               <p ref={titleRef}></p>
+              
             </div>
+
+            <div className="ds-proj-desc fixed bottom-12 opacity-0 text-white text-md px-8 z-[10008]">
+              <p ref={descRef}></p>
+            </div>
+
+            
 
             {/* --- Page Vignette Effects --- */}
             {/* These correspond to the settings controlled by Tweakpane */}
@@ -963,6 +1008,7 @@ const DataScienceProjects = () => {
           </div>
         </div>
       </div>
+      
     </div>
   );
 };

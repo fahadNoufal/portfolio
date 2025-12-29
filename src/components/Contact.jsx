@@ -126,6 +126,7 @@ const Contact = () => {
       return;
     }
 
+
     emailjs
       .sendForm("service_sq7iyr7", "template_46h3m0n", form.current, {
         publicKey: "jLLlR0-ujwRYgvbdP",
@@ -179,7 +180,7 @@ const Contact = () => {
             className="input-field-container text-left gap-20 font-sansation flex flex-col mt-[6rem] md:mt-[8rem] lg:mt-[10rem] xl:mt-[14rem]"
           >
             <div
-              className="relative p-6 sm:p-10 md:p-14 bg-gradient-to-br from-[#040404] via-[#090909] to-[#000000] shadow-2xl border border-white/10 backdrop-blur-sm min-h-[650px] overflow-hidden 
+              className="relative p-6 sm:p-10 md:p-14 bg-gradient-to-br from-[#040404] via-[#090909] to-[#000000] shadow-2xl border border-white/10 backdrop-blur-sm min-h-[500px] md:min-h-[650px] overflow-hidden 
   transition-all duration-500 hover:scale-[1.02] md:hover:scale-[1.05] hover:shadow-2xl"
             >
               {/* Decorative Gradient Blob */}
@@ -190,7 +191,7 @@ const Contact = () => {
                 <div className="name-field flex-1">
                   <label
                     htmlFor="name"
-                    className="block mb-3 sm:mb-4 text-lg sm:text-xl md:text-2xl font-semibold tracking-wide text-gray-100"
+                    className="block mb-3 sm:mb-4 text-sm sm:text-xl md:text-2xl font-semibold tracking-wide text-gray-100"
                   >
                     Name
                   </label>
@@ -198,7 +199,7 @@ const Contact = () => {
                     type="text"
                     name="from_name"
                     id="name"
-                    className="w-full interactable cursor-button capitalize px-4 sm:px-5 md:px-6 py-4 sm:py-5 text-base sm:text-lg md:text-xl bg-white/5 text-white placeholder-gray-400 outline-none 
+                    className="w-full interactable cursor-button capitalize px-4 sm:px-5 md:px-6 py-4 sm:py-5 text-sm sm:text-lg md:text-xl bg-white/5 placeholder:text-sm text-white placeholder-gray-400 outline-none 
         focus:ring-2 focus:ring-[#fee] focus:shadow-[0_0_25px_rgba(250,204,21,0.4)] focus:border-transparent transition-all"
                     data-type="input"
                     value={name}
@@ -210,7 +211,7 @@ const Contact = () => {
                 <div className="email-field flex-1">
                   <label
                     htmlFor="email"
-                    className="block mb-3 sm:mb-4 text-lg sm:text-xl md:text-2xl font-semibold tracking-wide text-gray-100"
+                    className="block mb-3 sm:mb-4 text-sm sm:text-xl md:text-2xl font-semibold tracking-wide text-gray-100"
                   >
                     Email
                   </label>
@@ -218,7 +219,7 @@ const Contact = () => {
                     type="email"
                     name="email_id"
                     id="email"
-                    className="w-full interactable cursor-button px-4 sm:px-5 md:px-6 py-4 sm:py-5 text-base sm:text-lg md:text-xl bg-white/5 text-white placeholder-gray-400 outline-none 
+                    className="w-full interactable cursor-button px-4 sm:px-5 md:px-6 py-4 sm:py-5 text-sm sm:text-lg md:text-xl bg-white/5 text-white placeholder:text-sm placeholder-gray-400 outline-none 
         focus:ring-2 focus:ring-[#fee] focus:shadow-[0_0_25px_rgba(250,204,21,0.4)] focus:border-transparent transition-all"
                     data-type="input"
                     value={email}
@@ -232,7 +233,7 @@ const Contact = () => {
               <div className="message-field w-full mt-8 sm:mt-10 md:mt-12 relative z-10">
                 <label
                   htmlFor="message"
-                  className="block mb-3 sm:mb-4 text-lg sm:text-xl md:text-2xl font-semibold tracking-wide text-gray-100"
+                  className="block mb-3 sm:mb-4 text-sm sm:text-xl md:text-2xl font-semibold tracking-wide text-gray-100"
                 >
                   Message
                 </label>
@@ -240,7 +241,7 @@ const Contact = () => {
                   name="message"
                   id="message"
                   rows="6"
-                  className="w-full interactable cursor-button px-4 sm:px-5 md:px-6 py-4 sm:py-5 text-base sm:text-lg md:text-xl  bg-white/5 text-white placeholder-gray-400 outline-none 
+                  className="w-full interactable cursor-button px-4 sm:px-5 md:px-6 py-4 sm:py-5 text-sm sm:text-lg md:text-xl  bg-white/5 text-white placeholder-gray-400 outline-none 
       focus:ring-2 focus:ring-[#fee] focus:shadow-[0_0_25px_rgba(250,204,21,0.4)] focus:border-transparent transition-all resize-none"
                   data-type="input"
                   value={message}
