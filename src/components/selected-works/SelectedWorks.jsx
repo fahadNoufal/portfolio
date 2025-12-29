@@ -2,6 +2,9 @@ import React, { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from '@gsap/react'
 import "./selected-works.css";
+import ai_librarian from '../../resources/selected-works/ai-librarian.jpg'
+import llm from '../../resources/selected-works/llm.png'
+import quickscope from '../../resources/selected-works/quick-scope.jpg'
 
 // Sample data for the grid
 const itemsData = [
@@ -15,19 +18,23 @@ const itemsData = [
     id: 2,
     number: "02",
     title: "Snowy Peak",
-    img: "https://picsum.photos/id/209/700/1400",
+    // img: "https://picsum.photos/id/209/700/1400",
+    img: ai_librarian,
   }, // This will be taller (480px) via CSS
   {
     id: 3,
     number: "03",
     title: "Old Clock",
-    img: "https://picsum.photos/id/175/700/1400",
+    // img: "https://picsum.photos/id/175/700/1400",
+    img: quickscope
   }, // This will be shorter (350px) via CSS
   {
     id: 4,
     number: "04",
     title: "Deep Forest",
-    img: "https://picsum.photos/id/302/700/1400",
+    // img: "https://picsum.photos/id/302/700/1400",
+    img: llm
+
   },
 ];
 
@@ -243,10 +250,10 @@ export default function App() {
         </a>
       </div>
       
-    <div className="selected-works translate-y-[10%] pt-[40vh]  py-[20vh]">
+    <div className="selected-works md:translate-y-[10%] pt-[40vh]  py-[20vh]">
       <div className="app-container bg-[#f4f4f4] pt-[40vh] relative overflow-hidden">
         <div className="selected-works-header absolute top-[27svh] left-1/2 transform -translate-x-1/2 w-full flex justify-center items-center ">
-          <h1 className='selected-work-txt-container relative overflow-hidden flex justify-center items-center font-humane-black text-[20svw]'>
+          <h1 className='selected-work-txt-container relative overflow-hidden flex justify-center items-center font-humane-black text-[24svw] md:text-[20svw]'>
             <span className='selected-work-txt flex overflow-hidden pt-8 leading-[70%]'>
             {/* {selectedWorkText} */}
             SELECTED WORKS
@@ -258,7 +265,7 @@ export default function App() {
         <div className="background" ref={backgroundRef}></div>
 
         {/* Grid Layout */}
-        <div className="grid">
+        <div className="grid -rotate-90 md:rotate-0">
           {itemsData.map((item, index) => (
             <GridItem
               key={item.id}

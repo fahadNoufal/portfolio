@@ -267,7 +267,7 @@ export default function WebProjs() {
   })
   return (
     <div className="web-projs">
-      <main className="portfolio-container">
+      <main className="portfolio-container overflow-hidden">
         
         <h1 className='web-work-txt-container h-[100dvh] flex justify-center items-center font-humane-black text-[32svw]'>
             <span className='flex overflow-hidden pt-8'>
@@ -283,10 +283,10 @@ export default function WebProjs() {
             <span className="project-data artist hover-text">
               DEATH ON THE BALCONY
             </span>
-            <span className="project-data album hover-text">VICE</span>
-            <span className="project-data category hover-text">SINGLE</span>
-            <span className="project-data label hover-text">SELF RELEASED</span>
-            <span className="project-data year hover-text">2023</span>
+            <span className="project-data hidden md:inline-block album hover-text">VICE</span>
+            <span className="project-data hidden md:inline-block category hover-text">SINGLE</span>
+            <span className="project-data hidden md:inline-block label hover-text">SELF RELEASED</span>
+            <span className="project-data year hover-text year-info hidden md:inline-block">2023</span>
           </li>
 
           <li
@@ -294,10 +294,10 @@ export default function WebProjs() {
             data-image="https://assets.codepen.io/7558/portrait-fashion-002.jpg"
           >
             <span className="project-data artist hover-text">JIMMY WHOO</span>
-            <span className="project-data album hover-text">NIGHTFALL</span>
-            <span className="project-data category hover-text">EP</span>
-            <span className="project-data label hover-text">DEEP HOUSE</span>
-            <span className="project-data year hover-text">2022</span>
+            <span className="project-data hidden md:inline-block album hover-text">NIGHTFALL</span>
+            <span className="project-data hidden md:inline-block category hover-text">EP</span>
+            <span className="project-data hidden md:inline-block label hover-text">DEEP HOUSE</span>
+            <span className="project-data year hover-text year-info hidden md:inline-block">2022</span>
           </li>
 
           <li
@@ -307,14 +307,14 @@ export default function WebProjs() {
             <span className="project-data artist hover-text">
               HERMANOS GUTIÉRREZ
             </span>
-            <span className="project-data album hover-text">
+            <span className="project-data album hover-text hidden md:inline-block">
               EL BUENO Y EL MALO
             </span>
-            <span className="project-data category hover-text">ALBUM</span>
-            <span className="project-data label hover-text">
+            <span className="project-data category hover-text hidden md:inline-block">ALBUM</span>
+            <span className="project-data label hover-text hidden md:inline-block">
               EASY EYE SOUND
             </span>
-            <span className="project-data year hover-text">2022</span>
+            <span className ="project-data year hover-text year-info hidden md:inline-block">2022</span>
           </li>
 
           <li
@@ -322,10 +322,10 @@ export default function WebProjs() {
             data-image="https://assets.codepen.io/7558/portrait-fashion-004.jpg"
           >
             <span className="project-data artist hover-text">NEIL FRANCES</span>
-            <span className="project-data album hover-text">LINES</span>
-            <span className="project-data category hover-text">ALBUM</span>
-            <span className="project-data label hover-text">ISKA DHAMD</span>
-            <span className="project-data year hover-text">2021</span>
+            <span className="project-data hidden md:inline-block album hover-text">LINES</span>
+            <span className="project-data hidden md:inline-block category hover-text">ALBUM</span>
+            <span className="project-data hidden md:inline-block label hover-text">ISKA DHAMD</span>
+            <span className="project-data year hover-text year-info hidden md:inline-block">2021</span>
           </li>
 
           <li
@@ -333,12 +333,12 @@ export default function WebProjs() {
             data-image="https://assets.codepen.io/7558/portrait-fashion-005.jpg"
           >
             <span className="project-data artist hover-text">ADDEX</span>
-            <span className="project-data album hover-text">
+            <span className="project-data hidden md:inline-block album hover-text">
               MIDNIGHT SESSIONS
             </span>
-            <span className="project-data category hover-text">EP</span>
-            <span className="project-data label hover-text">ELECTRONIC</span>
-            <span className="project-data year hover-text">2023</span>
+            <span className="project-data hidden md:inline-block category hover-text">EP</span>
+            <span className="project-data hidden md:inline-block label hover-text">ELECTRONIC</span>
+            <span className="project-data year hover-text year-info hidden md:inline-block">2023</span>
           </li>
 
           <li
@@ -346,10 +346,10 @@ export default function WebProjs() {
             data-image="https://assets.codepen.io/7558/portrait-fashion-006.jpg"
           >
             <span className="project-data artist hover-text">BEYHUDE</span>
-            <span className="project-data album hover-text">YALNIZLIK</span>
-            <span className="project-data category hover-text">SINGLE</span>
-            <span className="project-data label hover-text">ALBÜM YAPIM</span>
-            <span className="project-data year hover-text">2023</span>
+            <span className="project-data hidden md:inline-block album hover-text">YALNIZLIK</span>
+            <span className="project-data hidden md:inline-block category hover-text">SINGLE</span>
+            <span className="project-data hidden md:inline-block label hover-text">ALBÜM YAPIM</span>
+            <span className="project-data year hover-text year-info hidden md:inline-block">2023</span>
           </li>
 
           <li
@@ -357,10 +357,10 @@ export default function WebProjs() {
             data-image="https://assets.codepen.io/7558/portrait-fashion-007.jpg"
           >
             <span className="project-data artist hover-text">THING</span>
-            <span className="project-data album hover-text">SHAPES</span>
-            <span className="project-data category hover-text">ALBUM</span>
-            <span className="project-data label hover-text">KOMPAKT</span>
-            <span className="project-data year hover-text">2021</span>
+            <span className="project-data hidden md:inline-block album hover-text">SHAPES</span>
+            <span className="project-data hidden md:inline-block category hover-text">ALBUM</span>
+            <span className="project-data hidden md:inline-block label hover-text">KOMPAKT</span>
+            <span className="project-data year hover-text year-info hidden md:inline-block">2021</span>
           </li>
 
           <li
@@ -368,12 +368,12 @@ export default function WebProjs() {
             data-image="https://assets.codepen.io/7558/portrait-fashion-008.jpg"
           >
             <span className="project-data artist hover-text">ABAKUS</span>
-            <span className="project-data album hover-text">
+            <span className="project-data hidden md:inline-block album hover-text">
               THAT MUCH CLOSER TO THE SUN
             </span>
-            <span className="project-data category hover-text">ALBUM</span>
-            <span className="project-data label hover-text">BEATSERVICE</span>
-            <span className="project-data year hover-text">2020</span>
+            <span className="project-data hidden md:inline-block category hover-text">ALBUM</span>
+            <span className="project-data hidden md:inline-block label hover-text">BEATSERVICE</span>
+            <span className="project-data year hover-text year-info hidden md:inline-block">2020</span>
           </li>
 
           {/* --- YOUR REMAINING ITEMS (shortened for message) --- */}

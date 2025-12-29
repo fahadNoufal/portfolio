@@ -183,7 +183,7 @@ const Contact = () => {
   transition-all duration-500 hover:scale-[1.02] md:hover:scale-[1.05] hover:shadow-2xl"
             >
               {/* Decorative Gradient Blob */}
-              <div className="absolute -top-20 -right-20 w-48 sm:w-60 md:w-72 h-48 sm:h-60 md:h-72 bg-gradient-to-br from-yellow-400/20 via-orange-500/10 to-transparent rounded-full blur-3xl animate-pulse-slow pointer-events-none"></div>
+              <div className="absolute -top-20 -right-20 w-48 sm:w-60 md:w-72 h-48 sm:h-60 md:h-72 bg-gradient-to-br from-[#cfc4c491] via-[#fff9d491] to-transparent rounded-full blur-3xl animate-pulse-slow pointer-events-none"></div>
 
               {/* Name & Email */}
               <div className="name-email-field flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-12 relative z-10">
@@ -198,8 +198,8 @@ const Contact = () => {
                     type="text"
                     name="from_name"
                     id="name"
-                    className="w-full interactable cursor-button capitalize px-4 sm:px-5 md:px-6 py-4 sm:py-5 text-base sm:text-lg md:text-xl rounded-xl bg-white/5 text-white placeholder-gray-400 outline-none 
-        focus:ring-2 focus:ring-yellow-400 focus:shadow-[0_0_25px_rgba(250,204,21,0.4)] focus:border-transparent transition-all"
+                    className="w-full interactable cursor-button capitalize px-4 sm:px-5 md:px-6 py-4 sm:py-5 text-base sm:text-lg md:text-xl bg-white/5 text-white placeholder-gray-400 outline-none 
+        focus:ring-2 focus:ring-[#fee] focus:shadow-[0_0_25px_rgba(250,204,21,0.4)] focus:border-transparent transition-all"
                     data-type="input"
                     value={name}
                     onChange={handleNameChange}
@@ -218,8 +218,8 @@ const Contact = () => {
                     type="email"
                     name="email_id"
                     id="email"
-                    className="w-full interactable cursor-button px-4 sm:px-5 md:px-6 py-4 sm:py-5 text-base sm:text-lg md:text-xl rounded-xl bg-white/5 text-white placeholder-gray-400 outline-none 
-        focus:ring-2 focus:ring-yellow-400 focus:shadow-[0_0_25px_rgba(250,204,21,0.4)] focus:border-transparent transition-all"
+                    className="w-full interactable cursor-button px-4 sm:px-5 md:px-6 py-4 sm:py-5 text-base sm:text-lg md:text-xl bg-white/5 text-white placeholder-gray-400 outline-none 
+        focus:ring-2 focus:ring-[#fee] focus:shadow-[0_0_25px_rgba(250,204,21,0.4)] focus:border-transparent transition-all"
                     data-type="input"
                     value={email}
                     onChange={handleEmailChange}
@@ -241,7 +241,7 @@ const Contact = () => {
                   id="message"
                   rows="6"
                   className="w-full interactable cursor-button px-4 sm:px-5 md:px-6 py-4 sm:py-5 text-base sm:text-lg md:text-xl  bg-white/5 text-white placeholder-gray-400 outline-none 
-      focus:ring-2 focus:ring-yellow-400 focus:shadow-[0_0_25px_rgba(250,204,21,0.4)] focus:border-transparent transition-all resize-none"
+      focus:ring-2 focus:ring-[#fee] focus:shadow-[0_0_25px_rgba(250,204,21,0.4)] focus:border-transparent transition-all resize-none"
                   data-type="input"
                   value={message}
                   onChange={handleMessageChange}

@@ -45,11 +45,11 @@ const Landing = () => {
 
   return (
     <div className='landing bg-black-bg h-[100dvh] w-full overflow-hidden relative ' >
-        <nav className='flex flex-row justify-between text-[2rem] tracking-wider font-allison text-[#bfbfbf] font-light items-center absolute top-0 left-0 right-0 px-20 py-10 '>
+        <nav className='flex flex-row justify-between text-[2rem] tracking-wider font-allison text-[#bfbfbf] font-light items-center absolute top-0 left-0 right-0 px-8 md:px-20 py-10 '>
             <div className="logo text-white font z-10 relative">
                 Home
             </div>
-            <div className="nav-links flex gap-20 text-white z-10 relative">
+            <div className="nav-links hidden md:flex gap-20 text-white z-10 relative">
                 <a href="#about-me" className='hover:text-gray-400 transition-colors'>Intro</a>
                 <a href="#services" className='hover:text-gray-400 transition-colors'>Services</a>
                 {/* <a href="#web-projs" className='hover:text-gray-400 transition-colors'>Web Projects</a> */}
@@ -62,7 +62,7 @@ const Landing = () => {
             <div className="w-full border-white opacity-10 border-y-0 border h-full"></div>
             <div className="w-full border-white opacity-10 border-y-0 border h-full"></div>
             <div className="w-full border-white opacity-10 border-y-0 border h-full"></div>
-            <div className="w-full border-white opacity-10 border-y-0 border h-full"></div>
+            <div className="w-full hidden md:flex border-white opacity-10 border-y-0 border h-full"></div>
             <div className="w-full border-white opacity-10 border-y-0 border h-full"></div>
         </div>
         <div className="landing-text relative flex flex-col justify-center text-center items-center h-full z-[1] ">
