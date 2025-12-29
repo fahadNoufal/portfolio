@@ -101,7 +101,7 @@ const DataScienceProjects = () => {
       largeHeight: mobile?250:500,
       itemGap: mobile?32:65,
       hoverScale: 1.05,
-      expandedScale: 0.4,
+      expandedScale: mobile?1:0.4,
       dragEase: 0.075,
       momentumFactor: mobile?400:200,
       bufferZone: 3,
@@ -480,6 +480,7 @@ const DataScienceProjects = () => {
 
       const img = document.createElement("img");
       img.src = imgSrc;
+      img.width ='20vh'
       expandedItem.appendChild(img);
 
       expandedItem.addEventListener("click", closeExpandedItem);
