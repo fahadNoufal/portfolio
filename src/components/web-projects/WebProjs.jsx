@@ -269,7 +269,7 @@ export default function WebProjs() {
     <div className="web-projs">
       <main className="portfolio-container overflow-hidden">
         
-        <h1 className='web-work-txt-container h-[100dvh] flex justify-center items-center font-humane-black text-[32svw]'>
+        <h1 className='web-work-txt-container h-[40dvh] md:h-[100dvh] flex justify-center items-center font-humane-black text-[32svw]'>
             <span className='flex overflow-hidden pt-8'>
             {webWorkText}
             </span>

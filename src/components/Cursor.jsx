@@ -35,7 +35,7 @@ const Cursor = () => {
                 scaleValue = 8;
             }
             else if (scaleCursor !== null) {
-                scaleValue = 20;
+                scaleValue = 10;
             } else {
                 scaleValue = 1;
             }

@@ -12,6 +12,12 @@ import gsap from 'gsap';
 import Cursor from './components/Cursor';
 import DataScienceProjects from './components/ds-projs/DataScienceProjects.jsx';
 
+// Only trigger a refresh if the width changes (rotation), 
+// ignoring height changes (address bar scroll)
+ScrollTrigger.config({ 
+  ignoreMobileResize: true 
+});
+
 
 function App() {
 
