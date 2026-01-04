@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import animationVd from '../resources/cursor/animation.webm'
 import hook from '../resources/cursor/hook.webm'
-import unique from '../resources/cursor/unique.jpg'
+import mlModeling from '../resources/cursor/ml-model.jpeg'
 import seo from '../resources/cursor/seo.webm'
 
 const Cursor = () => {
@@ -73,13 +73,14 @@ const Cursor = () => {
                 displayingComponent= <video loop autoPlay src={hook} className=' max-w-[200px] sm:max-w-[500px] bg-black' alt="animation..." />
                 break
             case 'stands-out':
-                displayingComponent=<img src={unique} className=' max-w-[200px] sm:max-w-[500px]' alt="animation..." />
+                displayingComponent= <video loop autoPlay src={animationVd} className=' max-w-[200px] sm:max-w-[500px] bg-black' alt="animation..." />
+                
                 break
             case 'seo':
                 displayingComponent= <video loop autoPlay src={seo} className=' max-w-[200px]  sm:max-w-[450px] bg-black' alt="animation..." />
                 break
             case 'animation':
-                displayingComponent= <video loop autoPlay src={animationVd} className=' max-w-[200px] sm:max-w-[500px] bg-black' alt="animation..." />
+                displayingComponent=<img src={mlModeling} className=' max-h-[150px] w-[150px] object-cover sm:w-[400px]  sm:max-h-[400px]' alt="animation..." />
                 break
 
             case 'certificates':
@@ -120,7 +121,14 @@ const Cursor = () => {
                 displayingComponent= <div className='-rotate-[135deg]'><ArrowMark/></div>;
                 break
             case 'input':
-                displayingComponent= <div className=' aspect-square w-2 h-2 flex translate-x-[1.5px] translate-y-[0.5px] scale-[0.4]'>✒</div>   
+                displayingComponent= <div className=' aspect-square w-2 h-2 flex translate-x-[1.5px] translate-y-[0.5px] scale-[0.4]'></div>   
+                break
+            case 'project-item':
+                displayingComponent= <div className=' bg-yellow-bg  flex scale-[2]'>
+                                        <svg className='aspect-square  -rotate-45' viewBox="0 0 127 127" >
+                                            <path d="M37.1086 66.5246L37.1086 60.189H80.5533L61.0937 40.7294L65.6192 36.2039L92.7721 63.3568L65.6192 90.5097L61.0937 85.9842L80.5533 66.5246L37.1086 66.5246Z" fill="#000"/>
+                                        </svg>
+                                    </div>
                 break
             default:
                 displayingComponent= ""   

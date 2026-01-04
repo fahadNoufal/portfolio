@@ -1,19 +1,20 @@
 import React from "react";
-import js from "../resources/tech-stack/javascriot.png";
-import material from "../resources/tech-stack/material-ui.png";
-import tailwind from "../resources/tech-stack/tailwind.png";
-import redux from "../resources/tech-stack/redux.png";
-import python from "../resources/tech-stack/python.png";
-import django from "../resources/tech-stack/django.png";
-import rRouter from "../resources/tech-stack/react-router.png";
-import gsapLogo from "../resources/tech-stack/gsap.png";
-import pyAnywhere from "../resources/tech-stack/python-anywhere.png";
-import react from "../resources/tech-stack/react.png";
+import aws from '../resources/tech-stack/aws_icon.svg'
+import docker from '../resources/tech-stack/Docker.svg'
+import pandas from '../resources/tech-stack/Pandas.svg'
+import googleCloud from '../resources/tech-stack/Google Cloud.svg'
+
+import git from "../resources/tech-stack/Git.svg";
+import python from "../resources/tech-stack/Python.svg";
+import django from "../resources/tech-stack/Django.svg";
+import FastAPI from "../resources/tech-stack/FastAPI.svg";
+import plotly from "../resources/tech-stack/Ploty.svg";
+import pytorch from "../resources/tech-stack/pytorch_logo.svg";
 
 import bento1 from "../resources/service/service-creative-sol.jpg";
-import bento2 from "../resources/service/service-creative.png";
-import bento3 from "../resources/service/service-development.jpg";
-import bento4 from "../resources/service/service-animation.png";
+import nlp from '../resources/service/nlp-circle.gif'
+import insights from '../resources/service/insights.jpg'
+import dataVisualization from '../resources/service/data-visualization.jpeg'
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -202,6 +203,7 @@ const HowCanIHelp = () => {
 
   return (
     <div
+      id="services"
       data-scroll-section
       className="text-center sm:mt-20 xl:mt-40 py-[11rem] items-center w-full "
     >
@@ -247,10 +249,10 @@ const HowCanIHelp = () => {
                                     leading-[120%] sm:text-[1.2rem] md:text-[1.7rem] lg:text-[1.5rem] 2xl:text-[1.8 rem]"
             >
               <div className="w-[70%] lg:leading-[110%]  xl:leading-normal ">
-                Unique designs are always better for conveying messages to large
+                Transforming data and language into intelligent, production-ready AI.
               </div>
               <div className="bento-tag interactable  cursor-button  ">
-                UNIQUE
+                STRATEGY
               </div>
             </div>
           </div>
@@ -258,17 +260,20 @@ const HowCanIHelp = () => {
           <div className="flex flex-1 gap-4 ">
             <div className=" bento-box-b bento-2 relative bento-box h-[150px] sm:h-[30svh] lg:h-auto bento-box-border flex-[2] mix-blend-lighten">
               <img
-                src={bento2}
+                src={dataVisualization}
                 alt=""
-                className=" scale-90 mix-blend-lighten"
+                className=" mix-blend-lighten mx-[-25px] object-cover "
               />
+              <div className="flex text-white h-full text-sm md:text-xl w-full justify-end opacity-75 items-end">
+                Data visualization
+              </div>
             </div>
 
             <div className=" bento-box-b bento-3 bg-black  bento-box flex-[3]">
-              <img src={bento3} alt="" />
+              <img className=" opacity-80" src={insights} alt="" />
               <div className="flex h-full w-full justify-end items-end">
                 <div className="bento-tag interactable  cursor-button bg-black bg-opacity-50 sm:mr-8">
-                  DEVELOPMENT
+                  INSIGHTS
                 </div>
               </div>
             </div>
@@ -280,7 +285,7 @@ const HowCanIHelp = () => {
             className=" bento-box-t bento-4 justify-between items-end bento-box bento-box-border flex-[4] z-10 mix-blend-lighten  
                                 h-[400px] mb-4 sm:mb-0 sm:h-auto "
           >
-            <img src={bento4} alt="" />
+            <img className=" object-cover" src={nlp} alt="" />
 
             <svg
               className="aspect-square  
@@ -306,7 +311,7 @@ const HowCanIHelp = () => {
               />
             </svg>
             <div className="bento-tag interactable  cursor-button  scale-125 mr-6 mb-4">
-              ANIMATION
+              NLP Engineering
             </div>
           </div>
           <div className=" bento-box-b bento-5 flex text-black font-humane-black bg-yellow-bg bento-box flex-[1]">
@@ -318,18 +323,18 @@ const HowCanIHelp = () => {
                 className="  mt-[-1rem] mb-[-2.5rem] sm:my-[-2.5rem] 
                                           text-[4rem] sm:text-[6rem] xl:text-[8rem] 2xl:tracking-wide"
               >
-                UX DESIGN
+                AI & ML
               </span>
               <span
                 className=" font-sansation-light 
                                           text-[1.2rem] mt-4 xl:mt-0 xl:text-[1.5rem]"
               >
-                focuses on user experience
+                Models to real-world impact
               </span>
             </div>
             <div className="flex flex-col justify-between pr-4 sm:pr-0">
               <span className=" font-humane-black text-[2rem] sm:text-[4rem] mt-[-.5rem]">
-                UI
+                ML
               </span>
               <div className=" aspect-square sm:w-12 w-7 rounded-full bg-black"></div>
             </div>
@@ -343,37 +348,37 @@ const HowCanIHelp = () => {
       >
         <span className="  md:ml-[80px] flex flex-col lg:flex-row gap-[2rem] sm:gap-[3rem] lg:gap-[5rem] ">
           <section className="flex justify-around  sm:gap-[3rem] lg:gap-[5rem]">
-            <div id="js">
-              <img src={js} alt="" />
-            </div>
-            <div id="material">
-              <img src={material} alt="" />
-            </div>
-            <div id="react">
-              <img src={react} alt="" />
-            </div>
-            <div id="redux">
-              <img src={redux} alt="" />
-            </div>
-            <div id="python">
+            <div className=' tech-stack-item odd-tech-item' id="python">
               <img src={python} alt="" />
+            </div>
+            <div className=' tech-stack-item' id="pytorch">
+              <img src={pytorch} alt="" />
+            </div>
+            <div className=' tech-stack-item odd-tech-item' id="pandas">
+              <img src={pandas} alt="" />
+            </div>
+            <div className=' tech-stack-item' id="aws">
+              <img src={aws} alt="" />
+            </div>
+            <div className=' tech-stack-item odd-tech-item' id="plotly">
+              <img src={plotly} alt="" />
             </div>
           </section>
           <section className="flex justify-around sm:gap-[3rem] lg:gap-[5rem]">
-            <div id="django">
+            <div className=' tech-stack-item' id="fastapi">
+              <img src={FastAPI} alt="" />
+            </div>
+            <div className=' tech-stack-item odd-tech-item' id="docker">
+              <img src={docker} alt="" />
+            </div>
+            <div className=' tech-stack-item' id="google-cloud">
+              <img src={googleCloud} alt="" />
+            </div>
+            <div className=' tech-stack-item odd-tech-item' id="git">
+              <img src={git} alt="" />
+            </div>
+            <div className=' tech-stack-item' id="django">
               <img src={django} alt="" />
-            </div>
-            <div id="rRouter">
-              <img src={rRouter} alt="" />
-            </div>
-            <div id="gsapLogo">
-              <img src={gsapLogo} alt="" />
-            </div>
-            <div id="tailwind">
-              <img src={tailwind} alt="" />
-            </div>
-            <div id="pyAnywhere">
-              <img src={pyAnywhere} alt="" />
             </div>
           </section>
         </span>
@@ -395,32 +400,32 @@ const HowCanIHelp = () => {
         </div>
 
         <div className="text interactable " data-type="hook">
-          <div className=" line-heading flex sm:gap-12  items-center">
-            <h2>HOOK</h2>
+          <div className=" line-heading  flex sm:gap-12  items-center">
+            <h2>BUSINESS</h2>
             <ArrowMark />
           </div>
-          <span>Retention</span>
+          <span>UNDERSTANDING</span>
         </div>
         <div className="text interactable " data-type="stands-out">
           <div className=" line-heading flex sm:gap-12  items-center">
-            <h2>Stands out</h2>
+            <h2>Cloud & MLOps</h2>
             <ArrowMark />
           </div>
-          <span>WOAH!! </span>
+          <span>END TO END</span>
         </div>
         <div className="text interactable " data-type="seo">
           <div className=" line-heading flex sm:gap-12  items-center">
-            <h2>SEO</h2>
+            <h2>Deep Learning </h2>
             <ArrowMark />
           </div>
-          <span>Seamless</span>
+          <span>Gen-AI Systems</span>
         </div>
         <div className="text interactable" data-type="animation">
           <div className=" line-heading flex sm:gap-12  items-center">
-            <h2>animations</h2>
+            <h2>ML Modeling</h2>
             <ArrowMark />
           </div>
-          <span>Interactive!!</span>
+          <span>REAL WORLD!!</span>
         </div>
       </div>
     </div>

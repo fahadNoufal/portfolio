@@ -16,6 +16,9 @@ import student_stress from '../../resources/project-images/student-stress.png'
 import tic_tac_toe from '../../resources/project-images/tic-tac-toe.png'
 import lunar_lander from '../../resources/project-images/lunar-lander.png'
 import movie_recomm from '../../resources/project-images/movie-recom.jpg'
+import quickscope from '../../resources/selected-works/quick-scope.jpg'
+import llm from '../../resources/selected-works/llm.png'
+import ailibrarian from '../../resources/selected-works/ai-librarian.jpg'
 
 
 
@@ -48,39 +51,35 @@ const desc = [
 
 // --- Configuration Data ---
 const items = [
-  "Chromatic Loopscape",
-  "Solar Bloom",
-  "Neon Handscape",
-  "Echo Discs",
-  "Void Gaze",
-  "Gravity Sync",
-  "Heat Core",
-  "Fractal Mirage",
-  "Nova Pulse",
-  "Sonic Horizon",
-  // "Dream Circuit",
-  // "Lunar Mesh",
-  // "Radiant Dusk",
-  // "Pixel Drift",
-  // "Vortex Bloom",
-  // "Shadow Static",
-  // "Crimson Phase",
-  // "Retro Cascade",
-  // "Photon Fold",
-  // "Zenith Flow",
+  "Stress Predictor",
+  "Customer Undersatanding",
+  'AI Librarian',
+  'Quickscope',
+  "Real Estate Price Prediction ",
+  'Custom Language Model',
+  "Genetics",
+  "Customer Segmentation",
+  "crosswords Solver",
+  "Performance Predictor ",
+  "Tic Tac Toe",
+  "Lunar Lander",
+  "Movie Recommendation",
 ];
 
 const imageUrls = [
   student_stress,
   customer_segment,
-  lunar_lander,
-  movie_recomm,
+  ailibrarian,
+  quickscope,
   home_price,
-  tic_tac_toe,
+  llm,
   genetics,
   customer_segment2,
   crosswords,
   student_performance,
+  tic_tac_toe,
+  lunar_lander,
+  movie_recomm,
   // "https://cdn.cosmos.so/0f164449-f65e-4584-9d62-a9b3e1f4a90a?format=jpeg",
   // "https://cdn.cosmos.so/74ccf6cc-7672-4deb-ba13-1727b7dc6146?format=jpeg",
   // "https://cdn.cosmos.so/2f49a117-05e7-4ae9-9e95-b9917f970adb?format=jpeg",
@@ -902,7 +901,7 @@ const DataScienceProjects = () => {
         end: "50% top",
         toggleActions: "play play play reverse",
       },
-    });
+  });
   });
 
   useGSAP(() => {
@@ -917,7 +916,19 @@ const DataScienceProjects = () => {
         start: "top bottom",
         end: "50% top",
         toggleActions: "play pause pause reverse",
+      onLeaveBack:()=>{
+          gsap.to('.ds-proj-header',{
+            opacity:0,
+            duration:0.5
+          })
+        },
       },
+      onComplete:()=>{
+        gsap.to('.ds-proj-header',{
+          opacity:0.8,
+          duration:0.5
+        })
+      }
     });
   });
 
@@ -927,12 +938,12 @@ const DataScienceProjects = () => {
     </div>
   ))
   return (
-    <div>
+    <div id ='works' >
       <h1 className="work-txt-container h-[100dvh] flex justify-center items-center font-humane-black text-[12.5rem] sm:text-[15rem] md:text-[20rem] lg:text-[30rem] xl:text-[40rem]">
         <span className="flex overflow-hidden pt-8">{workText}</span>
       </h1>
       <div className="ds-proj-section mt-[300px] h-[110svh]">
-        <div className=" ds-proj-header text-sm md:text-lg pr-4 text-right opacity-50 mb-10"> Drag and click to explore projects</div>
+        <div className=" ds-proj-header opacity-0 pp-supply-mono text-sm md:text-lg pr-4 text-right mb-4"> Drag and click to explore projects</div>
         
         <div className="ds-proj-root">
 

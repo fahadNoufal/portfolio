@@ -11,6 +11,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 import Cursor from './components/Cursor';
 import DataScienceProjects from './components/ds-projs/DataScienceProjects.jsx';
+import Navbar from './components/Navbar.jsx';
 
 // Only trigger a refresh if the width changes (rotation), 
 // ignoring height changes (address bar scroll)
@@ -29,6 +30,7 @@ function App() {
     <div className="App bg-black-bg select-none">
       <Cursor/>
       <div  id='app'>
+        <Navbar/>
         <Landing/>
         <AboutMe/>
         <Service/>

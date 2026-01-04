@@ -18,21 +18,21 @@ const itemsData = [
   {
     id: 2,
     number: "02",
-    title: "Snowy Peak",
+    title: "AI LIBRARIAN",
     // img: "https://picsum.photos/id/209/700/1400",
     img: ai_librarian,
   }, // This will be taller (480px) via CSS
   {
     id: 3,
     number: "03",
-    title: "Old Clock",
+    title: "QUICK SCOPE",
     // img: "https://picsum.photos/id/175/700/1400",
     img: quickscope
   }, // This will be shorter (350px) via CSS
   {
     id: 4,
     number: "04",
-    title: "Deep Forest",
+    title: "CUSTOM LLM",
     // img: "https://picsum.photos/id/302/700/1400",
     img: llm
 
@@ -169,7 +169,6 @@ export default function App() {
   // Refs for animations
   const gridItemsRef = useRef([]);
   const backgroundRef = useRef(null);
-  const contentRef = useRef(null);
 
   useEffect(() => {
     // Only run this logic if the modal is OPEN

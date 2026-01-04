@@ -5,6 +5,8 @@ body{
     background-color: #070707;
 }
 
+
+
 /* width */
 .project-details-scrollbar::-webkit-scrollbar {
 width: 10px;
@@ -375,4 +377,21 @@ input:-webkit-autofill{
 .no-scroll {
   overflow: hidden !important;
   height: 100vh;
+}
+
+.tech-stack-item{
+    background-color: rgb(255, 255, 255);
+    /* opacity: 0; */
+    border-radius: 0.5rem;
+    padding: 8px;
+}
+.tech-stack-item img{
+    width: 100%;
+
+}
+.odd-tech-item{
+    border: 6px solid;
+    border-color:#D1FD0A;
+    /* border-color:#000000; */
+
 }

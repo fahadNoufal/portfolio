@@ -3,6 +3,18 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from '@gsap/react'
 
+import taskflow from '../../resources/web-projs/taskflow.png'
+import fashion from '../../resources/web-projs/fashion-site.png'
+import mess from '../../resources/web-projs/mess-app.png'
+import ccApp from '../../resources/web-projs/work-cc-app.png'
+import xactitude from '../../resources/web-projs/x-actitude.png'
+import ccWebsite from '../../resources/web-projs/work-chat-circle.png'
+
+
+
+
+
+
 
 
 const CONFIG = {
@@ -262,6 +274,18 @@ export default function WebProjs() {
         start: 'top 50%',
         end: '50% top',
         toggleActions: 'play play play reverse',
+        onLeaveBack:()=>{
+          gsap.to('.web-projs-text',{
+          opacity:0,
+          duration:0.5
+        })
+        }  
+      },
+      onComplete:()=>{
+        gsap.to('.web-projs-text',{
+          opacity:0.8,
+          duration:0.5
+        })
       }
     })
   })
@@ -269,115 +293,105 @@ export default function WebProjs() {
     <div className="web-projs">
       <main className="portfolio-container overflow-hidden">
         
-        <h1 className='web-work-txt-container h-[40dvh] md:h-[100dvh] flex justify-center items-center font-humane-black text-[32svw]'>
-            <span className='flex overflow-hidden pt-8'>
-            {webWorkText}
-            </span>
-        </h1>
+        <div className="h-[40dvh] md:h-[100dvh] mb-20 md:mb-0 flex flex-col justify-center items-center">
+          <h1 className='web-work-txt-container   font-humane-black text-[32svw] justify-center items-center'>
+              <span className='flex overflow-hidden pt-8'>
+              {webWorkText}
+              </span>
+          </h1>
+          <span className="web-projs-text text-xs px-2 text-left md:text-sm md:text-center w-full opacity-0 md:-mt-16">
+            I have also created some web apps. This makes me a unique candidate who also knows how to work with api's and other frameworks
+          </span>
+        </div>
 
-        <ul className="project-list" role="list">
+        <ul className="project-list" >
           <li
-            className="project-item"
-            data-image="https://assets.codepen.io/7558/portrait-fashion-001.jpg"
+            className="project-item interactable " role="list" data-type='project-item'
+            data-image={xactitude}
+            onClick={() => window.open('https://www.figma.com/design/ElNh1HHlnTHvxUYeI916lh/rough-01?m=auto&t=gkQSwm7GjqEaBVdS-6', '_blank')}
+
           >
-            <span className="project-data artist hover-text">
-              DEATH ON THE BALCONY
-            </span>
-            <span className="project-data hidden md:inline-block album hover-text">VICE</span>
-            <span className="project-data hidden md:inline-block category hover-text">SINGLE</span>
-            <span className="project-data hidden md:inline-block label hover-text">SELF RELEASED</span>
-            <span className="project-data year hover-text year-info hidden md:inline-block">2023</span>
+            <span className="project-data artist hover-text">XACTITUDE WEBSITE</span>
+            <span className="project-data hidden md:inline-block album hover-text">IT FEST</span>
+            <span className="project-data hidden md:inline-block category hover-text">UI/UX</span>
+            <span className="project-data hidden md:inline-block label hover-text">DESIGNING</span>
+            <span className="project-data year hover-text year-info hidden md:inline-block">2024</span>
           </li>
 
           <li
-            className="project-item"
-            data-image="https://assets.codepen.io/7558/portrait-fashion-002.jpg"
-          >
-            <span className="project-data artist hover-text">JIMMY WHOO</span>
-            <span className="project-data hidden md:inline-block album hover-text">NIGHTFALL</span>
-            <span className="project-data hidden md:inline-block category hover-text">EP</span>
-            <span className="project-data hidden md:inline-block label hover-text">DEEP HOUSE</span>
-            <span className="project-data year hover-text year-info hidden md:inline-block">2022</span>
-          </li>
-
-          <li
-            className="project-item"
-            data-image="https://assets.codepen.io/7558/portrait-fashion-003.jpg"
+            className="project-item interactable " role="list" data-type='project-item'
+            data-image={ccApp}
+            onClick={() => window.open('https://fahadnoufal.github.io/chat-circle/', '_blank')}
+            // onClick={}
           >
             <span className="project-data artist hover-text">
-              HERMANOS GUTIÉRREZ
+              CHAT CIRCLE APPLICATION
+            </span>
+            <span className="project-data hidden md:inline-block album hover-text">SOCIAL MEDIA</span>
+            <span className="project-data hidden md:inline-block category hover-text">DEVELOPMENT</span>
+            <span className="project-data hidden md:inline-block label hover-text">FULL STACK</span>
+            <span className="project-data year hover-text year-info hidden md:inline-block">2024</span>
+          </li>
+
+
+          <li
+            className="project-item interactable " role="list" data-type='project-item'
+            data-image={fashion}
+            onClick={() => window.open('https://fahadnoufal.github.io/fashion-site/', '_blank')}
+
+          >
+            <span className="project-data artist hover-text">
+              VESTO 
             </span>
             <span className="project-data album hover-text hidden md:inline-block">
-              EL BUENO Y EL MALO
+              E-COMMERCE
             </span>
-            <span className="project-data category hover-text hidden md:inline-block">ALBUM</span>
+            <span className="project-data category hover-text hidden md:inline-block">MULTIPAGE</span>
             <span className="project-data label hover-text hidden md:inline-block">
-              EASY EYE SOUND
+              FRONTEND
             </span>
-            <span className ="project-data year hover-text year-info hidden md:inline-block">2022</span>
+            <span className ="project-data year hover-text year-info hidden md:inline-block">2021</span>
           </li>
 
           <li
-            className="project-item"
-            data-image="https://assets.codepen.io/7558/portrait-fashion-004.jpg"
+            className="project-item interactable " role="list" data-type='project-item'
+            data-image={ccWebsite}
+            onClick={() => window.open('https://fahadnoufal.github.io/chatcircle-website/', '_blank')}
+
           >
-            <span className="project-data artist hover-text">NEIL FRANCES</span>
-            <span className="project-data hidden md:inline-block album hover-text">LINES</span>
-            <span className="project-data hidden md:inline-block category hover-text">ALBUM</span>
-            <span className="project-data hidden md:inline-block label hover-text">ISKA DHAMD</span>
-            <span className="project-data year hover-text year-info hidden md:inline-block">2021</span>
+            <span className="project-data artist hover-text">CHAT CIRCLE WEBSITE</span>
+            <span className="project-data hidden md:inline-block album hover-text">SOCIAL MEDIA</span>
+            <span className="project-data hidden md:inline-block category hover-text">MODERN UI</span>
+            <span className="project-data hidden md:inline-block label hover-text">FRONTEND</span>
+            <span className="project-data year hover-text year-info hidden md:inline-block">2023</span>
           </li>
 
           <li
-            className="project-item"
-            data-image="https://assets.codepen.io/7558/portrait-fashion-005.jpg"
+            className="project-item interactable " role="list" data-type='project-item'
+            data-image={taskflow}
+            onClick={() => window.open('https://fahadnoufal.github.io/TaskFlow/', '_blank')}
+
           >
-            <span className="project-data artist hover-text">ADDEX</span>
+            <span className="project-data artist hover-text">TASKFLOW APP</span>
             <span className="project-data hidden md:inline-block album hover-text">
-              MIDNIGHT SESSIONS
+              TODO
             </span>
-            <span className="project-data hidden md:inline-block category hover-text">EP</span>
-            <span className="project-data hidden md:inline-block label hover-text">ELECTRONIC</span>
+            <span className="project-data hidden md:inline-block category hover-text">SMOOTH ANIMATION</span>
+            <span className="project-data hidden md:inline-block label hover-text">FRONTEND</span>
             <span className="project-data year hover-text year-info hidden md:inline-block">2023</span>
           </li>
 
           <li
             className="project-item"
-            data-image="https://assets.codepen.io/7558/portrait-fashion-006.jpg"
+            data-image={mess}
           >
-            <span className="project-data artist hover-text">BEYHUDE</span>
-            <span className="project-data hidden md:inline-block album hover-text">YALNIZLIK</span>
-            <span className="project-data hidden md:inline-block category hover-text">SINGLE</span>
-            <span className="project-data hidden md:inline-block label hover-text">ALBÜM YAPIM</span>
+            <span className="project-data artist hover-text">MESS DELIVERY</span>
+            <span className="project-data hidden md:inline-block album hover-text">GROCERY</span>
+            <span className="project-data hidden md:inline-block category hover-text">UI/UX</span>
+            <span className="project-data hidden md:inline-block label hover-text">DESIGNING</span>
             <span className="project-data year hover-text year-info hidden md:inline-block">2023</span>
           </li>
 
-          <li
-            className="project-item"
-            data-image="https://assets.codepen.io/7558/portrait-fashion-007.jpg"
-          >
-            <span className="project-data artist hover-text">THING</span>
-            <span className="project-data hidden md:inline-block album hover-text">SHAPES</span>
-            <span className="project-data hidden md:inline-block category hover-text">ALBUM</span>
-            <span className="project-data hidden md:inline-block label hover-text">KOMPAKT</span>
-            <span className="project-data year hover-text year-info hidden md:inline-block">2021</span>
-          </li>
-
-          <li
-            className="project-item"
-            data-image="https://assets.codepen.io/7558/portrait-fashion-008.jpg"
-          >
-            <span className="project-data artist hover-text">ABAKUS</span>
-            <span className="project-data hidden md:inline-block album hover-text">
-              THAT MUCH CLOSER TO THE SUN
-            </span>
-            <span className="project-data hidden md:inline-block category hover-text">ALBUM</span>
-            <span className="project-data hidden md:inline-block label hover-text">BEATSERVICE</span>
-            <span className="project-data year hover-text year-info hidden md:inline-block">2020</span>
-          </li>
-
-          {/* --- YOUR REMAINING ITEMS (shortened for message) --- */}
-          {/* If you want, I will paste the remaining 14 items too. */}
         </ul>
       </main>
 

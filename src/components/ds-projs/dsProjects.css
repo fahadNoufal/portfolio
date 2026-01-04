@@ -241,7 +241,6 @@
   text-align: center;
   width: 100%;
   overflow: hidden;
-  mix-blend-mode: difference;
   z-index: 10001;
   pointer-events: none;
 }

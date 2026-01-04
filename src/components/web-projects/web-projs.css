@@ -8,6 +8,8 @@
   font-display: swap;
 }
 
+
+
 .web-projs,
 .web-projs::after,
 .web-projs::before {
@@ -19,6 +21,11 @@
   --color-background: rgb(5, 5, 5);
   --color-accent: rgb(255, 223, 0);
   --font-primary: "PP Supply Mono", monospace;
+}
+
+
+.pp-supply-mono{
+  font-family: "PP Supply Mono", monospace;
 }
 
 .web-projs {
@@ -99,6 +106,7 @@
   transition: all 0.3s ease;
   opacity: 1;
   position: relative;
+  z-index: 100000;
 }
 
 .web-projs .project-item.active {

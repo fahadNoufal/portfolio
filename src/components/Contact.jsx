@@ -148,7 +148,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-section relative font-days-one overflow-xhidden rounded-t-[2.5rem] sm:rounded-t-[5rem]">
+    <div id='contact' className="contact-section relative font-days-one overflow-xhidden rounded-t-[2.5rem] sm:rounded-t-[5rem]">
       {/* <div className="translate-y-[-20dvh] connect-screen bg-white-bg h-[120dvh] absolute w-full top-0">
         <div className="font-humane-black opacity-[1] text-center text-[40svw]">
           CONNECT
