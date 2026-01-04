@@ -302,9 +302,20 @@ const DataScienceProjects = () => {
 
     // --- Interaction Logic (Expand/Collapse) ---
 
-    const closeExpandedItem = () => {
-      if (!state.expandedItem || !state.originalPosition) return;
+    const closeExpandedItem = (fromHistory = false) => {
+      if (state.isClosing || !state.expandedItem || !state.originalPosition) return;
 
+      // 2. HISTORY SYNC (from previous step):
+      if (fromHistory !== true && window.history.state?.expanded) {
+        state.isClosing = true; // Lock it immediately
+        window.history.back();
+        return; 
+      }
+
+      // 3. LOCK: Mark as closing for the duration of the animation
+      state.isClosing = true;
+
+      // ... Existing animation logic starts here ...
       animateTitleOut();
       animateOverlayOut();
 
@@ -402,7 +413,17 @@ const DataScienceProjects = () => {
                   document.body.removeChild(captionClone);
               },
             });
-            
+            gsap.to(state.expandedItem, {
+              // ... inside your existing GSAP object ...
+              onComplete: () => {
+                // ... existing cleanup code ...
+
+                // 4. RESET: Unlock the flag when animation finishes
+                state.isClosing = false; 
+                
+                // ... rest of cleanup (setIsExpanded, etc) ...
+              }
+            });
           }
 
           if (state.expandedItem && state.expandedItem.parentNode) {
@@ -428,8 +449,13 @@ const DataScienceProjects = () => {
     };
 
     const expandItem = (item, itemIndex) => {
+      // 1. HISTORY PUSH:
+      // Tell the browser we are entering a "sub-view".
+      // This makes the Back button active.
+      window.history.pushState({ expanded: true }, "");
+
       state.isExpanded = true;
-      setIsExpanded(state.isExpanded)
+      setIsExpanded(state.isExpanded);
       console.log('set to true')
       state.activeItem = item;
       state.activeItemId = item.id;
@@ -817,25 +843,26 @@ const DataScienceProjects = () => {
     window.addEventListener("keydown", onKeyDown);
     overlay.addEventListener("click", onOverlayClick);
 
-    if (isExpanded) {
-      // 1. Push a temporary state to history to 'trap' the back button
-      window.history.pushState(null, "", window.location.href);
-
-      // 2. Define what happens when the back button is pressed
-      const handlePopState = () => {
-        // Close the modal
-        setIsExpanded(false);
+    const handlePopState = () => {
+      if (engineRef.current.state.isExpanded) {
+        // Force reset the flag so the actual close function can run
+        engineRef.current.state.isClosing = false; 
+        closeExpandedItem(true);
+      }
+    };
+    const onWheel = () => {
+      // Trigger close only if expanded and not already animating out
+      if (state.isExpanded && !state.isClosing) {
         closeExpandedItem();
-      };
+      }
+    };
+    window.addEventListener("wheel", onWheel);
 
-      // 3. Listen for the back event
-      window.addEventListener("popstate", handlePopState);
+    container.addEventListener("mousedown", onMouseDown);
+    // ... other listeners ...
+    window.addEventListener("popstate", handlePopState);
 
-      // 4. Cleanup: Remove the listener when the component unmounts or modal closes
-      return () => {
-        window.removeEventListener("popstate", handlePopState);
-      };
-    }
+
 
     // Cleanup
     return () => {
@@ -851,6 +878,8 @@ const DataScienceProjects = () => {
       window.removeEventListener("resize", onResize);
       window.removeEventListener("keydown", onKeyDown);
       overlay.removeEventListener("click", onOverlayClick);
+      window.removeEventListener("popstate", handlePopState);
+      window.removeEventListener("wheel", onWheel);
 
       if (state.expandedItem && state.expandedItem.parentNode) {
         document.body.removeChild(state.expandedItem);
@@ -859,30 +888,6 @@ const DataScienceProjects = () => {
     
   }, []);
 
-  
-
-  // useEffect(() => {
-  //   // Only run this logic if the modal is OPEN
-  //   if (isExpanded) {
-  //     // 1. Push a temporary state to history to 'trap' the back button
-  //     window.history.pushState(null, "", window.location.href);
-
-  //     // 2. Define what happens when the back button is pressed
-  //     const handlePopState = () => {
-  //       // Close the modal
-  //       setIsExpanded(false);
-  //       closeExpandedItem()
-  //     };
-
-  //     // 3. Listen for the back event
-  //     window.addEventListener("popstate", handlePopState);
-
-  //     // 4. Cleanup: Remove the listener when the component unmounts or modal closes
-  //     return () => {
-  //       window.removeEventListener("popstate", handlePopState);
-  //     };
-  //   }
-  // }, [isExpanded]);
   
   useGSAP(() => {
     gsap.to(".work-letters", {
@@ -937,57 +942,9 @@ const DataScienceProjects = () => {
               <div className="nav-section">
                 <div className="logo-container">
                   <div className="logo-circles">
-                    {/* <div className="circle circle-1"></div> */}
-                    {/* <div className="circle circle-2"></div> */}
                   </div>
                 </div>
               </div>
-
-              {/* <div className="values-section">
-                <h3>+Menu</h3>
-                <ul>
-                  <li>
-                    <a href="#" onClick={(e) => e.preventDefault()}>
-                      Clarity
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" onClick={(e) => e.preventDefault()}>
-                      Simplicity
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" onClick={(e) => e.preventDefault()}>
-                      Creativity
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" onClick={(e) => e.preventDefault()}>
-                      Authenticity
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" onClick={(e) => e.preventDefault()}>
-                      Connect
-                    </a>
-                  </li>
-                </ul>
-              </div> */}
-
-              {/* <div className="location-section">
-                <h3>+Location</h3>
-                <p>6357 Selma Ave</p>
-                <p>Los Angeles</p>
-                <p>CA 90028</p>
-              </div>
-
-              <div className="contact-section">
-                <h3>+Get In Touch</h3>
-                <p>(310) 456-7890</p>
-                <p>
-                  <a href="mailto:hi@filip.fyi">hi@filip.fyi</a>
-                </p>
-              </div> */}
 
               <div className="social-section">
                 <h3>+Social</h3>
@@ -1041,8 +998,8 @@ const DataScienceProjects = () => {
               
             </div>
 
-            <div className="ds-proj-desc fixed bottom-12 opacity-0 text-white text-md px-8 z-[10008]">
-              <p ref={descRef}></p>
+            <div className="ds-proj-desc w-full flex justify-center  fixed bottom-12 opacity-0 text-white text-md md:text-xl px-8 z-[10008]">
+              <p className="md:max-w-[80%] text-center mix-blend-difference bg-[#000000a0]" ref={descRef}></p>
             </div>
 
             
