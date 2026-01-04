@@ -98,6 +98,8 @@ const DataScienceProjects = () => {
   const descRef = useRef(null);
   const paneRef = useRef(null);
   const [mobile,setMobile] = useState(window.innerWidth <= 768)
+  const [isExpanded,setIsExpanded] = useState(false)
+  console.log(isExpanded)
 
   // We use a ref to store all the "global" logic variables to keep them accessible
   // inside the effect without stale closures, and to clean them up on unmount.
@@ -116,8 +118,6 @@ const DataScienceProjects = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  console.log(mobile)
-
   const engineRef = useRef({
     settings: {
       baseWidth: mobile?200:400,
@@ -132,7 +132,7 @@ const DataScienceProjects = () => {
       borderRadius: 0,
       vignetteSize: 0,
       vignetteStrength: 0.7,
-      overlayOpacity: 0.9,
+      overlayOpacity: 1,
       overlayEaseDuration: 0.8,
       zoomDuration: 0.6,
     },
@@ -412,6 +412,7 @@ const DataScienceProjects = () => {
           if (originalItem) originalItem.style.visibility = "visible";
 
           // Reset State
+          setIsExpanded(false)
           state.expandedItem = null;
           state.isExpanded = false;
           state.activeItem = null;
@@ -428,6 +429,8 @@ const DataScienceProjects = () => {
 
     const expandItem = (item, itemIndex) => {
       state.isExpanded = true;
+      setIsExpanded(state.isExpanded)
+      console.log('set to true')
       state.activeItem = item;
       state.activeItemId = item.id;
       state.canDrag = false;
@@ -814,6 +817,26 @@ const DataScienceProjects = () => {
     window.addEventListener("keydown", onKeyDown);
     overlay.addEventListener("click", onOverlayClick);
 
+    if (isExpanded) {
+      // 1. Push a temporary state to history to 'trap' the back button
+      window.history.pushState(null, "", window.location.href);
+
+      // 2. Define what happens when the back button is pressed
+      const handlePopState = () => {
+        // Close the modal
+        setIsExpanded(false);
+        closeExpandedItem();
+      };
+
+      // 3. Listen for the back event
+      window.addEventListener("popstate", handlePopState);
+
+      // 4. Cleanup: Remove the listener when the component unmounts or modal closes
+      return () => {
+        window.removeEventListener("popstate", handlePopState);
+      };
+    }
+
     // Cleanup
     return () => {
       cancelAnimationFrame(state.reqId);
@@ -833,8 +856,34 @@ const DataScienceProjects = () => {
         document.body.removeChild(state.expandedItem);
       }
     };
+    
   }, []);
 
+  
+
+  // useEffect(() => {
+  //   // Only run this logic if the modal is OPEN
+  //   if (isExpanded) {
+  //     // 1. Push a temporary state to history to 'trap' the back button
+  //     window.history.pushState(null, "", window.location.href);
+
+  //     // 2. Define what happens when the back button is pressed
+  //     const handlePopState = () => {
+  //       // Close the modal
+  //       setIsExpanded(false);
+  //       closeExpandedItem()
+  //     };
+
+  //     // 3. Listen for the back event
+  //     window.addEventListener("popstate", handlePopState);
+
+  //     // 4. Cleanup: Remove the listener when the component unmounts or modal closes
+  //     return () => {
+  //       window.removeEventListener("popstate", handlePopState);
+  //     };
+  //   }
+  // }, [isExpanded]);
+  
   useGSAP(() => {
     gsap.to(".work-letters", {
       y: 0,
