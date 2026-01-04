@@ -31,7 +31,7 @@ function App() {
       <div  id='app'>
         <Landing/>
         <AboutMe/>
-        {/* <Service/> */}
+        <Service/>
         <Certificates/>
         <DataScienceProjects/>
         <SelectedWorks/>

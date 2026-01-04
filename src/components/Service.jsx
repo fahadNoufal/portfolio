@@ -161,7 +161,7 @@ const HowCanIHelp = () => {
 
   const serviceText = "EXPERTISE".split("").map((char, index) => (
     <div
-      className="service-letters leading-[90%] opacity-0 translate-y-[50%] bg-gradient-to-t from-[#333] to-white bg-clip-text text-transparent"
+      className="service-letters leading-[90%] opacity-0 translate-y-[50%] bg-gradient-to-t from-[#333] to-white bg-clip-text text-[35vw] md:text-[28svw] text-transparent"
       key={index}
     >
       <div className="inline-block">{char}</div>
@@ -210,15 +210,9 @@ const HowCanIHelp = () => {
                          text-[3.2rem] sm:text-[5rem] md:text-[6rem] lg:text-[8rem]"
       >
         <span className=" overflow-hidden inline-block bg-[#070707] tracking-wide pt-3 px-6">
-          <h1 className="service-txt-container h-[100dvh] flex font-humane-black text-[12.5rem] sm:text-[15rem] md:text-[20rem] lg:text-[30rem] xl:text-[40rem]">
+          <h1 className="service-txt-container mt-20 md:mt-0 h-[40svh] md:h-[100dvh] flex font-humane-black ">
             <span className="flex overflow-hidden pt-8 flex-col items-center md:items-start">
               <div className="flex">{serviceText}</div>
-              <div className=" font-sansation-light -mt-16 overflow-hidden h-10 self-start w-full relative tracking-wide lg:tracking-wide text-3xl ">
-                <span className="service-desc-text opacity-40 absolute top-0 left-0 right-0 text-start translate-y-[100%]">
-                  From exploring data to developing predictive models, I
-                  specialize in transforming .
-                </span>
-              </div>
             </span>
           </h1>
         </span>
