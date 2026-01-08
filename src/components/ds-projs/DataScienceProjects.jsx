@@ -28,26 +28,33 @@ CustomEase.create("hop", "0.9, 0, 0.1, 1");
 
 
 const desc = [
-  "A comprehensive predictive model utilizing Random Forest and Gradient Boosting regressors to estimate student grades. By analyzing demographic and behavioral patterns, this tool helps educators identify at-risk students for early intervention.",
+  "An end-to-end machine learning system designed to predict student stress levels from large-scale, real-world behavioral data. The project unifies highly inconsistent, multi-modal data collected from 500+ heterogeneous sources, including 2M+ sensor events (app usage, motion, microphone), surveys, and ~32K self-reports. Raw event-level logs are transformed into interpretable daily behavioral features, enabling reliable stress prediction and actionable wellness insights.",
 
-  "An unsupervised machine learning system that groups customers into distinct personas based on purchasing habits. Using K-Means clustering and PCA for dimensionality reduction, it enables highly targeted marketing campaigns and improved retention.",
+  "A data analysis and insight generation project focused on extracting meaningful customer behavior patterns from transactional and engagement data. Combines exploratory analysis, statistical reasoning, and feature engineering to surface drivers of customer value, preferences, and engagement, supporting informed product and business decisions.",
 
-  "A Deep Q-Network (DQN) agent trained to autonomously pilot and land a lunar module within a physics-based simulation. This project demonstrates proficiency in reinforcement learning, reward shaping, and policy optimization for continuous control.",
+  "A production-ready, multi-model NLP system for intelligent book discovery and recommendation. The system combines semantic vector search, zero-shot classification, and emotion-aware filtering powered by transformer-based models and ChromaDB to deliver context-aware results. Deployed as a scalable FastAPI service on Google Cloud Run, supported by a fully automated CI/CD pipeline using GitHub Actions and Google Artifact Registry for serverless, versioned inference.",
 
-  "A hybrid recommendation engine combining collaborative filtering with content-based analysis to suggest personalized movie titles. The system effectively handles the cold-start problem and scales to process millions of user ratings with low latency.",
+  "A real-time social media and news intelligence platform hosted on AWS, designed to surface live discussions and generate topic-specific, unbiased reports across platforms. The system fine-tunes a 1B-parameter language model using LoRA (r=32) with Unsloth, optimized for 4-bit inference on a custom dataset. Backed by an end-to-end MLOps pipeline with automated data generation, Dockerized builds, CI/CD, and deployment to AWS EC2 via ECR, reducing inference cost and latency.",
 
-  "A robust real-estate valuation tool built on XGBoost to predict housing prices with high accuracy. The model integrates complex feature engineering—including location geospatial data and market trends—to outperform standard linear benchmarks.",
+  "A machine learning–driven property valuation system for the Bangalore real-estate market, trained on ~13K property records. The pipeline includes data preprocessing, feature engineering, and GridSearchCV-based hyperparameter tuning, achieving ~86% accuracy. The model is exposed via a FastAPI service behind NGINX, enabling real-time price predictions in a production environment.",
 
-  "An unbeatable AI opponent for strategy games implemented using the Minimax algorithm with alpha-beta pruning. This project explores game theory and state-space search optimization to ensure optimal decision-making in zero-sum environments.",
+  "A transformer-based language model (~60M parameters) designed and trained from scratch for controlled text generation. The architecture includes 384-dim token and positional embeddings, causal self-attention, 6-head multi-head attention, residual connections, LayerNorm, and MLP blocks across 6 transformer layers with a 128-token context window, tuned specifically for generating coherent and creative children’s stories.",
 
-  "A bioinformatics classification pipeline designed to identify genetic markers associated with specific traits. Utilizing Support Vector Machines on high-dimensional gene expression data, this tool assists researchers in isolating key biological predictors.",
+  "An AI reasoning project from Harvard’s CS50 AI course focused on modeling genetic inheritance under uncertainty. Uses Bayesian networks and probabilistic inference to compute gene distributions and trait expression probabilities, demonstrating structured reasoning and decision-making with incomplete information.",
 
-  "A Natural Language Processing (NLP) framework that analyzes text and survey data to detect early signs of stress and burnout. By leveraging sentiment analysis and biometric correlations, it provides actionable insights for mental health support.",
+  "An unsupervised learning project analyzing 500K+ real-world e-commerce transactions collected over a year to uncover customer behavior and spending dynamics. The system derives 6 meaningful customer segments, translating clustering outcomes into actionable business strategies for targeted marketing, churn risk identification, and revenue optimization.",
 
-  "A generative AI application capable of constructing valid crossword grids and generating semantic clues. The system uses LSTM networks to understand word relationships, ensuring both structural integrity and challenging, context-aware puzzles.",
+  "A constraint-based AI system from CS50 AI that solves crossword puzzles using Constraint Satisfaction Problems (CSPs). Implements constraint propagation, backtracking search, and optimization techniques to efficiently generate valid crossword solutions under complex structural and lexical constraints.",
 
-  "A time-series forecasting model designed to predict market trends using Recurrent Neural Networks (RNNs). By analyzing historical price data and technical indicators, the system identifies potential future movements with minimized volatility error."
+  "An end-to-end student performance prediction system combining feature processing, supervised learning, and hyperparameter tuning to achieve ~85% accuracy. Delivered as a Dockerized application with an automated build/run pipeline and an interactive frontend for real-time performance visualization.",
+
+  "An adversarial game-playing AI from CS50 AI implementing Minimax search to achieve optimal play. The system evaluates game states recursively to guarantee perfect decision-making against human opponents.",
+
+  "A reinforcement learning project from the DeepLearning.AI Machine Learning Specialization focused on training an autonomous agent to safely land a spacecraft. The project emphasizes reward design, policy learning, and iterative optimization within a simulated control environment.",
+
+  "A recommendation system from the DeepLearning.AI Machine Learning Specialization that delivers personalized movie suggestions using collaborative filtering and content-based techniques. Models user preferences and item similarities to produce data-driven recommendations."
 ];
+
 
 // --- Configuration Data ---
 const items = [
@@ -669,6 +676,7 @@ const DataScienceProjects = () => {
           captionElement.appendChild(nameElement);
           captionElement.appendChild(numberElement);
           item.appendChild(captionElement);
+          
 
           item.addEventListener("click", () => {
             if (state.mouseHasMoved || state.isDragging) return;

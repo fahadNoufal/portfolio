@@ -167,7 +167,7 @@ const Contact = () => {
         </div>
 
         <div className="contact-form mt-[5rem] md:mt-[6rem] mb-[12rem] lg:mt-[10rem] sm:text-[1.2rem] lg:text-[1.5rem] xl:text-[1.75rem]">
-          <div className="contact-head z-10 bg-black-bg font-days- relative gap-2 flex items-center sm:text-[1.25rem] md:text-[1.5rem] lg:text-[2rem]">
+          <div className="contact-head z-10 bg-black-bg font-days-one relative gap-2 flex items-center sm:text-[1.25rem] md:text-[1.5rem] lg:text-[2rem]">
             LET'S MAKE IT
             <span className="text-black-bg relative z- bg-yellow-bg px-2 rounded-sm">
               HAPPEN !
@@ -201,7 +201,7 @@ const Contact = () => {
                     id="name"
                     className="w-full interactable cursor-button capitalize px-4 sm:px-5 md:px-6 py-4 sm:py-5 text-sm sm:text-lg md:text-xl bg-white/5 placeholder:text-sm text-white placeholder-gray-400 outline-none 
         focus:ring-2 focus:ring-[#fee] focus:shadow-[0_0_25px_rgba(250,204,21,0.4)] focus:border-transparent transition-all"
-                    data-type="input"
+                    data-type="input-field"
                     value={name}
                     onChange={handleNameChange}
                     placeholder="Enter your full name"
@@ -221,7 +221,7 @@ const Contact = () => {
                     id="email"
                     className="w-full interactable cursor-button px-4 sm:px-5 md:px-6 py-4 sm:py-5 text-sm sm:text-lg md:text-xl bg-white/5 text-white placeholder:text-sm placeholder-gray-400 outline-none 
         focus:ring-2 focus:ring-[#fee] focus:shadow-[0_0_25px_rgba(250,204,21,0.4)] focus:border-transparent transition-all"
-                    data-type="input"
+                    data-type="input-field"
                     value={email}
                     onChange={handleEmailChange}
                     placeholder="Enter your email address"
@@ -243,7 +243,7 @@ const Contact = () => {
                   rows="6"
                   className="w-full interactable cursor-button px-4 sm:px-5 md:px-6 py-4 sm:py-5 text-sm sm:text-lg md:text-xl  bg-white/5 text-white placeholder-gray-400 outline-none 
       focus:ring-2 focus:ring-[#fee] focus:shadow-[0_0_25px_rgba(250,204,21,0.4)] focus:border-transparent transition-all resize-none"
-                  data-type="input"
+                  data-type="input-field"
                   value={message}
                   onChange={handleMessageChange}
                   placeholder="Type your message..."

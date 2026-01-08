@@ -96,7 +96,7 @@ const HowCanIHelp = () => {
       yPercent: 120,
       opacity: 0,
       clipPath: "inset(100% 0% 0% 0%)",
-      stagger: 0.12,
+      stagger: 0.2,
       ease: "power3.out",
       duration: 1,
       scrollTrigger: {
@@ -171,7 +171,7 @@ const HowCanIHelp = () => {
   useGSAP(() => {
     gsap.to(".service-letters", {
       y: 0,
-      stagger: 0.05,
+      stagger: 0.08,
       ease: "power4.out",
       duration: 1,
       opacity: 1,
@@ -211,10 +211,10 @@ const HowCanIHelp = () => {
         className=" relative z-10 text-white font-humane-black 
                          text-[3.2rem] sm:text-[5rem] md:text-[6rem] lg:text-[8rem]"
       >
-        <span className=" overflow-hidden inline-block bg-[#070707] tracking-wide pt-3 px-6">
-          <h1 className="service-txt-container mt-20 md:mt-0 h-[40svh] md:h-[100dvh] flex font-humane-black ">
+        <span className=" overflow-hidden inline-block  tracking-wide pt-3 px-6">
+          <h1 className="service-txt-container mt-20 md:mt-0 h-[30svh] md:h-[70dvh] flex font-humane-black ">
             <span className="flex overflow-hidden pt-8 flex-col items-center md:items-start">
-              <div className="flex">{serviceText}</div>
+              <div className="flex overflow-hidden">{serviceText}</div>
             </span>
           </h1>
         </span>

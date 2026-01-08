@@ -40,8 +40,8 @@ const AboutMe = () => {
         {
           yPercent: 50,
           opacity: 0,
-          stagger: 0.1,
-          duration: 0.5,
+          stagger: 0.3,
+          duration: 0.9,
         },
         "-=0.8"
       );
@@ -102,15 +102,15 @@ const AboutMe = () => {
 
           <div className="about-description md:py-8 md:px-6 sm:px-0 gap-40 xl:px-12 text-[#585858] text-left space-y-6 text-[1rem] md:text-[1.25rem] xl:text-[1.38rem] 2xl:text-[1.5rem] font-sansation tracking-wide lg:tracking-wider sm:block">
             <p>
-              I'm a creative developer from Kerala, India, holding a Bachelor’s in Data Science. I combine technical skill with a strong design aesthetic to bring concepts to life.
+              I’m an aspiring data scientist from Kerala, India, holding a Bachelor’s degree in Data Science. I combine technical skills with real world practical applications to bring concepts to life.
             </p>
             <span className=" md:hidden w-full block h-[0.5px] opacity-10 bg-black"></span>
             <p className=" ">
-              A curious mind with a passion for blending code and creativity, turning ideas into immersive digital experiences. Skilled in crafting visually striking and user-friendly interfaces, while bringing innovation to every project. Always exploring the sweet spot where design meets technology."
+              A curious mind with a passion for solving problems and building solutions that can create a positive impact in everyday life or one day, lead to meaningful business breakthroughs I can truly call my own.
             </p>
             <span className=" md:hidden w-full block h-[0.5px] opacity-10 bg-black"></span>
             <p className=" ">
-              A curious mind with a passion for blending code and creativity, turning ideas into immersive digital experiences. Skilled in crafting visually striking and user-friendly interfaces, while bringing innovation to every project. Always exploring the sweet spot where design meets technology."
+              I have a strong foundation in programming and mathematics, along with a solid understanding of business. I learn quickly, think deeply, and always push myself to go the extra mile. I don’t just aim to complete tasks, I focus more on quality and strive to do my work better than the rest.
             </p>
           </div>
             

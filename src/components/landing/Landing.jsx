@@ -23,7 +23,7 @@ const Landing = () => {
         gsap.to('.landing-text',{scale:0.7, opacity:0.5, ease:'',
             scrollTrigger:{
                 trigger:'.landing-text',
-                start:'bottom 99%',
+                start:'bottom 95%',
                 toggleActions:'restart play play reverse',
                 end:'bottom 50%',
                 scrub:1,

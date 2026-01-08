@@ -108,14 +108,14 @@ const ProjectDetails = ({technos=[],type,description,name='',num,platform,platfo
                     <span className=' -ml-2 sm:-ml-0 leading-[100%]'>back</span>
                 </div>
                 <div className=" flex gap- md:gap-[5rem]">
-                    <div className="go-back  items-center flex md:gap-3 cursor-pointer interactable " data-type='visit'>
+                    {visit && <div className="go-back  items-center flex md:gap-3 cursor-pointer interactable " data-type='visit'>
                         <a target='_blank' rel='noreferrer' href={visit} className=' leading-[100%]'>visit</a>
                         <img src={arrow} className=' -ml-3 sm:ml-0 scale-50 md:scale-[0.95] ' alt="" />
-                    </div>
-                    <div className="go-back  items-center flex md:gap-3 cursor-pointer interactable"  data-type='visit'>
+                    </div>}
+                    {github && <div className="go-back  items-center flex md:gap-3 cursor-pointer interactable"  data-type='visit'>
                         <a target='_blank' rel='noreferrer' href={github} className=' leading-[100%]'>github</a>
                         <img src={arrow} className=' -ml-3 sm:ml-0 scale-50 md:scale-[0.95] ' alt="" />
-                    </div>
+                    </div>}
                 </div>
             </div>
 

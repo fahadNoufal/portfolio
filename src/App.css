@@ -311,6 +311,10 @@ background: #555;
         font-family: 'sansation-light';
         padding: 0.3rem 1rem;
     }
+    .odd-tech-item{
+        border: 3px solid;
+
+    }
     .bento-box{
         padding: 0.8rem;
     }

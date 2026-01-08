@@ -5,6 +5,7 @@ import "./selected-works.css";
 import ai_librarian from '../../resources/selected-works/ai-librarian.jpg'
 import llm from '../../resources/selected-works/llm.png'
 import quickscope from '../../resources/selected-works/quick-scope.jpg'
+import customerSegment from '../../resources/project-images/customer-segment.png'
 import ProjectDetails from "../ProjectDetails";
 
 // Sample data for the grid
@@ -12,82 +13,82 @@ const itemsData = [
   {
     id: 1,
     number: "01",
-    title: "Highlands",
-    img: "https://picsum.photos/id/192/700/1400",
-  },
-  {
-    id: 2,
-    number: "02",
     title: "AI LIBRARIAN",
     // img: "https://picsum.photos/id/209/700/1400",
     img: ai_librarian,
   }, // This will be taller (480px) via CSS
   {
-    id: 3,
-    number: "03",
+    id: 2,
+    number: "02",
     title: "QUICK SCOPE",
     // img: "https://picsum.photos/id/175/700/1400",
     img: quickscope
   }, // This will be shorter (350px) via CSS
   {
-    id: 4,
-    number: "04",
+    id: 3,
+    number: "03",
     title: "CUSTOM LLM",
     // img: "https://picsum.photos/id/302/700/1400",
     img: llm
 
   },
+  {
+    id: 4,
+    number: "04",
+    title: "CUSTOMER SEGMENTS",
+    img: customerSegment,
+  },
 ];
 
 const allProjDetails = {
     0: {
-      name: "Chat Circle",
+      name: "AI Librarian",
       num: '01',
-      type: 'Functional Application',
-      platform: 'Social Media',
+      type: 'MULTI MODEL',
+      platform: 'Semantic Search',
       platformSub: 'application',
-      description: "This social media application offers a platform for users to create chat rooms and engage in real-time discussions. The backend is developed with Django, providing a RESTful API for efficient user interactions, while the React frontend ensures a smooth user experience, all supported by SQLPlus for data management.",
-      technos: ["python", "django", "javascript", "react", "redux", "router", "tailwind"],
-      referenceImg:quickscope,
-      github: 'https://github.com/fahadNoufal/chat-circle',
-      visit: 'https://fahadnoufal.github.io/chat-circle/',
+      description: "This is an end-to-end, multi-model AI book discovery engine delivering highly accurate, context-aware recommendations. Books are retrieved using semantic vector search, zero-shot classification, and emotion-aware filtering, powered by transformer-based NLP models and ChromaDB, and deployed as a scalable FastAPI service on Google Cloud Run for real-time results. Deployment: Deployed an end-to-end production ready CI/CD pipeline implemented usign GitHub Actions and Cloud Run. The pipeline builds CPU-optimized (minimizing resource) Docker images, publishes them to Google Artifact Registry, and deploys versioned containers to Google Cloud Run for scalable, serverless ML inference. ",
+      // technos: ["javascript", "react", "router", "tailwind"],
+      referenceImg:ai_librarian,
+      github: 'https://github.com/fahadNoufal/AI-Librarian-Frontend',
+      visit: 'https://fahadnoufal.github.io/AI-Librarian-Frontend/',
     },
     1: {
-      name: "Chat Website",
+      name: "QUICK SCOPE",
       num: '02',
-      type: 'Landing Website',
-      platform: 'Social Media',
-      platformSub: 'application',
-      description: "The official landing page for the Chat Circle App, this site is a showcase of modern web design with React, featuring a fun and modern vibe, smooth navigation, and a Join button that takes users directly into the Chat Circle application.",
-      technos: ["javascript", "react", "router", "tailwind"],
-      referenceImg:ai_librarian,
-      github: 'https://github.com/fahadNoufal/chatcircle-website',
-      visit: 'https://fahadnoufal.github.io/chatcircle-website/',
-    },
-    2: {
-      name: "Xactitude",
-      num: '03',
-      type: 'Event UI/UX',
-      platform: 'Stunning UI',
-      platformSub: 'Figma',
-      description: "A modern and engaging website UI/UX designed in Figma for the intra-college IT fest, featuring stunning visual elements and intuitive layouts that highlight event details and enhance student participation.",
+      type: 'Fine Tuning',
+      platform: 'News Reporting',
+      platformSub: 'Unbiased',
+      description: "This is an end-to-end real-time social media and news reporting system hosted on aws that reports live discussions across platforms based on your topic of intrest. A 1B-parameter model is fine-tuned using LoRA (r=32) with Unsloth, tuned (4-bit inference) on a custom built dataset to generate tailored, unbiased news reporting. Deployment: Designed and deployed an end-to-end MLOps pipeline with automated data generation (n8n) and CI/CD workflows that build and push Docker images to AWS ECR and deploy them on AWS EC2 instance using GitHub Actions, reducing inference cost and latency.",
       // technos: ['react'],
       referenceImg:quickscope,
-      github: 'https://github.com/fahadNoufal/TaskFlow',
-      visit: 'https://www.figma.com/design/ElNh1HHlnTHvxUYeI916lh/rough-01?m=auto&t=gkQSwm7GjqEaBVdS-6',
+      github: 'https://github.com/fahadNoufal/QuickScope',
+      visit: 'https://github.com/fahadNoufal/QuickScope',
     },
-    3: {
-      name: "Fashion Site",
+    2: {
+      name: "CUSTOM LLM",
       num: '03',
-      type: 'E-commerce Website',
-      platform: 'Ecommerce',
-      platformSub: 'website',
-      description: "A fully responsive fashion shopping platform featuring an About Us page, blog section, product cart, and image gallery, delivering a complete and seamless online shopping experience.",
+      type: 'Transformer Model',
+      platform: 'Story Generation',
+      platformSub: 'Pytorch',
+      description: "Built a language Transformer model (~60M parameters) from scratch using PyTorch, featuring vector and positional embeddings (384-dim), causal self-attention, multi-head attention (6 heads), residual connections, LayerNorm, MLP blocks with a context window of 128-tokens passing through 6 transformer blocks, tuned specifically to generate children's stories.",
       technos: ["javascript"],
       referenceImg:llm,
-      github: 'https://github.com/fahadNoufal/fashion-site',
-      visit: 'https://fahadnoufal.github.io/fashion-site/',
-    }
+      // github: 'https://github.com/fahadNoufal/fashion-site',
+      // visit: 'https://fahadnoufal.github.io/fashion-site/',
+    },
+    3: {
+      name: "CUSTOMER SEGMENTS",
+      num: '04',
+      type: 'Business Insights',
+      platform: 'Unsupervised Learning',
+      platformSub: 'Clustering',
+      description: "Conducted in-depth analysis on real-world retail transaction data collected across a year containing 500K + transcations to uncover customer behavior patterns and spending dynamics and derived 6 meaningful customer segments using unsupervised learning techniques. Also, translated clustering results into customized actionable business insights and plans, enabling targeted marketing strategies, churn risk identification, and revenue optimization.",
+      // technos: ["python", "django", "javascript", "react", "redux", "router", "tailwind"],
+      referenceImg:customerSegment,
+      github: 'https://github.com/fahadNoufal/ecommerce-customer-segmentation/',
+      // visit: 'https://fahadnoufal.github.io/chat-circle/',
+    },
 }
 
 const GridItem = ({ item, index, onItemClick, itemRef }) => {
