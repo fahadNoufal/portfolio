@@ -28,6 +28,10 @@ function App() {
     ignoreMobileResize: true // ignores vertical resizes of < 25% of the viewport height
   });
   ScrollTrigger.normalizeScroll(true);
+  // Add this to your config
+  ScrollTrigger.normalizeScroll({
+    allowNestedScroll: true, 
+  });
 
   return (
 
