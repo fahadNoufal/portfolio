@@ -13,12 +13,6 @@ import Cursor from './components/Cursor';
 import DataScienceProjects from './components/ds-projs/DataScienceProjects.jsx';
 import Navbar from './components/Navbar.jsx';
 
-// Only trigger a refresh if the width changes (rotation), 
-// ignoring height changes (address bar scroll)
-ScrollTrigger.config({ 
-  ignoreMobileResize: true 
-});
-
 
 function App() {
 
@@ -31,6 +25,13 @@ function App() {
   // Add this to your config
   ScrollTrigger.normalizeScroll({
     allowNestedScroll: true, 
+  });
+
+  ScrollTrigger.create({
+    trigger: ".project-details-container",
+    start: "top top",
+    // This helps when nested inside other triggers
+    nested: true 
   });
 
   return (
