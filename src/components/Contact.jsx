@@ -37,7 +37,8 @@ const Contact = () => {
       duration: 1.2,
       scrollTrigger: {
         trigger: ".contact-bottom",
-        start: "80% bottom",
+        start: "top 90%",
+        markers: true,
         toggleActions: "play play play reverse",
       },
     });

@@ -31,7 +31,7 @@ const Certificates = () => {
     
     tl.to('.certificate-container',{
       xPercent:`${mobile?-200:-120}`,
-      yPercent:`${mobile?-280:-100}`,
+      yPercent:`${mobile?-250:-100}`,
       scrollTrigger:{
         trigger:'.enough-of-dialogues',
         start:'top 20%',
