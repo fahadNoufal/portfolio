@@ -34,8 +34,8 @@ const Certificates = () => {
       yPercent:`${mobile?-280:-100}`,
       scrollTrigger:{
         trigger:'.enough-of-dialogues',
-        start:'65% bottom',
-        end:'bottom 0%',
+        start:'top 20%',
+        end:'bottom top',
         // markers:true,
         scrub:3,
       }
@@ -61,8 +61,8 @@ const Certificates = () => {
 
     ScrollTrigger.create({
       trigger:'.enough-of-dialogues',
-      start:'65% bottom',
-      end:'bottom 0%',
+      start:'top 20%',
+      end:'bottom top',
       scrub:3,
       animation:tl2,
     })
