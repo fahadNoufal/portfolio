@@ -27,7 +27,8 @@ function App() {
   ScrollTrigger.config({
     ignoreMobileResize: true // ignores vertical resizes of < 25% of the viewport height
   });
-  
+  ScrollTrigger.normalizeScroll(true);
+
   return (
 
 
