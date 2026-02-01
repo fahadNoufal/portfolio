@@ -23,6 +23,10 @@ ScrollTrigger.config({
 function App() {
 
   gsap.registerPlugin(ScrollTrigger)
+
+  ScrollTrigger.config({
+    ignoreMobileResize: true // ignores vertical resizes of < 25% of the viewport height
+  });
   
   return (
 
