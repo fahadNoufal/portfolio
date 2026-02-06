@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.29d74a9d.css",
-    "main.js": "/portfolio/static/js/main.2e4f33f9.js",
+    "main.css": "/portfolio/static/css/main.bed3ccc7.css",
+    "main.js": "/portfolio/static/js/main.076d4fdd.js",
     "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
     "static/media/nlp-circle.gif": "/portfolio/static/media/nlp-circle.d72ba113485da2fc5e5c.gif",
     "static/media/student-stress.png": "/portfolio/static/media/student-stress.d82c247556a829a2a64b.png",
@@ -41,13 +41,14 @@
     "static/media/ml-model.jpeg": "/portfolio/static/media/ml-model.5991406241933bd63a43.jpeg",
     "static/media/ai-librarian.jpg": "/portfolio/static/media/ai-librarian.6f2b0c8f7a84c898d3e6.jpg",
     "static/media/Humane-Black-BF657fc365849db.otf": "/portfolio/static/media/Humane-Black-BF657fc365849db.73f32b61d8ce1b061a9f.otf",
+    "static/media/auto-stream-sales-agent.jpg": "/portfolio/static/media/auto-stream-sales-agent.2e958fd161ac1401e166.jpg",
     "static/media/service-creative-sol.jpg": "/portfolio/static/media/service-creative-sol.fe698cc987598128a86b.jpg",
     "static/media/data-visualization.jpeg": "/portfolio/static/media/data-visualization.b5d77b9673a69a3677d4.jpeg",
-    "static/media/Ploty.svg": "/portfolio/static/media/Ploty.c158b7e9446528c0700671b7bc51e845.svg",
     "static/media/Docker.svg": "/portfolio/static/media/Docker.1d41320cb0101dbbc6fe182abd590263.svg",
     "static/media/aws_icon.svg": "/portfolio/static/media/aws_icon.53f4cad612660fe71b72040f40667c50.svg",
     "static/media/Frame 2762.svg": "/portfolio/static/media/Frame 2762.8daad722d93528cfeb8c3f37ff0e2413.svg",
     "static/media/FastAPI.svg": "/portfolio/static/media/FastAPI.4dbff8f1d0f1d25e084d4efce48ae0d6.svg",
+    "static/media/Langgraph.svg": "/portfolio/static/media/Langgraph.252bcfea7865db4beba8f5125e004292.svg",
     "static/media/Python.svg": "/portfolio/static/media/Python.849d0b2b5f1ec20f077dd267498bd536.svg",
     "index.html": "/portfolio/index.html",
     "static/media/Google Cloud.svg": "/portfolio/static/media/Google Cloud.d1a9cdc7f8658dec6aef309e62d454c9.svg",
@@ -55,12 +56,12 @@
     "static/media/Pandas.svg": "/portfolio/static/media/Pandas.5a48d1677b40ca61e96a08e92fdbb64d.svg",
     "static/media/Django.svg": "/portfolio/static/media/Django.c1ea8b0c07747ebdd9c4da37f0f46d2a.svg",
     "static/media/pytorch_logo.svg": "/portfolio/static/media/pytorch_logo.8653d1d6d7ba93c4c4ed583bbd51fb99.svg",
-    "main.29d74a9d.css.map": "/portfolio/static/css/main.29d74a9d.css.map",
-    "main.2e4f33f9.js.map": "/portfolio/static/js/main.2e4f33f9.js.map",
+    "main.bed3ccc7.css.map": "/portfolio/static/css/main.bed3ccc7.css.map",
+    "main.076d4fdd.js.map": "/portfolio/static/js/main.076d4fdd.js.map",
     "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.29d74a9d.css",
-    "static/js/main.2e4f33f9.js"
+    "static/css/main.bed3ccc7.css",
+    "static/js/main.076d4fdd.js"
   ]
 }
