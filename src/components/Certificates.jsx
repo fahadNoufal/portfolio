@@ -3,12 +3,12 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 
 import c1 from '../resources/certificates/hackerrank-5-star.png'
-import c2 from '../resources/certificates/22CDSA1.jpg'
-import c3 from '../resources/certificates/BentlyInstitute(3D).jpg'
-import c4 from '../resources/certificates/MachineLearningOnramp.jpg'
-import c5 from '../resources/certificates/Process_Automation_Bootcamp.jpg'
-import c6 from '../resources/certificates/QlikSenseDataArchitectQualification.jpg'
-import c7 from '../resources/certificates/fahad noufal.jpg'
+import c2 from '../resources/certificates/ml-specialization.png'
+import c3 from '../resources/certificates/ds-internship.png'
+import c4 from '../resources/certificates/Process_Automation_Bootcamp.jpg'
+import c5 from '../resources/certificates/QlikSenseDataArchitectQualification.jpg'
+import c6 from '../resources/certificates/cs50ai.png'
+import c7 from '../resources/certificates/ml-infosys.png'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 
