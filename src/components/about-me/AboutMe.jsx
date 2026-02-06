@@ -106,7 +106,7 @@ const AboutMe = () => {
             </p>
             <span className=" md:hidden w-full block h-[0.5px] opacity-10 bg-black"></span>
             <p className=" ">
-              A curious mind with a passion for solving problems and building solutions that can create a positive impact in everyday life or one day, lead to meaningful business breakthroughs I can truly call my own.
+              A curious mind with a passion for solving problems and building solutions that can create a positive impact in everyday life lead to meaningful business breakthroughs which I can truly call my own.
             </p>
             <span className=" md:hidden w-full block h-[0.5px] opacity-10 bg-black"></span>
             <p className=" ">

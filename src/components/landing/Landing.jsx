@@ -64,7 +64,7 @@ const Landing = () => {
             <img src={creative} alt="" className=' px-2 sm:w-[70%] lg:w-[50%]' />
             <h3 className=' font-days-one  text-[#bfbfbf]
                              mt-[1.5rem] sm:mt-[2rem] lg:mt-[3.5rem] sm:text-[1.2rem] lg:text-[1.8rem]' >
-                DATA SCIENTIST
+                AI ML ENGINEER
             </h3>
             <div className="flower absolute z-[-1] ">
                 <img src={flower} alt=""  className=' mt-[16rem] sm:w-auto w-[60%] mx-auto mb-28 sm:mb-0 sm:h-[80svh]'/>

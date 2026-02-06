@@ -8,8 +8,8 @@ import git from "../resources/tech-stack/Git.svg";
 import python from "../resources/tech-stack/Python.svg";
 import django from "../resources/tech-stack/Django.svg";
 import FastAPI from "../resources/tech-stack/FastAPI.svg";
-import plotly from "../resources/tech-stack/Ploty.svg";
 import pytorch from "../resources/tech-stack/pytorch_logo.svg";
+import langgraph from "../resources/tech-stack/Langgraph.svg"
 
 import bento1 from "../resources/service/service-creative-sol.jpg";
 import nlp from '../resources/service/nlp-circle.gif'
@@ -360,8 +360,8 @@ const HowCanIHelp = () => {
             <div className=' tech-stack-item' id="aws">
               <img src={aws} alt="" />
             </div>
-            <div className=' tech-stack-item odd-tech-item' id="plotly">
-              <img src={plotly} alt="" />
+            <div className=' tech-stack-item odd-tech-item' id="langgraph">
+              <img src={langgraph} alt="" />
             </div>
           </section>
           <section className="flex justify-around sm:gap-[3rem] lg:gap-[5rem]">

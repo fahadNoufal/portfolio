@@ -1,39 +1,37 @@
-import React, { useEffect } from 'react'
-import djangologo from "../resources/bw-logo/django-logo.png"
-import gsaplogo from "../resources/bw-logo/gsap-logo.png"
-import js from "../resources/bw-logo/js-logo.png"
-import mui from "../resources/bw-logo/mui-logo.png"
-import py from "../resources/bw-logo/py-logo.png"
-import reactlogo from "../resources/bw-logo/react-logo.png"
-import reduxlogo from "../resources/bw-logo/redux-logo.png"
-import tailwindlogo from "../resources/bw-logo/tailwind-logo.png"
-import routerlogo from "../resources/bw-logo/router-logo.png"
+import django from "../resources/tech-stack/Django.svg"
+import docker from "../resources/tech-stack/Docker.svg"
+import aws from "../resources/tech-stack/aws_icon.svg"
+import fastapi from "../resources/tech-stack/FastAPI.svg"
+import git from "../resources/tech-stack/Git.svg"
+import gcp from "../resources/tech-stack/Google Cloud.svg"
+import pandas from "../resources/tech-stack/Pandas.svg"
+import python from "../resources/tech-stack/Python.svg"
+import pytorch from "../resources/tech-stack/pytorch_logo.svg"
+import langgraph from "../resources/tech-stack/Langgraph.svg"
 
 import arrow from "../resources/bw-logo/arrow-proj-details.png"
-import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
-import { Play } from 'lucide-react'
 
 
 const ProjectDetails = ({technos=[],type,description,name='',num,platform,platformSub,github='',visit='',referenceImg='',handleBackClick}) => {
 
     const techStack={
-        python:["Python" , py],
-        django:["django",djangologo],
-        javascript:["javascript",js],
-        mui:["material UI",mui],
-        gsap:["gsap",gsaplogo],
-        react:["react",reactlogo],
-        redux:["redux",reduxlogo],
-        tailwind:["tailwind",tailwindlogo],
-        router:["router",routerlogo],
+        python:["python" , python ],
+        django:["django" , django],
+        fastapi:["fastapi" , fastapi],
+        docker:["docker" , docker],
+        aws:["aws" , aws],
+        gcp:["gcp" , gcp],
+        git:["git" , git],
+        pandas:["pandas" , pandas],
+        pytorch:["pytorch" , pytorch],
+        langgraph:["langgraph", langgraph],
     }
 
     const Tech=({name,img})=>{
       return(
         <div className=" tech-stack-item items-center w-full capitalize flex flex-col gap-1 sm:gap-2 font-sansation text-[0.9rem] sm:text-[1rem] 
                         scale-75 sm:scale-90 md:scale-100 xl:scale-125 text-center sm:text-left">
-            <img className=' w-[64px] h-[54px] object-cover rounded-md shadow-lg' src={img} alt={name} />
+            <img className=' w-[60px]  object-cover' src={img} alt={name} />
             <span className=''>{name}</span>
         </div>
     )
