@@ -1,31 +1,31 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.bed3ccc7.css",
-    "main.js": "/portfolio/static/js/main.076d4fdd.js",
+    "main.js": "/portfolio/static/js/main.419e511a.js",
     "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
     "static/media/nlp-circle.gif": "/portfolio/static/media/nlp-circle.d72ba113485da2fc5e5c.gif",
     "static/media/student-stress.png": "/portfolio/static/media/student-stress.d82c247556a829a2a64b.png",
     "static/media/home-price.png": "/portfolio/static/media/home-price.cd2ef7d75939cd4c627b.png",
     "static/media/customer-segment.png": "/portfolio/static/media/customer-segment.ec40667764346fb99965.png",
     "static/media/llm.png": "/portfolio/static/media/llm.66768962a6886ec344de.png",
-    "static/media/22CDSA1.jpg": "/portfolio/static/media/22CDSA1.6bb4a3fc32a5a39e603d.jpg",
     "static/media/mess-app.png": "/portfolio/static/media/mess-app.b8d223fdd4bee268e068.png",
     "static/media/Creative.svg": "/portfolio/static/media/Creative.bcd77bc38dee559be6194f1c935d7924.svg",
     "static/media/student-performance.png": "/portfolio/static/media/student-performance.8176efd77572193eacf1.png",
     "static/media/crosswords.png": "/portfolio/static/media/crosswords.c2456c4ca0973057fc3e.png",
     "static/media/tic-tac-toe.png": "/portfolio/static/media/tic-tac-toe.20d5a3679edd9e993e74.png",
     "static/media/lunar-lander.png": "/portfolio/static/media/lunar-lander.1596d35a8aeb76086212.png",
-    "static/media/BentlyInstitute(3D).jpg": "/portfolio/static/media/BentlyInstitute(3D).8b0328b41d1dcac46b02.jpg",
     "static/media/fashion-site.png": "/portfolio/static/media/fashion-site.5af6d6c53833dd5f9a71.png",
     "static/media/hook.webm": "/portfolio/static/media/hook.c7671bb2ed93f6dcafdf.webm",
+    "static/media/ml-specialization.png": "/portfolio/static/media/ml-specialization.d123ffcfc4b73e2915fa.png",
     "static/media/work-cc-app.png": "/portfolio/static/media/work-cc-app.8351c44d79d5a14c6f4f.png",
-    "static/media/fahad noufal.jpg": "/portfolio/static/media/fahad noufal.504399e1bf7b3772fbc8.jpg",
-    "static/media/MachineLearningOnramp.jpg": "/portfolio/static/media/MachineLearningOnramp.5b6649091d29ae3e9b14.jpg",
     "static/media/x-actitude.png": "/portfolio/static/media/x-actitude.72b021e2ae89fdeaa98c.png",
     "static/media/Process_Automation_Bootcamp.jpg": "/portfolio/static/media/Process_Automation_Bootcamp.4a80dc78876f05432a04.jpg",
     "static/media/hackerrank-5-star.png": "/portfolio/static/media/hackerrank-5-star.b2042180bd52113c3044.png",
     "static/media/quick-scope.jpg": "/portfolio/static/media/quick-scope.8a954efba7e2560fd30d.jpg",
+    "static/media/cs50ai.png": "/portfolio/static/media/cs50ai.d1fb69c278f2967ea968.png",
     "static/media/taskflow.png": "/portfolio/static/media/taskflow.0c34bb094c4eb8e33b02.png",
+    "static/media/ds-internship.png": "/portfolio/static/media/ds-internship.2f07b90333dbdfdc88d9.png",
+    "static/media/ml-infosys.png": "/portfolio/static/media/ml-infosys.d82925e39e8ed189721b.png",
     "static/media/seo.webm": "/portfolio/static/media/seo.68ce0bbef2a909915718.webm",
     "static/media/genetics.png": "/portfolio/static/media/genetics.b2354e75f906090d0674.png",
     "static/media/QlikSenseDataArchitectQualification.jpg": "/portfolio/static/media/QlikSenseDataArchitectQualification.316d81b19458f9c3dd14.jpg",
@@ -57,11 +57,11 @@
     "static/media/Django.svg": "/portfolio/static/media/Django.c1ea8b0c07747ebdd9c4da37f0f46d2a.svg",
     "static/media/pytorch_logo.svg": "/portfolio/static/media/pytorch_logo.8653d1d6d7ba93c4c4ed583bbd51fb99.svg",
     "main.bed3ccc7.css.map": "/portfolio/static/css/main.bed3ccc7.css.map",
-    "main.076d4fdd.js.map": "/portfolio/static/js/main.076d4fdd.js.map",
+    "main.419e511a.js.map": "/portfolio/static/js/main.419e511a.js.map",
     "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bed3ccc7.css",
-    "static/js/main.076d4fdd.js"
+    "static/js/main.419e511a.js"
   ]
 }
