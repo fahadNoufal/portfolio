@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.bed3ccc7.css",
-    "main.js": "/portfolio/static/js/main.a27c47c3.js",
+    "main.js": "/portfolio/static/js/main.407d4fc5.js",
     "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
     "static/media/nlp-circle.gif": "/portfolio/static/media/nlp-circle.d72ba113485da2fc5e5c.gif",
     "static/media/student-stress.png": "/portfolio/static/media/student-stress.d82c247556a829a2a64b.png",
@@ -29,6 +29,7 @@
     "static/media/seo.webm": "/portfolio/static/media/seo.68ce0bbef2a909915718.webm",
     "static/media/genetics.png": "/portfolio/static/media/genetics.b2354e75f906090d0674.png",
     "static/media/QlikSenseDataArchitectQualification.jpg": "/portfolio/static/media/QlikSenseDataArchitectQualification.316d81b19458f9c3dd14.jpg",
+    "static/media/ecommerce-agent.jpg": "/portfolio/static/media/ecommerce-agent.8e33ee70e4b56663d617.jpg",
     "static/media/insights.jpg": "/portfolio/static/media/insights.2e80e9da91906e07bb2a.jpg",
     "static/media/customer-segment-2.jpg": "/portfolio/static/media/customer-segment-2.1f4cd0a591440a9f2d35.jpg",
     "static/media/fahad_img.jpg": "/portfolio/static/media/fahad_img.46b04407a160cdb38d6c.jpg",
@@ -57,11 +58,11 @@
     "static/media/Django.svg": "/portfolio/static/media/Django.c1ea8b0c07747ebdd9c4da37f0f46d2a.svg",
     "static/media/pytorch_logo.svg": "/portfolio/static/media/pytorch_logo.8653d1d6d7ba93c4c4ed583bbd51fb99.svg",
     "main.bed3ccc7.css.map": "/portfolio/static/css/main.bed3ccc7.css.map",
-    "main.a27c47c3.js.map": "/portfolio/static/js/main.a27c47c3.js.map",
+    "main.407d4fc5.js.map": "/portfolio/static/js/main.407d4fc5.js.map",
     "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bed3ccc7.css",
-    "static/js/main.a27c47c3.js"
+    "static/js/main.407d4fc5.js"
   ]
 }
