@@ -102,15 +102,16 @@ const AboutMe = () => {
 
           <div className="about-description md:py-8 md:px-6 sm:px-0 gap-40 xl:px-12 text-[#585858] text-left space-y-6 text-[1rem] md:text-[1.25rem] xl:text-[1.38rem] 2xl:text-[1.5rem] font-sansation tracking-wide lg:tracking-wider sm:block">
             <p>
-              I’m an aspiring data scientist from Kerala, India, holding a Bachelor’s degree in Data Science. I combine technical skills with real world practical applications to bring concepts to life.
+              I’m a Data Science graduate (CGPA: 8.0) focused on building AI systems that create real impact; automating workflows, improving efficiency, and reducing costs.
+              What started as curiosity has grown into a strong interest in developing solutions that don’t just work, but deliver results.
             </p>
             <span className=" md:hidden w-full block h-[0.5px] opacity-10 bg-black"></span>
             <p className=" ">
-              A curious mind with a passion for solving problems and building solutions that can create a positive impact in everyday life lead to meaningful business breakthroughs which I can truly call my own.
+              I’ve built AI assistants and automation tools that streamline processes, enhance user experiences, and handle tasks end-to-end.
             </p>
             <span className=" md:hidden w-full block h-[0.5px] opacity-10 bg-black"></span>
             <p className=" ">
-              I have a strong foundation in programming and mathematics, along with a solid understanding of business. I learn quickly, think deeply, and always push myself to go the extra mile. I don’t just aim to complete tasks, I focus more on quality and strive to do my work better than the rest.
+              I thrive in fast-paced environments where I can take ownership and turn ideas into impactful products. My goal is simple: build technology that solves real problems and makes a meaningful difference.
             </p>
           </div>
             

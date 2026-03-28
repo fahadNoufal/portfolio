@@ -5,6 +5,7 @@ import "./selected-works.css";
 import ai_librarian from '../../resources/selected-works/ai-librarian.jpg'
 import llm from '../../resources/selected-works/llm.png'
 import quickscope from '../../resources/selected-works/quick-scope.jpg'
+import ecomAgent from '../../resources/selected-works/ecommerce-agent.jpg'
 import autostream from '../../resources/selected-works/auto-stream-sales-agent.jpg'
 import ProjectDetails from "../ProjectDetails";
 
@@ -14,7 +15,7 @@ const itemsData = [
     id: 1,
     number: "01",
     title: "AUTOSTREAM AGENT",
-    img: autostream,
+    img: ecomAgent,
   },
   {
     id: 2,
@@ -42,16 +43,16 @@ const itemsData = [
 
 const allProjDetails = {
     0: {
-      name: "AutoStream AI Agent",
-      num: '01',
+      name: "E-Commerce Agent",
+      num: '00',
       type: 'Agentic System',
-      platform: 'SaaS Lead Generation',
-      platformSub: 'AI Agent',
-      description: "AI agent for SaaS sales that acts as a virtual sales representative, conducting sales conversations to capture user interest and collect lead details. It delivers RAG-based product Q&A, dynamic user intent classification, and persistent conversational memory, and is designed to handle non-linear user flows.",
+      platform: 'Ecommerce AI Assistant',
+      platformSub: 'Multi-Agent',
+      description: "Built a multi-agent AI system for eCommerce that automates the entire customer journey—from product discovery to checkout—within a single chat interface; each agent is responsible for a specific task—such as product recommendations, customer queries, and checkout handling. The system leverages internal data to provide accurate, context-aware responses and automates the entire customer journey within a single chat interface, improving user experience while reducing support workload and drop-offs.",
       technos: ["python", 'langgraph',"fastapi", "pandas", "git"],
-      referenceImg:autostream,
-      github: 'https://github.com/fahadNoufal/AutoStream-AI-Agent/',
-      visit: 'https://drive.google.com/drive/folders/1-b-GOINKaanoLkxFRwbUPm8naU-jHQHi?usp=drive_link',
+      referenceImg:ecomAgent,
+      // github: 'https://github.com/fahadNoufal/AutoStream-AI-Agent/',
+      // visit: 'https://drive.google.com/drive/folders/1-b-GOINKaanoLkxFRwbUPm8naU-jHQHi?usp=drive_link',
     },
     1: {
       name: "AI Librarian",
@@ -66,16 +67,16 @@ const allProjDetails = {
       visit: 'https://fahadnoufal.github.io/AI-Librarian-Frontend/',
     },
     2: {
-      name: "QUICK SCOPE",
-      num: '02',
-      type: 'Fine Tuning',
-      platform: 'News Reporting',
-      platformSub: 'Unbiased',
-      description: "This is an end-to-end real-time social media and news reporting system hosted on aws that reports live discussions across platforms based on your topic of intrest. A 1B-parameter model is fine-tuned using LoRA (r=32) with Unsloth, tuned (4-bit inference) on a custom built dataset to generate tailored, unbiased news reporting. Deployment: Designed and deployed an end-to-end MLOps pipeline with automated data generation (n8n) and CI/CD workflows that build and push Docker images to AWS ECR and deploy them on AWS EC2 instance using GitHub Actions, reducing inference cost and latency.",
-      technos: ['python','aws', 'docker', 'git','pandas'],
-      referenceImg:quickscope,
-      github: 'https://github.com/fahadNoufal/QuickScope',
-      visit: 'https://github.com/fahadNoufal/QuickScope',
+      name: "AutoStream AI Agent",
+      num: '01',
+      type: 'Agentic System',
+      platform: 'SaaS Lead Generation',
+      platformSub: 'AI Agent',
+      description: "AI agent for SaaS sales that acts as a virtual sales representative, conducting sales conversations to capture user interest and collect lead details. It delivers RAG-based product Q&A, dynamic user intent classification, and persistent conversational memory, and is designed to handle non-linear user flows.",
+      technos: ["python", 'langgraph',"fastapi", "pandas", "git"],
+      referenceImg: autostream,
+      github: 'https://github.com/fahadNoufal/AutoStream-AI-Agent/',
+      visit: 'https://drive.google.com/drive/folders/1-b-GOINKaanoLkxFRwbUPm8naU-jHQHi?usp=drive_link',
     },
     3: {
       name: "CUSTOM LLM",

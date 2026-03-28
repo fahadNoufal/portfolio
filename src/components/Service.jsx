@@ -265,7 +265,7 @@ const HowCanIHelp = () => {
                 className=" mix-blend-lighten mx-[-25px] object-cover "
               />
               <div className="flex text-white h-full text-sm md:text-xl w-full justify-end opacity-75 items-end">
-                Data visualization
+                AI Automation
               </div>
             </div>
 
@@ -393,10 +393,10 @@ const HowCanIHelp = () => {
       >
         <div className="text interactable  cursor-button " data-type="story">
           <div className=" line-heading flex sm:gap-12  items-center">
-            <h2>story telling</h2>
+            <h2>Automation</h2>
             <ArrowMark />
           </div>
-          <span>visuals</span>
+          <span>Workflows</span>
         </div>
 
         <div className="text interactable " data-type="hook">
